@@ -11,7 +11,7 @@ class SideBarLink extends React.Component {
   // }
   render() {
     return (
-        <Link href={'/posts/'+this.props.url} key={this.props.uniqueId}>
+        <Link as={`/post/${this.props.url}`} href={`/categoryIndex?categoryName=${this.props.url}`} key={this.props.key}>
           <a style={linkStyle}> {this.props.name}</a>
         </Link>
       );
@@ -24,7 +24,7 @@ class SideBar extends React.Component {
     super(props)
     var sidebar = []
     for(const i in categoryData) {
-      sidebar.push(<SideBarLink name={categoryData[i].name} key={categoryData[i].id} url={categoryData[i].url} />)
+      sidebar.push(<SideBarLink name={categoryData[i].name} key={categoryData[i].id} url={categoryData[i].url}/>)
     }
     this.state = {sidebar: sidebar}
   }
@@ -47,7 +47,7 @@ class Header extends React.Component {
             <Link href="/">
               <a style={linkStyle}>Home</a>
             </Link>
-            <Link href="/about">
+            <Link href="/about" prefetch>
               <a style={linkStyle}>About</a>
             </Link>
         </div>

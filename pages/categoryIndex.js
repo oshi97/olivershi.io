@@ -5,13 +5,12 @@ import Link from 'next/link'
 // it not found return "category not found"
 class Index extends React.Component {
   render() {
-    console.log('props',this.props)
     return (
       <Layout>
         <h1>List of {this.props.categoryName} Posts</h1>
         <ul>
           <li> 
-    	  		<Link href={'/posts/'+this.props.categoryName}>
+    	  		<Link as={'/post/'+this.props.categoryName} href={'/categoryIndex?categoryName='+this.props.categoryName}>
               {/*TODO load posts from database here, likely want to preload into json*/}
     	    		<a> Click here! </a>
     	    	</Link>
@@ -23,7 +22,6 @@ class Index extends React.Component {
 }
 
 Index.getInitialProps = async function(context) {
-  console.log('ctx = ', context.query)
   const { categoryName } = context.query
   return { categoryName: categoryName }
 }
