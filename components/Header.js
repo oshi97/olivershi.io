@@ -1,50 +1,24 @@
 import Link from 'next/link'
-import categoryData from '../static/data/categoryData.js'
+import SideBar from './SideBar.js'
 
 const linkStyle = {
   marginRight: 15
 }
-
-class SideBarLink extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-  render() {
-    return (
-        <Link as={`/post/${this.props.url}`} href={`/categoryIndex?categoryName=${this.props.url}`} key={this.props.key}>
-          <a style={linkStyle}> {this.props.name}</a>
-        </Link>
-      );
-  }
-}
-
-// daily life, reflections, programming, creative writing, books
-class SideBar extends React.Component {
-  constructor(props) {
-    super(props)
-    var sidebar = []
-    for(const i in categoryData) {
-      sidebar.push(<SideBarLink name={categoryData[i].name} key={categoryData[i].id} url={categoryData[i].url}/>)
-    }
-    this.state = {sidebar: sidebar}
-  }
-  render() {
-    return(
-        <div>This is the sidebar {this.state.sidebar}</div>
-      );
-  }
-}
+// TODO make something that updates all import links automatically when file is moved
+// Will probably never finish this myself and someone else will finish it first or 
+// Maybe it already exists and I'll just find it
+// Honestly, find and replace is a thing huh, it shouldnt be that hard to make if its
+// not already a thing which it should be
 
 class Header extends React.Component {
   constructor(props) {
     super(props)
   }
-
   render() {
     return(
         <div>
         	<SideBar count={this.props.count}/>
-            <Link href="/">
+            <Link href="/" prefetch>
               <a style={linkStyle}>Home</a>
             </Link>
             <Link href="/about" prefetch>

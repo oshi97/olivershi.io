@@ -14,18 +14,11 @@ mongoose.connect('mongodb://localhost/blogtest', {useNewUrlParser: true})
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
-// models.Post.countDocuments({}, (err, count) => {
-//   console.log(`from server counted ${count}`)
-// })
-// models.Post.find({}).countDocuments((err, count) => {
-//   console.log((`two from server counted ${count}`))
-// })
 const static_url = './static/data/'
-// TODO change this to use string formatting to be clearer
 function copyCategoryData() {
 	console.log(" ---- writing category data")
 	models.Category.find({}, (err, res) => {
-  	fs.writeFileSync(static_url+'categoryData.js','module.exports =' + JSON.stringify(res))
+  	fs.writeFileSync(static_url + 'categoryData.js','module.exports =' + JSON.stringify(res))
   })
 }
 
@@ -42,7 +35,6 @@ function myPrepare() {
 	copyCategoryData()
 	copyPostData()
 }
-
 
 // Server Code
 app.prepare(
