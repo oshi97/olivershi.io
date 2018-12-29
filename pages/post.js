@@ -1,10 +1,19 @@
-import Layout from '../components/MyLayout.js'
+import Layout from '../components/Layout.js'
+class Post extends React.Component { 
+	render() {
+		return (
+	    <Layout>
+	       <h1>Post Title</h1>
+	       {this.props.post}
+	       </Layout>
+		);
+	}
+}
 
-const Post = (props) => (
-    <Layout>
-       <h1>Post Title</h1>
-       <p>whheeee this is a post - we should probably give an id to each post to get it, I think an api is fine</p>
-    </Layout>
-)
+Post.getInitialProps = async function(context) {
+	console.log(context.query)
+	import PostData from '../static/data/'+context.query;
+	return {post: PostData}
+}
 
 export default Post

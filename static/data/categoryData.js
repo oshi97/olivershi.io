@@ -1,0 +1,1 @@
+module.exports = [{"_id":"5c24092ec09a0ca46b7858b3","id":0,"name":"Daily Life","url":"daily"},{"_id":"5c24142fc09a0ca46b785f41","id":1,"name":"Reflections","url":"reflections"}]

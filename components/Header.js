@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import categoryData from '../static/data/categoryData.js'
 
 const linkStyle = {
   marginRight: 15
@@ -10,8 +11,8 @@ class SideBarLink extends React.Component {
   // }
   render() {
     return (
-        <Link href={'/posts/'+this.props.category} key={this.props.uniqueId}>
-          <a style={linkStyle}> {this.props.category} </a>
+        <Link href={'/posts/'+this.props.url} key={this.props.uniqueId}>
+          <a style={linkStyle}> {this.props.name}</a>
         </Link>
       );
   }
@@ -21,15 +22,15 @@ class SideBarLink extends React.Component {
 class SideBar extends React.Component {
   constructor(props) {
     super(props)
+    var sidebar = []
+    for(const i in categoryData) {
+      sidebar.push(<SideBarLink name={categoryData[i].name} key={categoryData[i].id} url={categoryData[i].url} />)
+    }
+    this.state = {sidebar: sidebar}
   }
   render() {
-    var sidebar = [];
-    console.log("osdfsdf=" + this.props.count)
-    for(let i = 0; i < this.props.count; ++i) {
-      sidebar.push(<SideBarLink category="Category" key={i} />);
-    }
     return(
-        <div>This is the sidebar {sidebar}</div>
+        <div>This is the sidebar {this.state.sidebar}</div>
       );
   }
 }

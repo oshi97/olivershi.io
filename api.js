@@ -8,15 +8,6 @@ mongoose.connect('mongodb://localhost/blogtest', {useNewUrlParser: true})
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
-
-
-models.Post.countDocuments({}, (err, count) => {
-  console.log(`from api counted ${count}`)
-})
-models.Post.find({}).countDocuments((err, count) => {
-  console.log((`two from api counted ${count}`))
-})
-
 router.get('/api', (req, res) => {
   res.status(200).json(
   {
