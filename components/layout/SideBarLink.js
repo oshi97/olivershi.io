@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import categoryData from '../static/data/categoryData.js'
 
 const linkStyle = {
   marginRight: 15

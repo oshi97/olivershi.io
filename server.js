@@ -6,7 +6,6 @@ const fs = require('fs')
 
 const server = express()
 const dev = process.env.NODE_ENV !== 'production'
-// const dev = false
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
@@ -31,7 +30,7 @@ function copyPostData() {
   })
 }
 
-function myPrepare() {
+async function myPrepare() {
 	copyCategoryData()
 	copyPostData()
 }

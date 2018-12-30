@@ -1,1 +1,1 @@
-module.exports ={"tags":[],"_id":"5c23f439c09a0ca46b7852f0","id":0,"post":"balksdjfla","comments":[]}
+module.exports ={"_id":"5c292b83485ad34290612ceb","text":"THIS IS THE TEXT","id":0,"createdAt":"2018-12-30T20:33:07.623Z","updatedAt":"2018-12-30T20:33:07.623Z","__v":0}

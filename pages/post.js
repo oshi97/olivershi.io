@@ -10,8 +10,9 @@ class Post extends React.Component {
 	}
 }
 
+// param1 is postId
 Post.getInitialProps = async function(context) {
-	const PostData = require('../static/data/'+context.query.postId+'.js')
+	const PostData = require('../static/data/'+context.query.param1+'.js')
 	return {
 		post: PostData.post,
 		id: PostData.id,

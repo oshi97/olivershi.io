@@ -1,77 +1,82 @@
 const mongoose = require('mongoose');
 mongoose.set('useCreateIndex', true)
+const Schema = mongoose.Schema
 
 const requiredString = {
 	type: String,
 	required: true
 }
 
-const CategorySchema = mongoose.Schema({
+const CategorySchema = Schema({
 	id: {
-		// set this to mongoose
 		type: Number,
-		required: true,
-		// TODO need to make IDs unique somehow but still readable
-		index: true,
-		unique: true
+		// required: true,
+		// index: true,
+		// unique: true
 	}, 
 	name: {
 		type: String,
-		required: true
+		// required: true,
+		// unique: true
 	},
 	url: {
 		type: String,
-		required: true
-	}
+		// required: true,
+		// unique: true
+	},
+	posts: [{
+		type: Schema.Types.ObjectId,
+		ref: 'Post',
+	}],
+
 })
 
-// const PostSegmentSchema = mongoose.Schema({
-// 	text: {
-// 		type: String,
-// 		index: true
+// const CommentSchema = Schema(
+// 	{
+// 		author: requiredString,
+// 		text: requiredString
 // 	},
-// 	image: String
-// });
+// 	{
+// 		timestamps: true
+// 	}
+// );
 
-const CommentSchema = mongoose.Schema(
-	{
-		author: requiredString,
-		text: requiredString
-	},
-	{
-		timestamps: true
-	}
-);
-
-const PostSchema = mongoose.Schema(
+const PostSchema = Schema(
 	{
 		text: {
-			// type: [PostSegmentSchema],
-			// default: undefined
 			type: String,
-			index: true
+			// index: true
 		}, 
-		comments: [CommentSchema],
-		preview: String,
-		title: requiredString,
-		tags: [String],
+		// comments: [CommentSchema],
+		// preview: String,
+		// title: requiredString,
+		// tags: [String],
 		category: {
-			type:CategorySchema,
-			required: true
+			// type:CategorySchema,
+			type: Schema.Types.ObjectId,
+			ref: 'Category',
 		}, 
 		id: {
 			type: Number,
-			index: true,
-			required: true,
-			unique: true
+			// index: true,
+			// required: true,
+			// unique: true
 		}
 	}, 
 	{
 		timestamps: true
 	}
 );
+// CategorySchema.statics.getNextId = function() {
+// 	var thisCount = 0;
+// 	this.countDocuments({}, (err, count) => {
+// 		if (err)  return handleError(err);
+// 		thisCount = count
+// 	})
+// 	return thisCount
+// }
+const Category = mongoose.model('Category', CategorySchema);
 
-module.exports.Category = mongoose.model('Category', CategorySchema);
+module.exports.Category = Category;
 module.exports.Post = mongoose.model('Post', PostSchema);
-module.exports.Comment = mongoose.model('Comment', CommentSchema);
-// module.exports.PostSegment = mongoose.model('PostSegmentSchema', PostSegmentSchema);
+// module.exports.Comment = mongoose.model('Comment', CommentSchema);

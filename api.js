@@ -1,7 +1,11 @@
-// I tried not having these requires but still needed them I think
 const mongoose = require('mongoose')
 const models = require('./db-import.js')
 const router = require('express').Router()
+
+function handleError(err) {
+  console.log("ERROR - ", err)
+  process.exit(1)
+}
 
 // Database Connection + import models
 mongoose.connect('mongodb://localhost/blogtest', {useNewUrlParser: true})
@@ -27,16 +31,25 @@ router.get('/api/post/:id', (req, res) => {
   })
 }) 
 
+router.get('/api/category/:categoryUrl/postIds', (req, res) => {
+  const categoryUrl = req.params.categoryUrl
+  models.Category.findOne({url: categoryUrl})
+    .populate('posts', '-post -_id')
+    .exec((err, category) => {
+      if (err) return handleError(err);
+      console.log('api ', categoryUrl, 'for canonical postids returned ', category.posts)
+      res.status(200).json({
+        posts: category.posts
+      })
+    })  
+})
+
 router.get('/api/category/all', (req, res) => {
   models.Category.find({}, (err, categories) => {
-    models.Category.countDocuments({}, (err, count) => {
       res.status(200).json({
         categories: categories,
         body: req.body,
-        // count: count
     })
-    })
-
   })
 })
 

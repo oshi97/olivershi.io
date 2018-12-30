@@ -1,4 +1,4 @@
-import Header from './Header.js'
+import Header from './layout/Header.js'
 // TODO override nextjs built in <Document> to include layout so it doesn't ever have to update
 const layoutStyle = {
   margin: 20,

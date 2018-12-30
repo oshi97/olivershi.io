@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import SideBarLink from './SideBarLink.js'
-import categoryData from '../static/data/categoryData.js'
+import categoryData from '../../static/data/categoryData.js'
 
 // daily life, reflections, programming, creative writing, books
 class SideBar extends React.Component {
