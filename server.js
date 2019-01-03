@@ -16,57 +16,53 @@ db.on('error', console.error.bind(console, 'connection error:'));
 const static_url = './static/data/'
 function copyCategoryData() {
 	console.log(" ---- writing category data")
-	models.Category.find({}, (err, res) => {
-  	fs.writeFileSync(static_url + 'categoryData.js','module.exports =' + JSON.stringify(res))
-  })
-}
-
-function copyPostData() {
-	models.Post.find({}, (err, res) => {
-  	for (const i in res) {
-  		post = res[i]
-  		fs.writeFileSync(static_url + post.id + '.js', 'module.exports =' + JSON.stringify(post))
-  	}
-  })
+	models.Category.find({})
+	.select('id name url -_id')
+	.exec((err, res) => {
+		fs.writeFileSync(static_url + 'categoryData.js','module.exports =' + JSON.stringify(res))
+	})
 }
 
 async function myPrepare() {
 	copyCategoryData()
-	copyPostData()
 }
 
 // Server Code
 app.prepare(
-  myPrepare()
+	myPrepare()
 ).then(() => {
-  server.use(express.json())
-  server.use(express.urlencoded({extended: true}))
-  // These two must come before api require
-  server.use(require('./api'))
+	server.use(express.json())
+	server.use(express.urlencoded({extended: true}))
+	server.use(require('./api'))
 
-  server.get('/post/:categoryName', (req, res) => {
-    const queryParams = {categoryName: req.params.categoryName}
-    app.render(req, res, '/categoryIndex', queryParams)
-  })
+	server.get('/about', (req, res) => {
+		app.render(req, res, '/about', {})
+	})
 
-  // TODO: make post id something related to date or at least make them unique to category but not necessarily
-  // with each other i.e. different categories can all have a post 0
-  // low priority
-  server.get('/post/:categoryName/:postId', (req, res) =>{
-  	const queryParams = {postId: req.params.postId}
-  	app.render(req, res, '/post', queryParams)
-  })
+	server.get('/:categoryUrl', (req, res) => {
+		const queryParams = {categoryUrl: req.params.categoryUrl}
+		app.render(req, res, '/categoryIndex', queryParams)
+	})
 
-  server.get('*', (req, res) => {
-    return handle(req, res)
-  })
+	server.get('/:categoryUrl/:postUrl', (req, res) => {
+		const queryParams = {postUrl: req.params.postUrl}
+		app.render(req, res, '/post', queryParams)
+	})
 
-  server.listen(3000, (err) => {
-    if (err) throw err
-    console.log('> Ready on http://localhost:3000')
-  })
+	server.get('/', (req, res) => {
+		app.render(req, res, '/index', {})
+	})
+
+	server.get('*', (req, res) => {
+		return handle(req, res)
+	})
+
+	server.listen(3000, (err) => {
+		if (err) throw err
+		console.log('> Ready on http://localhost:3000')
+	})
 })
 .catch((ex) => {
-  console.error(ex.stack)
-  process.exit(1)
+	console.error(ex.stack)
+	process.exit(1)
 })

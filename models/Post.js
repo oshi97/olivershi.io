@@ -49,34 +49,48 @@ const PostSchema = Schema(
 		}, 
 		// comments: [CommentSchema],
 		// preview: String,
-		// title: requiredString,
+		title: String,
 		// tags: [String],
 		category: {
-			// type:CategorySchema,
-			type: Schema.Types.ObjectId,
-			ref: 'Category',
+			type:CategorySchema,
+			// type: Schema.Types.ObjectId,
+			// ref: 'Category',
 		}, 
 		id: {
 			type: Number,
 			// index: true,
 			// required: true,
 			// unique: true
-		}
+		},
+		url: String
 	}, 
 	{
 		timestamps: true
 	}
 );
-// CategorySchema.statics.getNextId = function() {
-// 	var thisCount = 0;
-// 	this.countDocuments({}, (err, count) => {
-// 		if (err)  return handleError(err);
-// 		thisCount = count
-// 	})
-// 	return thisCount
-// }
-const Category = mongoose.model('Category', CategorySchema);
 
+// CategorySchema.method('addNewPost', (post) => {
+// 	console.log('maybe okay', post)
+// 	const newPost = new Post(post)
+// 	console.log('okay', newPost)
+// })
+
+CategorySchema.static('getNextId', () => {
+	var newid = Category.countDocuments({}).exec().then((id) => {
+		console.log('promised id = ',id)
+		return id
+	})
+	// below code does not execute, cool!
+	console.log('returned id is', newid)
+	return newid
+})
+
+PostSchema.static('getNextId', () => {
+	return Post.countDocuments({}).exec()
+})
+
+const Category = mongoose.model('Category', CategorySchema);
+const Post = mongoose.model('Post', PostSchema)
 module.exports.Category = Category;
-module.exports.Post = mongoose.model('Post', PostSchema);
+module.exports.Post = Post
 // module.exports.Comment = mongoose.model('Comment', CommentSchema);

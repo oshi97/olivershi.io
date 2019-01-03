@@ -1,1 +1,0 @@
-module.exports ={"_id":"5c292b83485ad34290612ceb","text":"THIS IS THE TEXT","id":0,"createdAt":"2018-12-30T20:33:07.623Z","updatedAt":"2018-12-30T20:33:07.623Z","__v":0}

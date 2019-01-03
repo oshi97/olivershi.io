@@ -4,7 +4,7 @@ class Post extends React.Component {
 		return (
 			<div>
 				<h1>Post Title: {this.props.title} for id {this.props.id}</h1>
-				{this.props.post}
+				{this.props.text}
 			</div>
 		);
 	}
@@ -12,11 +12,20 @@ class Post extends React.Component {
 
 // param1 is postId
 Post.getInitialProps = async function(context) {
-	const PostData = require('../static/data/'+context.query.param1+'.js')
-	return {
-		post: PostData.post,
-		id: PostData.id,
-		title: PostData.title
+	// should only have one paramter of show id
+	const { id } = context.query
+	console.log(context)
+	console.log(`got the post with id ${id}`)
+	console.log(`making request to https://localhost:3000/api/post/${id}`)
+	
+	const res = await fetch(`https://localhost:3000/api/post/${id}`)
+	const post = await res.json()
+	return { 
+		text: post.text,
+		title: post.title,
+		categoryOID: post.category,
+		id: post.id,
+		body: req.body
 	}
 }
 

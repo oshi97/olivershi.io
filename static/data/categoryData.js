@@ -1,1 +1,1 @@
-module.exports =[{"posts":["5c292b83485ad34290612ceb"],"_id":"5c292bd404852c369c4d7781","id":0,"name":"testCategoryName1","url":"testCategoryName1","__v":1}]
+module.exports =[{"id":0,"name":"testCategoryName1","url":"testCategoryName1"}]

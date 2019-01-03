@@ -10,7 +10,7 @@ class Index extends React.Component {
 				<h1>List of {this.props.categoryName} Posts</h1>
 				<ul>
 					<li> 
-						<Link as={'/post/'+this.props.categoryName+'/0'} href={'/post?param1='+this.props.categoryName}>
+						<Link as={'/'+this.props.categoryName+'/0'} href={'/post?param1='+this.props.categoryName}>
 							{/*TODO load posts from database here, likely want to preload into json*/}
 							<a> Click here! </a>
 						</Link>
@@ -22,10 +22,19 @@ class Index extends React.Component {
 }
 
 Index.getInitialProps = async function(context) {
+	// TODO finish this this commit
 	const { categoryName } = context.query
+	console.log(context)
+	console.log(`got the category with name ${categoryName}`)
+	console.log(`making request to https://localhost:3000/api/category/${category}`)
 	
+	const res = await fetch(`https://localhost:3000/api/post/${id}`)
+	const post = await res.json()
 	
-	return { categoryName: categoryName }
+	return { 
+		categoryName: categoryName,
+		posts: 
+	}
 }
 
 export default Index
