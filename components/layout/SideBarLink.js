@@ -11,7 +11,7 @@ class SideBarLink extends React.Component {
   // }
   render() {
     return (
-        <Link prefetch as={`/post/${this.props.url}`} href={`/categoryIndex?categoryName=${this.props.url}`}>
+        <Link prefetch as={`/blog/${this.props.url}`} href={`/categoryIndex?categoryUrl=${this.props.url}`}>
           <a style={linkStyle}> {this.props.name}</a>
         </Link>
       );

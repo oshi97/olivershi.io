@@ -30,8 +30,20 @@ router.get('/api/posts', (req, res) => {
   })
 })
 
+router.get('/api/posts/url/:postUrl', (req, res) => {
+	models.Post.findOne({url: req.params.postUrl}, (err, post) => {
+    res.status(200).json({
+      text: post.text,
+      title: post.title,
+      categoryOID: post.category,
+      id: post.id,
+      body: req.body
+    })
+  })
+})
+
 // Return post by a specific id
-router.get('/api/posts/:id', (req, res) => {
+router.get('/api/posts/id/:id', (req, res) => {
   // return get data from mongoose here
   models.Post.findOne({id: req.params.id}, (err, post) => {
     res.status(200).json(
@@ -49,9 +61,10 @@ router.get('/api/posts/:id', (req, res) => {
 router.get('/api/categories/:categoryUrl/posts', (req, res) => {
   const categoryUrl = req.params.categoryUrl
   models.Category.findOne({url: categoryUrl})
-    .populate('posts', 'id url -_id')
+    .populate('posts', 'id url title -_id')
     .exec((err, category) => {
       if (err) return handleError(err);
+      console.log("AYAYA ", category)
       res.status(200).json({
         posts: category.posts
       })

@@ -16,7 +16,8 @@ function createPost() {
   var testPost = new models.Post({
     text: "THIS IS THE TEXT",
     id: 1,
-    url: "niceurl"
+    url: "posturl",
+    title: "I AM THE ALPHA POST"
   })
 
   return testPost
@@ -28,6 +29,8 @@ function getPost(id) {
   }
 
 // Should have returned a promise here if we wanted the original way or breaking up things
+// I give up on a convenience method for this because frankly this is the easiest way anyway
+// especially since I'm only going to use it in a few places lol
 function createCategoryAndSave() {
   models.Category.countDocuments({}, (err, count)=>{
     var testCategory = new models.Category({
@@ -36,12 +39,14 @@ function createCategoryAndSave() {
       url: "testCategory",
       posts: []
     })
-    return testCategory
+    quicksave(testCategory)
   })
 }
 
 function quicksave(data) {
-  data.save((err, dat) => { console.log("Saved: ", dat) })
+  // data.save((err, dat) => { console.log("Saved: ", dat) })
+  // wow that works so I guess there's no point of this method huh... lol
+  data.save()
 }
 
 async function pushPostAndSave() {
@@ -66,10 +71,7 @@ function prettyPrint(post, category) {
 }
 
 db.once('open', () => {
-  var post = createPost()
-  var category = createCategory()
-  quicksave(category)
-  prettyPrint(post, category)
+  createCategoryAndSave()
   // pushPostAndSave()
   // addNewPost(post, category)
   // prettyPrint(post, category)

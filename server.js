@@ -39,13 +39,15 @@ app.prepare(
 		app.render(req, res, '/about', {})
 	})
 
-	server.get('/:categoryUrl', (req, res) => {
-		const queryParams = {categoryUrl: req.params.categoryUrl}
+	server.get('/blog/:categoryUrl', (req, res) => {
+		const categoryUrl = req.params.categoryUrl
+		const queryParams = {categoryUrl: categoryUrl}
 		app.render(req, res, '/categoryIndex', queryParams)
 	})
 
-	server.get('/:categoryUrl/:postUrl', (req, res) => {
-		const queryParams = {postUrl: req.params.postUrl}
+	server.get('/blog/:categoryUrl/:postUrl', (req, res) => {
+		const postUrl = req.params.postUrl
+		const queryParams = {postUrl: postUrl}
 		app.render(req, res, '/post', queryParams)
 	})
 
