@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <html>
-        <Head>
+        <Head charSet="utf-8">
           <style>{`body { margin: 0 } /* custom! */`}</style>
         </Head>
         <body className="custom_class">

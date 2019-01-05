@@ -3,6 +3,7 @@ const next = require('next')
 const mongoose = require('mongoose')
 const models = require('./db-import.js')
 const fs = require('fs')
+const helmet = require('helmet')
 
 const server = express()
 const dev = process.env.NODE_ENV !== 'production'
@@ -13,24 +14,9 @@ mongoose.connect('mongodb://localhost/blogtest', {useNewUrlParser: true})
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
-const static_url = './static/data/'
-function copyCategoryData() {
-	console.log(" ---- writing category data")
-	models.Category.find({})
-	.select('id name url -_id')
-	.exec((err, res) => {
-		fs.writeFileSync(static_url + 'categoryData.js','module.exports =' + JSON.stringify(res))
-	})
-}
-
-async function myPrepare() {
-	copyCategoryData()
-}
-
 // Server Code
-app.prepare(
-	myPrepare()
-).then(() => {
+app.prepare().then(() => {
+	server.use(helmet())
 	server.use(express.json())
 	server.use(express.urlencoded({extended: true}))
 	server.use(require('./api'))

@@ -16,7 +16,6 @@ class Post extends React.Component {
 Post.getInitialProps = async function(context) {
 	// should only have one paramter of show id
 	const { postUrl } = context.query
-	console.log(`making request to http://localhost:3000/api/posts/url/${postUrl}`)
 	
 	const res = await fetch(`http://localhost:3000/api/posts/url/${postUrl}`)
 	const post = await res.json()

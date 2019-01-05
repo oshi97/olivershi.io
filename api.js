@@ -64,7 +64,6 @@ router.get('/api/categories/:categoryUrl/posts', (req, res) => {
     .populate('posts', 'id url title -_id')
     .exec((err, category) => {
       if (err) return handleError(err);
-      console.log("AYAYA ", category)
       res.status(200).json({
         posts: category.posts
       })
