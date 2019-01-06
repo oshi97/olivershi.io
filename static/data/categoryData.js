@@ -1,1 +1,0 @@
-module.exports =[{"id":0,"name":"testCategoryName1","url":"testCategoryName1"}]
