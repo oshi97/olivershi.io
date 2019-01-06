@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 // const models = require('./db-import.js')
 // const fs = require('fs')
 const helmet = require('helmet')
+import renderRouterMiddleware from '../iso-middleware/renderRoute';
 
 const app = express()
 // const dev = process.env.NODE_ENV !== 'production'
@@ -17,7 +18,14 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 // server.use(require('./server/api'))
 
-app.use(express.static("./dist"));
+// app.use(express.static("./dist"));
+const buildPath = path.join(__dirname, '../', 'build');
+app.use('/', express.static(buildPath));
+// app.use(express.static(__dirname));
+app.get('*', renderRouterMiddleware);
+// app.get('*', (req, res) => {
+// 	res.sendFile( __dirname+'/dist/index.html')
+// })
 
 app.listen(3000, (err) => {
 	if (err) throw err
