@@ -1,31 +1,49 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-module.exports = {
+// webpack.config.js
+
+var path = require('path')
+var webpack = require('webpack')
+var nodeExternals = require('webpack-node-externals')
+
+var browserConfig = {
+  mode: 'production',
+  entry: './src/browser/index.js',
+  output: {
+    path: path.resolve(__dirname, 'public'),
+    filename: 'bundle.js',
+    publicPath: '/'
+  },
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader"
-          }
-        ]
-      }
+      { test: /\.(js)$/, use: 'babel-loader' },
     ]
   },
-  devServer: {
-    port: 3000
-  },
   plugins: [
-    new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
+    new webpack.DefinePlugin({
+      __isBrowser__: "true"
     })
   ]
-};
+}
+
+var serverConfig = {
+  mode: 'production',
+  entry: './src/server/index.js',
+  target: 'node',
+  externals: [nodeExternals()],
+  output: {
+    path: __dirname,
+    filename: 'server.js',
+    publicPath: '/'
+  },
+  module: {
+    rules: [
+      { test: /\.(js)$/, use: 'babel-loader' }
+    ]
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      __isBrowser__: "false"
+    })
+  ]
+}
+
+module.exports = [browserConfig, serverConfig]
