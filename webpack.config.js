@@ -3,9 +3,10 @@
 var path = require('path')
 var webpack = require('webpack')
 var nodeExternals = require('webpack-node-externals')
+var isDev = true
 
 var browserConfig = {
-  mode: 'production',
+  mode: isDev ? 'development' : 'production',
   entry: './src/browser/index.js',
   output: {
     path: path.resolve(__dirname, 'public'),
@@ -25,7 +26,7 @@ var browserConfig = {
 }
 
 var serverConfig = {
-  mode: 'production',
+  mode: isDev ? 'development' : 'production',
   entry: './src/server/index.js',
   target: 'node',
   externals: [nodeExternals()],

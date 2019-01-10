@@ -5,13 +5,14 @@ import App from '../shared/App'
 import React from 'react'
 import serialize from "serialize-javascript"
 import { fetchPopularRepos } from '../shared/api'
-import "@babel/polyfill";
+import "@babel/polyfill"
 import { StaticRouter, matchPath } from 'react-router-dom'
 import routes from '../shared/routes'
 
 const app = express()
 app.use(cors())
 app.use(express.static('public'))
+app.use('/static', express.static('static'))
 
 app.get('*', (req, res, next) => {
 	const activeRoute = routes.find(
@@ -21,12 +22,14 @@ app.get('*', (req, res, next) => {
 	const promise = activeRoute.fetchInitialData
 		? activeRoute.fetchInitialData(req.path)
 		: Promise.resolve()
+
 	promise.then((data) => {
 		const context = { data } 
 		const markup = renderToString(
-		<StaticRouter lcoation={req.url} context={context}>
-			<App />
-		</StaticRouter> )
+			<StaticRouter location={req.url} context={context}>
+				<App />
+			</StaticRouter> )
+		
 		res.send(`
 			<!DOCTYPE html>
 			<html>

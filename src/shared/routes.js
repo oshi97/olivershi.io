@@ -1,6 +1,6 @@
 import Home from './Home'
-import Grid from './Grid'
-import { fetchPopularRepos } from './api'
+import Canvas from './Canvas'
+import Two from './Two'
 
 const routes = [
     {
@@ -9,11 +9,17 @@ const routes = [
         component: Home,
     },
     {
-        path: '/popular/:id',
-        component: Grid,
-        fetchInitialData: (path = '') => fetchPopularRepos(
-            path.split('/').pop()
-        )
+        path: '/canvas',
+        exact: true,
+        component: Canvas,
+        // fetchInitialData: (path = '') => fetchPopularRepos(
+        //     path.split('/').pop()
+        // )
+    },
+    {
+        path: '/two',
+        exact: true,
+        component: Two,
     }
 ]
 

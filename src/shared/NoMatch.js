@@ -1,4 +1,3 @@
-// shared/NoMatch.js
 import React from 'react'
 
 export default function NoMatch () {
