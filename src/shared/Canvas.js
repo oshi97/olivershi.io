@@ -9,7 +9,7 @@ class Circle {
     this.radius = radius
   }
   draw() {
-    console.log("DRAW")
+    console.log("DRAW test gitignore")
   }
 }
 
