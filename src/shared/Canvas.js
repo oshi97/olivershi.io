@@ -23,8 +23,8 @@ let dx = 10
 let dy = 10
 let xScalar = 1
 let yScalar = 1
-let x = 200
-let y = 200
+let x = Math.random()*innerWidth
+let y = Math.random()*innerHeight
 let radius = 30
 
 function animate() {
@@ -84,7 +84,8 @@ class Canvas extends React.Component {
   }
 
   handleClick(e) {
-    console.log(x,xScalar,dx,y,yScalar,dy)
+    // console.log(x,xScalar,dx,y,yScalar,dy)
+    console.log(window)
   }
   
   render() {
