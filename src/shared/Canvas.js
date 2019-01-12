@@ -9,7 +9,6 @@ class Circle {
     this.radius = radius
   }
   draw() {
-    console.log("DRAW test gitignore")
   }
 }
 
@@ -18,14 +17,23 @@ let canvas = null
 let animationFrameId = null
 let innerWidth = null
 let innerHeight = null
+let initialized = false
 
 let dx = 10
 let dy = 10
 let xScalar = 1
 let yScalar = 1
-let x = Math.random()*innerWidth
-let y = Math.random()*innerHeight
+let x = null
+let y = null
 let radius = 30
+function initializeVariables() {
+  if (!initialized) {
+    x = Math.random()*innerWidth
+    y = Math.random()*innerHeight
+    initialized = true
+  }
+}
+
 
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -44,6 +52,8 @@ function animate() {
   } else if (y-radius < 0){
     yScalar = 1
   }
+  dx += xScalar*(Math.random()-0.5)
+  dy += yScalar*(Math.random()-0.5)
   x += xScalar*(dx+Math.random()-0.5)
   y += yScalar*(dy+Math.random()-0.5)
   animationFrameId=requestAnimationFrame(animate)
@@ -69,7 +79,6 @@ class Canvas extends React.Component {
 
   }
   updateDimensions() {
-    console.log("UPDATE")
     innerHeight = window.innerHeight
     innerWidth = window.innerWidth
     this.refs.canvas.height = window.innerHeight
@@ -80,11 +89,11 @@ class Canvas extends React.Component {
     canvas = this.refs.canvas
     ctx = canvas.getContext('2d')
     canvas.style.border = '0px solid #000000'
+    initializeVariables()
     animate()
   }
 
   handleClick(e) {
-    // console.log(x,xScalar,dx,y,yScalar,dy)
     console.log(window)
   }
   
