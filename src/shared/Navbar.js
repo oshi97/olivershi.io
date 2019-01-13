@@ -17,10 +17,13 @@ export default function Navbar () {
   }]
 
   return (
-    <ul>
+    <ul style={{ 'user-select': 'none', 'draggable':'false' }}>
       {languages.map(({ name, key, param }) => (
         <li key={key}>
-          <NavLink activeStyle={{fontWeight: 'bold', color: 'lightblue'}} exact to={`/${param}`}>
+          <NavLink 
+            activeStyle={{fontWeight: 'bold', color: 'lightblue'}} 
+            exact to={`/${param}`}
+          >
             {name} {key} {param}
           </NavLink>
         </li>
