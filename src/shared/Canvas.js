@@ -183,7 +183,7 @@ function drawGrass() {
 function drawSky() {
   if (shouldDrawSky) {
     ctx.fillStyle = "lightblue"
-    ctx.fillRect(0, skyHeight, innerWidth, skyHeight)
+    ctx.fillRect(0, 0, innerWidth, skyHeight)
   }
 }
 function animate() {
@@ -209,6 +209,8 @@ class Canvas extends React.Component {
     this.toggleUpperWall = this.toggleUpperWall.bind(this)
     this.toggleLowerWall = this.toggleLowerWall.bind(this)
     this.uploadBalls = this.uploadBalls.bind(this)
+    this.zeroGravity = this.zeroGravity.bind(this)
+    this.oneGravity = this.oneGravity.bind(this)
     this.state = {
       toggleUpperWallText: "Open the skies", 
       toggleLowerWallText: "AHH!!!",
@@ -271,7 +273,14 @@ class Canvas extends React.Component {
       mouseDownArrow.y = e.clientY
     }
   }
-
+  zeroGravity(e) {
+    gravity = 0
+    this.setState({gravity: 0})
+  }
+  oneGravity(e) {
+    gravity = 1
+    this.setState({gravity: 1})
+  }
   changeGravity(e) {
     if (e.target.value && !isNaN(e.target.value)) {
       gravity = parseInt(e.target.value)
@@ -370,6 +379,12 @@ class Canvas extends React.Component {
         </button>
         <button onClick={e => this.downloadBalls(e)}>
           Download Current balls.json
+        </button>
+        <button onClick={e => this.zeroGravity(e)}>
+          ZERO GRAVITY CONVENIENCE BUTTON
+        </button>
+        <button onClick={e => this.oneGravity(e)}>
+          Default Gravity
         </button>
         <label htmlFor="ball-upload">Upload a saved layout</label>
         <input 
