@@ -14,6 +14,7 @@ let colors = ["rgb(248,177,149)", "rgb(246,114,128)","rgb(192,108,132)","rgb(108
 let strokeColors = ["#0063B0","#0CBAE8","#00FFFA","#0CE8AE","#0DFF82"]
 let mouseDownArrow = null
 let gravity = 1
+let wallFriction = 0.6
 let useUpperWall = true
 let useLowerWall = true
 let shouldDrawGrass = true
@@ -139,13 +140,13 @@ class Circle {
     const rightWall = this.x + this.radius + this.dx > innerWidth
     const leftWall = this.x - this.radius - this.dx < 0
     if ( rightWall && this.dx > 0 || leftWall && this.dx <0 ) {
-      this.dx = -this.dx*0.6
+      this.dx = -this.dx * wallFriction
     } 
     // upper wall here means upper on the screen
     const lowerWall = (this.y + this.radius + grassHeight + this.dy + 0.1 > innerHeight) && useLowerWall
     const upperWall = (this.y - this.radius - skyHeight -this.dy + 0.1 < 0) && useUpperWall
     if (lowerWall || upperWall&&this.dy<0 ) {
-      this.dy = -this.dy*0.6
+      this.dy = -this.dy * wallFriction
     } 
     // something like static friction I guess
     const lowerWallStaticFriction = lowerWall && this.dy<0.1 &&this.dy>-0.1 
@@ -211,10 +212,12 @@ class Canvas extends React.Component {
     this.uploadBalls = this.uploadBalls.bind(this)
     this.zeroGravity = this.zeroGravity.bind(this)
     this.oneGravity = this.oneGravity.bind(this)
+    this.changeWallFriction = this.changeWallFriction.bind(this)
     this.state = {
       toggleUpperWallText: "Open the skies", 
       toggleLowerWallText: "AHH!!!",
-      gravity: gravity
+      gravity: gravity,
+      wallFriction: wallFriction
     }
   }
   componentDidMount() {
@@ -285,6 +288,12 @@ class Canvas extends React.Component {
     if (e.target.value && !isNaN(e.target.value)) {
       gravity = parseInt(e.target.value)
       this.setState({gravity: gravity})
+    }
+  }
+  changeWallFriction(e) {
+    if (e.target.value && !isNaN(e.target.value)) {
+      wallFriction = parseInt(e.target.value)/10
+      this.setState({wallFriction: wallFriction})
     }
   }
   toggleUpperWall(e) {
@@ -365,6 +374,8 @@ class Canvas extends React.Component {
           defaultValue={gravity} 
         /> */}
         <input type="range" min={-10} max={10} value={this.state.gravity} onChange={(e) => this.changeGravity(e)}/>
+        <label htmlFor="wallFrictionInput">Wall Friction: {this.state.wallFriction} </label>
+        <input type="range" min={1} max={20} value={this.state.wallFriction*10} onChange={(e) => this.changeWallFriction(e)}/>
         <button onClick={e => this.toggleUpperWall(e)}> 
           {this.state.toggleUpperWallText} 
         </button>
