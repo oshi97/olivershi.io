@@ -1,44 +1,43 @@
 {
   "name": "olivershi.io",
   "version": "1.0.0",
-  "description": "",
+  "description": "Updating livershi.com to use newer tech",
   "main": "index.js",
   "scripts": {
-    "linux-start": "webpack -w & nodemon server.js",
     "start": "npm-run-all --parallel webpack nodemon",
-    "start-once": "npm-run-all webpack-once node",
+    "start-prod": "npm-run-all webpack-prod node",
+    "webpack-prod": "npx webpack --mode production",
     "node": "node server.js",
-    "webpack-once": "webpack",
-    "webpack": "webpack -w",
-    "nodemon": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "webpack": "npx webpack -w --mode development",
+    "nodemon": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oshi97/olivershi.io.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oshi97/olivershi.io/issues"
+  },
+  "homepage": "https://github.com/oshi97/olivershi.io#readme",
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.15.2",
-    "isomorphic-fetch": "^2.2.1",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "react-router-dom": "^4.3.1",
-    "serialize-javascript": "^1.6.1"
+    "express": "^4.16.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
-    "@babel/polyfill": "^7.2.5",
-    "@babel/preset-env": "^7.3.1",
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "npm-run-all": "^4.1.5",
-    "prop-types": "^15.7.1",
-    "webpack": "^4.29.3",
-    "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.1.14",
-    "webpack-node-externals": "^1.7.2"
+    "css-loader": "^2.1.1",
+    "nodemon": "^1.19.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
   }
 }

@@ -1,5 +1,4 @@
 node_modules
 *.log
-public
-server.js
+/dist
 

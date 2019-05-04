@@ -1,50 +1,34 @@
-// webpack.config.js
+const path = require("path");
+const webpack = require("webpack");
 
-var path = require('path')
-var webpack = require('webpack')
-var nodeExternals = require('webpack-node-externals')
-var isDev = true
-
-var browserConfig = {
-  mode: isDev ? 'development' : 'production',
-  entry: './src/browser/index.js',
-  output: {
-    path: path.resolve(__dirname, 'public'),
-    filename: 'bundle.js',
-    publicPath: '/'
-  },
+module.exports = {
+  entry: "./src/index.js",
+  mode: "development",
   module: {
     rules: [
-      { test: /\.(js)$/, use: 'babel-loader' },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: "babel-loader",
+        options: { presets: ["@babel/env"] }
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      }
     ]
   },
-  plugins: [
-    new webpack.DefinePlugin({
-      __isBrowser__: "true"
-    })
-  ]
-}
-
-var serverConfig = {
-  mode: isDev ? 'development' : 'production',
-  entry: './src/server/index.js',
-  target: 'node',
-  externals: [nodeExternals()],
+  resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
-    path: __dirname,
-    filename: 'server.js',
-    publicPath: '/'
+    path: path.resolve(__dirname, "dist/"),
+    publicPath: "/dist/",
+    filename: "bundle.js"
   },
-  module: {
-    rules: [
-      { test: /\.(js)$/, use: 'babel-loader' }
-    ]
+  devServer: {
+    contentBase: path.join(__dirname, "public/"),
+    port: 3000,
+    publicPath: "http://localhost:3000/dist/",
+    hotOnly: true
   },
-  plugins: [
-    new webpack.DefinePlugin({
-      __isBrowser__: "false"
-    })
-  ]
-}
-
-module.exports = [browserConfig, serverConfig]
+  plugins: [new webpack.HotModuleReplacementPlugin()]
+};
