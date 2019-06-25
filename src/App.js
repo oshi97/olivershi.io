@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
 import "./App.css"
 
 const baseImgUrl = "/images"
-// image url, title, link, date, description
+// image url, title, link, date(?), description
 const PostPreview = (props) => {
 	return (
 		<div className="post-preview">
@@ -11,9 +11,8 @@ const PostPreview = (props) => {
 				<img className="post-preview-img" src={baseImgUrl + "/" + props.imgUrl}></img>
 			</Link>
 			<div className="desc-container">
-				<Link to={props.link ? props.link : '/'}> {props.title} </Link>
-				<div> {props.desc} </div>
-				<div className="preview-date"> {props.date} </div>
+				<Link to={props.link ? props.link : '/'} className="preview-title"> {props.title} </Link>
+				<div className="preview-desc"> {props.desc} </div>
 			</div>
 		</div>
 	)
@@ -21,12 +20,14 @@ const PostPreview = (props) => {
 
 const Home = () => {
 	return (
-			<ul className="home-preview-list">
+			<ul className="post-preview-list">
 				<li>
 					<PostPreview title="title1" desc="post numbrr 1" imgUrl="1.jpg" date="Novemeber whenever" link="1"/>
 				</li>
 				<li>				
-					<PostPreview title="title2" desc="description for second post" imgUrl="2.jpg" link="2" />
+					<PostPreview title="title2" desc="My 7-Year Pursuit of How To Live A near-death experience, an improbable disorder, and a global quest for answers Dakar,  " imgUrl="2.jpg" link="2" />
+				</li><li>				
+					<PostPreview title="title3" desc="lorem eisdfaasdf epsom salt  " imgUrl="piano-beluga.gif" link="2" />
 				</li>
 			</ul>
 	)
