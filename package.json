@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm-run-all --parallel webpack nodemon",
     "webpack-prod": "npx webpack --mode production",
-    "forever-start" : "npx forever start server.js",
+    "forever-start": "npx forever start server.js",
     "forever-stopall": "npx forever stopall",
     "node": "node server.js",
     "webpack": "npx webpack -w --mode development",
