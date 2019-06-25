@@ -85,6 +85,7 @@ body {
 .logo:hover,
 .main-nav li a:hover {
 	color: rgb(56, 168, 233);
+	cursor:pointer;
 }
 
 .post-preview-list {
@@ -94,18 +95,71 @@ body {
 }
 
 .post-preview {
-	margin:10px;
+	margin-left: 15px;
+	margin-right: 15px;
 	text-align:left;
 	width:250px;
 	height:300px;
-	border:4px solid black;
 	flex: 1 1 0;
+	text-decoration: none;
+}
+
+.post-preview:hover img {
+	opacity:0.2;
+	cursor: pointer;
+}
+
+.post-preview:hover .post-preview-img-container{
+	text-decoration: none;
+	cursor:pointer;
 }
 
 .post-preview-img {
 	width:100%;
-	height:60%;
-	/* border: 1px solid rgba(240, 235, 230, 0.7); */
+	height:100%;
+}
+
+.post-preview-img-background {
+	background-color:black;
+	widows: 100%;
+	height:65%;
+	position:relative;
+}
+
+.post-preview-img-text {
+	display:none;
+	position: relative;
+	color:white;
+	opacity:1;
+	z-index: 1;
+	text-align:left;
+	left:10%;
+	bottom: 35%;
+	font-size: 18px;
+}
+
+.post-preview-img-date {
+	display:none;
+	position: relative;
+	color:rgb(97, 187, 240);
+	opacity: 1;
+	z-index: 1;
+	text-align:left;
+	left:10%;
+	bottom: 95%;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.post-preview:hover .post-preview-img-date {
+	display:block;
+	text-decoration: none;
+}
+
+.post-preview:hover .post-preview-img-text{
+	display:block;
+	text-decoration: rgb(56, 168, 233) underline;
+	cursor:pointer; 
 }
 
 .desc-container {
@@ -113,19 +167,41 @@ body {
 	display:flex;
 	flex-direction:column;
 	align-items:flex-start;
+	text-decoration: none;
 }
 
+
+
 .preview-title {
+	margin-top:5px;
 	margin-bottom:5px;
 	font-size: 18px;
-	text-decoration: none;
 	color:rgba(9, 98, 231, 0.993)
+}
+
+.preview-title-link {
+	text-decoration: none;
+}
+
+.post-preview:hover .preview-title-link {
+	text-decoration: rgba(9, 98, 231, 0.993) underline;
+	cursor:pointer;
+}
+
+.preview-desc-link {
+	text-decoration: none;
 }
 
 .preview-desc {
 	font-size: 14px;
+	text-decoration: none;
+	color:rgba(10,15,55,1);
 }
 
 .container-grid {
-	margin-top: 20px;
+	position:absolute;
+	margin-top: 0px;
+	width: 90%;
+	left: 5%;
+	text-align: center;
 }
