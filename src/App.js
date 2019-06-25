@@ -50,7 +50,7 @@ const FourOhFour = () => {
 	return (
 			<div className="four-oh-four-container"> 
 				<div>
-					Congrats you hit the 404! 
+					Congrats, you hit the 404! 
 				</div>
 				<div>
 					Back to home! 
@@ -101,7 +101,7 @@ class Navbar extends Component {
 				<span className="navbar-toggle">
 					<i className="fas fa-bars" onClick={this.handleClick}></i>
 				</span>
-				<Link className="logo" to="/"> logo </Link>
+				<Link className="logo" to="/"> logos </Link>
 				<MainNav classy = {className} />
 			</nav>
 		)
@@ -114,12 +114,21 @@ const Test = () => {
 	)
 }
 
+const WebsiteTitle = () => {
+	return (
+		<div className="website-title">
+			{/* Strangled by Infinity */}
+		</div>
+	)
+}
+
 class App extends Component{
 	render() {
 		return (
 			<div>
 				<Router>
 					<Navbar />
+					{/* <WebsiteTitle /> */}
 					<div className="container-grid">
 						<Switch>
 							<Route path="/about" exact component={About} />
