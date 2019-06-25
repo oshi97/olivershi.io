@@ -109,7 +109,7 @@ const About = () => {
 					I've dragged longer than a boa
 
 					I thank you for 
-					reaching the end
+					reaching the send
 					but implore you to believe
 					that learning never ends
 					`}
