@@ -4,7 +4,7 @@ import "./AboutNav.css"
 
 const AboutNav = () => {
 	return (
-		<div className="navbar">
+		<div className="nav">
 		<ul className="nav-list">
 			<li>
 				<Link to="/about/poem"> Weird Poem </Link>
