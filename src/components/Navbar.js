@@ -33,9 +33,12 @@ class Navbar extends Component {
 		return (
 			<nav className="navbar">
 				<span className="navbar-toggle">
-					<i className="fas fa-bars" onClick={this.handleClick}></i>
+					<i className="material-icons" onClick={this.handleClick}>list</i>
 				</span>
-				<Link className="logo" to="/"> logos </Link>
+				<Link className="logo" to="/"> 
+					<i className="material-icons home-icon"> home </i> 
+					<div className="home-text"> Home </div>
+				</Link>
 				<MainNav classy={className} />
 			</nav>
 		)
