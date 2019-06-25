@@ -19,7 +19,7 @@ const Home = () => {
 					<PostPreview 
 						title="title2" 
 						date="fun time" 
-						desc="Longggggg longggg mannnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn long long long long long long  long long long  long long long  long long long  " 
+						desc="Longggggg longggg mannnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn long long long long long long  long long long  long long long  long long long long long long long long long  long long long  long long long  long long lonlong long long  long long long  long long lo " 
 						imgUrl="2.jpg" 
 						link="2" />
 				</li>
