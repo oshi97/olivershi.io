@@ -91,6 +91,7 @@ body {
 .post-preview-list {
 	list-style-type: none;
 	display:flex;
+	justify-content: space-evenly;
 	flex-wrap:wrap;
 }
 
@@ -104,8 +105,12 @@ body {
 	text-decoration: none;
 }
 
+.post-preview:hover {
+	cursor: pointer;
+}
+
 .post-preview:hover img {
-	opacity:0.2;
+	opacity:0.35;
 	cursor: pointer;
 }
 
@@ -204,4 +209,9 @@ body {
 	width: 90%;
 	left: 5%;
 	text-align: center;
+}
+
+.four-oh-four-container {
+	display:flex;
+	flex-direction: column;
 }

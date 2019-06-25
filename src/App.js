@@ -35,8 +35,12 @@ const Home = () => {
 				</li>
 				<li>				
 					<PostPreview title="title2" date="fun time" desc="My 7-Year Pursuit of How To Live A near-death experience, an improbable disorder, and a global quest for answers Dakar,  " imgUrl="2.jpg" link="2" />
-				</li><li>				
+				</li>
+				<li>				
 					<PostPreview title="title3" date="wheeee a watch" desc="lorem eisdfaasdf epsom salt" imgUrl="piano-beluga.gif" link="2" />
+				</li>
+				<li>				
+					<PostPreview title="title4" date="some time" desc="i am tree. lorem. ipsum." imgUrl="4.jpeg" link="2" />
 				</li>
 			</ul>
 	)
@@ -44,10 +48,14 @@ const Home = () => {
 
 const FourOhFour = () => {
 	return (
-			<div> 
-				Congrats you hit the 404! 
-				<Link to="/"> 
+			<div className="four-oh-four-container"> 
+				<div>
+					Congrats you hit the 404! 
+				</div>
+				<div>
 					Back to home! 
+				</div>
+				<Link to="/"> 
 					<img src={baseImgUrl + "/avocado.gif"}></img>
 				</Link>
 			</div>
