@@ -1,11 +1,11 @@
 import React, { Component } from "react"
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
-import "./App.css"
+import "./views/home/Home.css"
 
-import Home from "./components/Home.js"
-import Navbar from "./components/Navbar.js"
+import Home from "./views/home/Home.js"
+import Navbar from "./views/home/Navbar.js"
 import FourOhFour from "./components/FourOhFour.js"
-import About from "./components/About.js"
+import About from "./views/about/About.js"
 
 class App extends Component{
 	render() {
@@ -15,7 +15,7 @@ class App extends Component{
 					<Navbar />
 					<div className="container-grid">
 						<Switch>
-							<Route path="/about" exact component={About} />
+							<Route path="/about/" component={About} />
 							<Route path="/" exact component={Home} />
 							<Route component={FourOhFour} />
 						</Switch>

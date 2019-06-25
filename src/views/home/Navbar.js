@@ -1,12 +1,12 @@
 import React, { Component } from "react"
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
-import "../App.css"
+import "./Home.css"
 
 const MainNav = ({ classy }) => {
 	return (
 		<ul className={ classy }>
 			<li>
-				<Link to="/about"> What is this page? </Link>
+				<Link to="/about/poem"> What is this page? </Link>
 			</li>
 		</ul>
 	)

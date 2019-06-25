@@ -105,6 +105,8 @@ const Poem = () => {
 			that learning never ends
 
 			6-25-2019
+
+			Thank you for at least looking at my attempt at a poem
 			`}
 		</div>
   )

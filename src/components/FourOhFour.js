@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
-import "../App.css"
+import "../views/home/Home.css"
 
 const FourOhFour = () => {
 	return (
