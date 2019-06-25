@@ -1,7 +1,6 @@
 import React from "react"
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
 import "../App.css"
-const baseImgUrl = "/images"
 
 const FourOhFour = () => {
 	return (
@@ -13,7 +12,7 @@ const FourOhFour = () => {
 					Back to home! 
 				</div>
 				<Link to="/"> 
-					<img src={baseImgUrl + "/avocado.gif"}></img>
+					<img src={"images/avocado.gif"}></img>
 				</Link>
 			</div>
 	)
