@@ -13,7 +13,7 @@ const About = () => {
 					This idea is hard to deny
 
 					Put perhaps our wizened, shriveled haggard accusers
-					Should stop to think how all of these users users
+					Should stop to think how all of these users
 					Have found themselves to be thoughtless consumers?
 
 					Now, dear reader, you may start to wonder
@@ -35,7 +35,7 @@ const About = () => {
 					With great excitement he climbed all the way over
 					And stuck it onto his horn
 
-					This goat was mightingly 
+					This goat was mightily 
 					Still quite excitingly
 					With his newly skewered prize
 					Yet in the distance
@@ -71,8 +71,8 @@ const About = () => {
 					Till we find ourselves all shriveled
 					and dead
 
-					Tradationally we would store 
-					int our brains
+					Traditionally we would store 
+					into our brains
 					The new things that we graciously
 					learn each day
 					
@@ -101,7 +101,7 @@ const About = () => {
 					And here you might find
 					Some of the debris
 					That washes up on the shores
-					From each of my day's thinkings
+					From each day's thinkings
 
 					And if you've made it to the end
 					of this dreadfully long poem
