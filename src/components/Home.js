@@ -19,7 +19,7 @@ const Home = () => {
 					<PostPreview 
 						title="title2" 
 						date="fun time" 
-						desc="My 7-Year Pursuit of How To Live A near-death experience, an improbable disorder, and a global quest for answers Dakar,  " 
+						desc="Longggggg longggg mannnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn long long long long long long  long long long  long long long  long long long  " 
 						imgUrl="2.jpg" 
 						link="2" />
 				</li>
