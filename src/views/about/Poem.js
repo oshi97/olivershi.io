@@ -106,7 +106,7 @@ const Poem = () => {
 
 			6-25-2019
 
-			Thank you for at least looking at my attempt at a poem
+			Thanks for reading my attempt at a poem
 			`}
 		</div>
   )

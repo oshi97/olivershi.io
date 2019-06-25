@@ -1,3 +1,8 @@
+/* 
+I refuse to refactor this montrocity
+...
+Gimme at least a month
+*/
 body {
 	font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 }
@@ -231,10 +236,8 @@ body {
 }
 
 .container-grid {
-	position: absolute;
 	margin-top: 0px;
-	width: 90%;
-	left: 5%;
+	width: 100%;
 	text-align: center;
 	margin-bottom:40px;
 }

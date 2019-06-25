@@ -4,13 +4,19 @@ import "./AboutNav.css"
 
 const AboutNav = () => {
 	return (
-		<ul className="about-nav">
+		<div className="navbar">
+		<ul className="nav-list">
 			<li>
 				<Link to="/about/poem"> Weird Poem </Link>
-        <Link to="/about/actual-english"> Actual English </Link>
-        <Link to="/about/me"> The Creator (of the site) </Link>
+			</li>
+			<li>
+				<Link to="/about/actual-english"> Actual English </Link>
+				</li>
+			<li>
+				<Link to="/about/me"> The Creator (of the site) </Link>
 			</li>
 		</ul>
+		</div>
 	)
 }
 
