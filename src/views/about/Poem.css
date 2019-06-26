@@ -5,4 +5,6 @@
   width:80%;
   display:block;
   white-space: pre-line;
+  grid-column: 2/3;
+  grid-row: 1/2;
 }

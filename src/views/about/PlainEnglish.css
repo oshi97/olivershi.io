@@ -1,0 +1,19 @@
+
+.plain-english {
+  font-size: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  white-space: pre-line;
+  word-wrap: break-word;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  max-width: 600px;
+  text-align:center;
+  justify-self:center;
+  margin-top:5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .plain-english {
+    margin-top:0px;
+  }
+}
