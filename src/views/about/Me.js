@@ -5,9 +5,9 @@ const Me = () => {
 	return (
     <div className="me-container">
       <div className="me">{`
-        I'm just trying to find out who I am. And learn things. 
+        Hi, I'm Oliver! I'm not really sure what to say beyond that. 
         
-        Here are some pictures I like.
+        Here are some pictures I like I guess.
         `}
 		  </div>
       <img className="me-pic" src="/images/turtle.png"></img>
