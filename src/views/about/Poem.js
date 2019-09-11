@@ -34,10 +34,10 @@ const Poem = () => {
 			the watermelon
 			dancing under his knees
 			brought tears to his eyes
-      that nobody could see
+      		that nobody could see
       
-      Now, dear reader, you may start to wonder
-      With such a strange a rhyme
+			Now, dear reader, you may start to wonder
+			With such a strange a rhyme
 			Whatever the klucker is this ridiculous pucker?
 			Trying to tell me here?
 
