@@ -29,13 +29,9 @@ class Test extends React.Component {
   }
 }
 
-
-
 const App = () => (
 	<Router>
-		<Security {...config}>
-			<Route path='/admin' exact component={Test}/>
-		</Security>
+		<Route path='/admin' exact component={Test}/>
 	</Router>
 )
 
