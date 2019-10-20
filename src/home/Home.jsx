@@ -19,7 +19,7 @@ class Test extends React.Component {
 
 	sendPost() {
 		axios.post(
-			'http://olivershi.io/api/posts',
+			'https://olivershi.io/api/posts',
 			{ example: 'data' },
 			{ headers: { 'Content-Type': 'application/json' } }
 		)
