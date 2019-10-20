@@ -3,6 +3,7 @@ const path = require('path')
 const serveIndex = require('serve-index')
 const fs = require('fs')
 const cors = require('cors')
+const https = require('https')
 
 const app = express()
 const PORT = 3000
@@ -72,5 +73,8 @@ if (process.env.NODE_ENV === undefined) {
   process.env.ENV = process.env.NODE_ENV
 }
 console.log('*** \n\n\nRUNNING IN - ' + process.env.ENV + '\n\n\n***')
-app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))
+https.createServer({
+  key: fs.readFileSync('localhost.key'),
+  cert: fs.readFileSync('localhost.cert')
+}, app).listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))
 
