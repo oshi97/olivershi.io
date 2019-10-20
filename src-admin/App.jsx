@@ -10,8 +10,9 @@ class Test extends React.Component {
 	}
 
 	sendPost() {
+		const baseUrl = process.env.NODE_ENV === 'production' ? 'https://olivershi.io' : 'http://localhost:3000'
 		axios.post(
-			'https://olivershi.io/api/posts',
+			baseUrl + '/api/posts',
 			{ example: 'data' },
 			{ headers: { 'Content-Type': 'application/json' } }
 		)
@@ -23,19 +24,16 @@ class Test extends React.Component {
         <button onClick={this.sendPost.bind(this)}>
 					Write jSON!@!
 				</button>
+				{process.env.NODE_ENV}
 			</div>
     );
   }
 }
 
+
 const App = () => (
 	<Router>
-		<div className='container-grid'>
-			<Switch>
-				<Route path='/admin' component={Test}/>
-				<Redirect to='/admin'/>
-			</Switch>
-		</div>
+		<Route path='/admin' exact={true} component={Test}/>
 	</Router>
 )
 

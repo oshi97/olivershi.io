@@ -3,7 +3,7 @@ const webpack = require("webpack");
 
 module.exports = {
   entry: {
-    bundle: "./src/index.js",
+    bundle: "./src/App",
     admin: "./src-admin/App"
   },
   mode: "development",
