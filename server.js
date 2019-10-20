@@ -5,6 +5,10 @@ const fs = require('fs');
 const app = express()
 const port = 3000
 
+if (!fs.existsSync(path.join(__dirname + '/posts'))) {
+  fs.mkdirSync(path.join(__dirname + '/posts'))
+}
+
 app.use('/dist', express.static('dist'))
 app.use('/public/images', express.static('public/images'))
 app.use('/public/sheets', express.static('public/sheets'), serveIndex('sheets', {'icons': true}))
@@ -22,6 +26,7 @@ app.post('/api/posts', (req, res) => {
     date: '10/19',
     content: 'test test testest'
   }
+
   let data = JSON.stringify(post, null, 2);
   fs.writeFile(path.join(__dirname + '/posts/student-' + Math.random() + '.json'), data, (err) => {
       if (err) {
