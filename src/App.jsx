@@ -31,9 +31,7 @@ const App = () => (
 				<Route path='/about' component={About}/>
 				<Route path='/home' component={Home}/>
 				<Route path='/sheets' component={Sheets}/>
-				<Route>
-					<Redirect to='/home/'/>
-				</Route>
+				<Redirect to='/home'/>
 			</Switch>
 		</div>
 	</Router>

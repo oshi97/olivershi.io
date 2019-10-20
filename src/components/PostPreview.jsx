@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import Image from '../components/Image'
 import '../home/Home.css'
 
-const baseImgUrl = '/public/images'
 // image url, title, link, date, description
 const PostPreview = ({ link, desc, date, imgUrl, title }) => {
 	return (

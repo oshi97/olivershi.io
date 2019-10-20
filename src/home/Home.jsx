@@ -5,11 +5,17 @@ import PostPreview from '../components/PostPreview'
 import {Editor, EditorState, RichUtils} from 'draft-js';
 import axios from 'axios';
 
-const HomeRouter = () => (
-	<Switch>
-		<Route path='/home/draft' exact component={Test} />
-		<Route component={Default}/>
-	</Switch>
+const Default = () => (
+	<ul className='post-preview-list'>
+		<li>				
+			<PostPreview 
+				title='title3' 
+				date='wheeee a watch' 
+				desc='lorem eisdfaasdf epsom salt' 
+				imgUrl='piano-beluga.gif' 
+				link='home/draft' />
+		</li>
+	</ul>
 )
 
 class Test extends React.Component {
@@ -36,17 +42,11 @@ class Test extends React.Component {
   }
 }
 
-const Default = () => (
-	<ul className='post-preview-list'>
-		<li>				
-			<PostPreview 
-				title='title3' 
-				date='wheeee a watch' 
-				desc='lorem eisdfaasdf epsom salt' 
-				imgUrl='piano-beluga.gif' 
-				link='draft' />
-		</li>
-	</ul>
+const HomeRouter = () => (
+	<Switch>
+		<Route path='/home/draft' exact component={Test} />
+		<Route component={Default}/>
+	</Switch>
 )
 
 const Home = () => (
