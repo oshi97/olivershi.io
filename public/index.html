@@ -13,22 +13,26 @@
     crossorigin="anonymous">
   </script>
   <script>
-    var smileys = [':D',':)','=)','=D','xD','㋡','㋛','☺','☻','シ','ッ','ツ','ヅ','⍡','⍢','⍣','⍥','⍩']
-    var title_length = 5
-    var replace_with_seven = Math.floor(Math.random() * title_length)
-    $(document).ready(function() {
-      document.title = ''
-      for (var i = 0; i < title_length; i++) {
-        if (i === replace_with_seven) {
-          document.title += smileys[7] + '​​\u205f​​​'
-        } else {
-          var x = Math.floor(Math.random() * smileys.length)
-          document.title += smileys[x] + '​​\u205f​​​';
-        }
-      }
-    })
+    // (function smileyify() {
+    //   var smileys = [':D',':)','=)','=D','xD','㋡','㋛','☺','☻','シ','ッ','ツ','ヅ','⍡','⍢','⍣','⍥','⍩']
+    //   var title_length = 5
+    //   var replace_with_seven = Math.floor(Math.random() * title_length)
+    //   $(document).ready(function() {
+    //     // document.title = ''
+    //     for (var i = 0; i < title_length; i++) {
+    //       if (i === replace_with_seven) {
+    //         // document.title += smileys[7] + '​​\u205f​​​'
+    //         console.log(smileys[7] + '​​\u205f​​​')
+    //       } else {
+    //         var x = Math.floor(Math.random() * smileys.length)
+    //         // document.title += smileys[x] + '​​\u205f​​​';
+    //         console.log(smileys[x] + '​​\u205f​​​')
+    //       }
+    //     }
+    //   })
+    // })()
   </script>
-  <title> :) </title>
+  <title> Lost in the 21st Century </title>
 </head>
 
 <body>
