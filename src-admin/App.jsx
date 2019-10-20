@@ -2,10 +2,6 @@ import React from 'react'
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom'
 import axios from 'axios'
-import Admin from './Admin'
-import LoginForm from './LoginForm'
-
-import { Security, SecureRoute, ImplicitCallback } from '@okta/okta-react';
 
 class Test extends React.Component {
   constructor(props) {
@@ -33,20 +29,12 @@ class Test extends React.Component {
   }
 }
 
-const config = {
-  issuer: 'https://dev-399526.okta.com/oauth2/default',
-  redirectUri: window.location.origin + '/admin/implicit/callback',
-  clientId: '0oa1mkc294tzA6aOS357',
-  pkce: true
-}
+
 
 const App = () => (
 	<Router>
 		<Security {...config}>
-			<Route path='/admin' exact component={LoginForm}/>
-			<Route path='/admin/okta' exact={true} component={Admin}/>
-			{/* <Route path='/admin/implicit/callback' component={ImplicitCallback}/> */}
-			<SecureRoute path='/admin' exact={true} component={Test}/>
+			<Route path='/admin' exact component={Test}/>
 		</Security>
 	</Router>
 )

@@ -3,42 +3,6 @@ const path = require('path')
 const serveIndex = require('serve-index')
 const fs = require('fs')
 const cors = require('cors')
-const OktaJwtVerifier = require('@okta/jwt-verifier');
-
-const oktaJwtVerifier = new OktaJwtVerifier({
-  issuer: 'https://dev-399526.okta.com/oauth2/default',
-  clientId: '0oa1mkc294tzA6aOS357',
-  assertClaims: {
-    aud: 'admin://default',
-  },
-});
-
-/**
- * A simple middleware that asserts valid access tokens and sends 401 responses
- * if the token is not present or fails validation.  If the token is valid its
- * contents are attached to req.jwt
- */
-function authenticationRequired(req, res, next) {
-  console.log(req.headers)
-  const authHeader = req.headers.authorization || ''
-  const match = authHeader.match(/Bearer (.+)/)
-
-  if (!match) {
-    return res.status(401).end()
-  }
-
-  const accessToken = match[1]
-  const expectedAudience = 'admin://default'
-
-  return oktaJwtVerifier.verifyAccessToken(accessToken, expectedAudience)
-    .then((jwt) => {
-      req.jwt = jwt
-      next()
-    })
-    .catch((err) => {
-      res.status(401).send(err.message)
-    })
-}
 
 const app = express()
 const PORT = 3000
@@ -62,10 +26,6 @@ app.use('/dist', express.static('dist'))
 app.use('/public/images', express.static('public/images'))
 app.use('/public/sheets', express.static('public/sheets'), serveIndex('sheets', {'icons': true}))
 
-app.get('/secure', authenticationRequired, (req, res) => {
-  res.json(req.jwt)
-})
-
 app.get('/admin*', (req, res) => {
   res.sendFile(path.join(__dirname + '/public/admin.html'))
 })
@@ -78,7 +38,7 @@ app.get('/api/posts/:postId', cors(corsOptions), (req, res) => {
   })
 })
 
-app.post('/api/posts', cors(corsOptions), authenticationRequired, (req, res) => {
+app.post('/api/posts', cors(corsOptions), (req, res) => {
   let post = {
     date: '10/19',
     content: 'test test testest'
