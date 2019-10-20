@@ -2,7 +2,10 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    bundle: "./src/index.js",
+    admin: "./src-admin/App"
+  },
   mode: "development",
   module: {
     rules: [
@@ -21,8 +24,7 @@ module.exports = {
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
     path: path.resolve(__dirname, "dist/"),
-    publicPath: "/dist/",
-    filename: "bundle.js"
+    path: __dirname + '/dist/',
   },
   devServer: {
     contentBase: path.join(__dirname, "public/"),

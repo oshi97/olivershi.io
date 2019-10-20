@@ -43,7 +43,7 @@ function authenticationRequired(req, res, next) {
 const app = express()
 const PORT = 3000
 
-let whitelist = ['https://olivershi.io']
+let whitelist = ['https://olivershi.io', 'http://localhost:3000']
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
@@ -62,7 +62,8 @@ app.use('/dist', express.static('dist'))
 app.use('/public/images', express.static('public/images'))
 app.use('/public/sheets', express.static('public/sheets'), serveIndex('sheets', {'icons': true}))
 
-app.get('/admin', cors(corsOptions), authenticationRequired, (req, res) => {
+// app.get('/admin', cors(corsOptions), authenticationRequired, (req, res) => {
+app.get('/admin', (req, res) => {
   res.sendFile(path.join(__dirname + '/public/admin.html'))
 });
 
