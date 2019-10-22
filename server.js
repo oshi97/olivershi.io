@@ -6,6 +6,8 @@ const cors = require('cors')
 const crypto = require('crypto');
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
+const dotenv = require('dotenv');
+dotenv.config();
 
 // because windows is just a little bit special
 if (process.env.NODE_ENV === undefined) {
@@ -13,8 +15,6 @@ if (process.env.NODE_ENV === undefined) {
   process.env.USERNAME = hash('user')
   process.env.PASSWORD = hash('pass')
 } else {
-  const dotenv = require('dotenv');
-  dotenv.config();
   process.env.ENV = process.env.NODE_ENV
   if (!process.env.USERNAME || !process.env.PASSWORD) {
     console.log('***\n HI me, please set up your env file thanks \n ***')
