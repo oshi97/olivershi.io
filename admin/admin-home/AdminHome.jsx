@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import './AdminHome.css'
 import PostPreview from '../../components/PostPreview'
-import Draft from 'draft-js'
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 
 const Default = () => (
 	<React.Fragment>
@@ -19,11 +19,23 @@ const Default = () => (
 	</React.Fragment>
 )
 
-const NewPost = () => (
-	<div>
-		Add a new post
-	</div>
-)
+class NewPost extends React.Component {
+	componentDidMount() {
+		ClassicEditor
+		.create( document.querySelector( '#editor' ) )
+		.catch( error => {
+				console.error( error );
+		} );
+	}
+
+	render() {
+		return (
+			<div>
+				<textarea name="content" id="editor"></textarea>
+			</div>
+		)
+	}
+}
 
 const AdminHomeRouter = () => (
 	<Switch>
