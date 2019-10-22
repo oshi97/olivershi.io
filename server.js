@@ -54,7 +54,7 @@ app.use('/dist', express.static('dist'))
 app.use('/public/images', express.static('public/images'))
 app.use('/public/sheets', express.static('public/sheets'), serveIndex('sheets', {'icons': true}))
 
-let SECRET = null
+let SECRET = process.env.ENV === 'DEV' ? 'dev-secret' : hash(Math.random().toString(36).substring(7))
 let token = null
 let expirationDate = null
 
@@ -75,7 +75,9 @@ app.post('/admin', (req, res) => {
   const { username, password } = req.body;
   if (hasValidCookie(req.cookies) || checkLogin(username, password)) {
     expirationDate = new Date(Date.now() + 21600000).toString()
-    SECRET = hash(Math.random().toString(36).substring(7))
+    if (process.env.ENV !== 'DEV') {
+      SECRET = hash(Math.random().toString(36).substring(7))
+    }
     token = hash(expirationDate + SECRET);
     res.cookie('expirationDate', expirationDate, { maxAge: 21600000 })
     res.cookie('token', token, { maxAge: 21600000 })

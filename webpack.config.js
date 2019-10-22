@@ -4,7 +4,7 @@ const webpack = require("webpack");
 module.exports = {
   entry: {
     bundle: "./src/App",
-    admin: "./src-admin/App"
+    admin: "./admin/App"
   },
   mode: "development",
   module: {

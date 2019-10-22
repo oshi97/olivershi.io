@@ -30,9 +30,9 @@ const App = () => (
 		<div className='container-grid'>
 			<Switch>
 				<Route path='/about' component={About}/>
-				<Route path='/home' component={Home}/>
 				<Route path='/sheets' component={Sheets}/>
-				<Redirect to='/home'/>
+				<Route path='/' exact component={Home}/>
+				<Redirect to='/'/>
 			</Switch>
 		</div>
 	</Router>

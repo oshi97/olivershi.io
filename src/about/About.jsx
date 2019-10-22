@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from '../components/Image'
+import Image from '../../components/Image'
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom'
 import './About.css'
 import '../home/Home.css'
