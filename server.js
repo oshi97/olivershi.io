@@ -51,8 +51,9 @@ if (!fs.existsSync(path.join(__dirname + '/posts'))) {
 }
 
 app.use('/dist', express.static('dist'))
+app.use('/.well-known', express.static('public/well-known'))
 app.use('/public/images', express.static('public/images'))
-app.use('/public/sheets', express.static('public/sheets'), serveIndex('sheets', {'icons': true}))
+app.use('/sheets', express.static('public/sheets'), serveIndex('public/sheets', {'icons': true}))
 
 let SECRET = process.env.ENV === 'DEV' ? 'dev-secret' : hash(Math.random().toString(36).substring(7))
 let token = null
