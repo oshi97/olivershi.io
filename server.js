@@ -51,7 +51,7 @@ if (!fs.existsSync(path.join(__dirname + '/posts'))) {
 }
 
 app.use('/dist', express.static('dist'))
-app.use('/.well-known', express.static('public/well-known'))
+app.use('/.well-known/pki-validation', express.static('public/ssl'))
 app.use('/public/images', express.static('public/images'))
 app.use('/sheets', express.static('public/sheets'), serveIndex('public/sheets', {'icons': true}))
 
