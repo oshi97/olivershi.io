@@ -1,7 +1,8 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom'
 import './Home.css'
 import PostPreview from '../../components/PostPreview'
+import AudioRecorder from '../posts/AudioRecorder'
 
 const Default = () => (
 	<ul className='post-preview-list'>
@@ -11,19 +12,17 @@ const Default = () => (
 				date='wheeee a watch' 
 				desc='lorem eisdfaasdf epsom salt' 
 				imgUrl='piano-beluga.gif' 
-				link='/newPost' />
+				link='/newPost'/>
 		</li>
 	</ul>
 )
 
-const HomeRouter = () => (
-	<Switch>
-		<Route component={Default}/>
-	</Switch>
-)
 
 const Home = () => (
-	<HomeRouter/>
+	<Switch>
+		<Route path='/newPost' component={AudioRecorder}/>
+		<Route component={Default}/>
+	</Switch>
 )
 
 export default Home

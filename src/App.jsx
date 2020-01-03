@@ -24,6 +24,12 @@ const Navbar = () => (
 	</nav>
 )
 
+const AudioRecorder = () => (
+	<div>
+		Poopers
+	</div>
+)
+
 const App = () => (
 	<Router>
 		<Navbar />
@@ -31,11 +37,10 @@ const App = () => (
 			<Switch>
 				<Route path='/about' component={About}/>
 				<Route path='/sheets' component={Sheets}/>
-				<Route path='/' exact component={Home}/>
-				<Redirect to='/'/>
+				<Route path='/' component={Home}/>
 			</Switch>
 		</div>
 	</Router>
 )
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"))
