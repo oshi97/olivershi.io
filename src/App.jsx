@@ -60,7 +60,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className='app'>
-				Yahallo!!~
+				Yahallo!!~!!!
 				<Directory {...this.state.sheetsJson}/>
 			</div>
 		)

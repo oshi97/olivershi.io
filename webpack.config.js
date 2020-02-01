@@ -2,7 +2,7 @@ const path = require('path');
 
 const entry = { bundle: './src/App' };
 const resolve = { extensions: ['*', '.js', '.jsx'] }
-const output = { path: path.resolve(__dirname, 'dist/') }
+const output = { path: path.resolve(__dirname, 'docs/') }
 
 module.exports = (_, argv) => {
   let config = {
@@ -26,14 +26,5 @@ module.exports = (_, argv) => {
     },
   };
 
-  if (argv.mode === 'development') {
-    return config;
-  }
-
-  return {
-    ...config,
-    output: {
-      path: path.resolve(__dirname, 'docs/')
-    }
-  }
+  return config
 };
