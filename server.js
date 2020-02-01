@@ -1,8 +1,13 @@
 const express = require('express')
 const path = require('path')
 const serveIndex = require('serve-index')
+var cors = require('cors')
+const spawn = require('child_process').spawn
+
+spawn('python', ['sheets.py'], {cwd: path.join(__dirname, './public/sheets/')})
 
 const app = express()
+app.use(cors())
 const PORT = 3000
 
 app.use('/dist', express.static('dist'))
