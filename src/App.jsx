@@ -2,8 +2,7 @@ import React from 'react'
 import ReactDOM from "react-dom"
 import { sheetsJson } from './tools/ajax'
 import './App.css'
-
-const sheetsRoot = 'public/sheets/'
+import sheetsRoot from './consts/sheetsRoot'
 
 /**
  * 
@@ -50,7 +49,7 @@ class App extends React.Component {
 	}
 
 	componentDidMount() {
-		sheetsJson('public/sheets/dir.json').then(res => {
+		sheetsJson().then(res => {
 			const sheetsJson = JSON.parse(res.response)
 			this.setState({ sheetsJson })
 		}).catch(err => {
@@ -61,6 +60,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className='app'>
+				Yahallo!!~
 				<Directory {...this.state.sheetsJson}/>
 			</div>
 		)

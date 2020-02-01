@@ -1,3 +1,5 @@
+import sheetsRoot from '../consts/sheetsRoot'
+
 /**
  * 
  * @param {string} url 
@@ -31,5 +33,5 @@ function ajax(url, method='GET') {
 }
 
 export function sheetsJson() {
-  return ajax('/public/sheets/dir.json')
+  return ajax(sheetsRoot + 'dir.json')
 }
