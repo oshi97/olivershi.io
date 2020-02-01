@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npm-run-all --parallel webpack node",
     "build": "npx webpack --mode production",
+    "sheets": "python ./public/sheets/sheets.py",
     "node": "node server.js",
     "webpack": "npx webpack -w --mode development"
   },

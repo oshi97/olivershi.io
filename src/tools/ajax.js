@@ -15,7 +15,6 @@ function ajax(url, method='GET') {
   let xhttp = new XMLHttpRequest()
   return new Promise((resolve, reject) => {
     xhttp.onreadystatechange = () => {
-      console.log(xhttp)
       if (xhttp.readyState !== 4) 
         return;
       if (xhttp.status >= 200 && xhttp.status < 300)

@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from "react-dom"
 import { sheetsJson } from './tools/ajax'
+import './App.css'
 
 const sheetsRoot = 'public/sheets/'
 
@@ -11,7 +12,6 @@ const sheetsRoot = 'public/sheets/'
  */
 function routeDirEntry(dirEntry, rootDir) {
 	if (typeof dirEntry === 'string') {
-		console.log(dirEntry, rootDir);
 		return <File
 			name={dirEntry}
 			full_path={sheetsRoot + rootDir + dirEntry}
@@ -24,17 +24,18 @@ function routeDirEntry(dirEntry, rootDir) {
 
 const Directory = (props) => {
 	const { contents, name, full_path } = props
-	console.log(props)
 	return (
-		<div>
+		<div className='dir'>
 			{name || './'}
-			{contents && contents.map(dirEntry => routeDirEntry(dirEntry, full_path))}
+			<div className='dir-content'>
+				{contents && contents.map(dirEntry => routeDirEntry(dirEntry, full_path))}
+			</div>
 		</div>
 	);
 }
 
 const File = ({ name, full_path }) => (
-	<div>
+	<div className='file'>
 		<a href={full_path}>{name}</a>
 	</div>
 )
@@ -58,7 +59,6 @@ class App extends React.Component {
 	}
 
 	render() {
-		console.log('start', this.state.sheetsJson)
 		return (
 			<div className='app'>
 				<Directory {...this.state.sheetsJson}/>
