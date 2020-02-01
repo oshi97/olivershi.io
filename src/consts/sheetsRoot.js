@@ -1,1 +1,1 @@
-export default 'docs/sheets/';
+export default 'sheets/';
