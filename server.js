@@ -3,7 +3,7 @@ const path = require('path')
 var cors = require('cors')
 const spawn = require('child_process').spawn
 
-spawn('python', ['sheets.py'], {cwd: path.join(__dirname, './docs/sheets/')})
+spawn('python', ['sheets.py'], {cwd: path.join(__dirname, './docs/public/sheets/')})
 
 const app = express()
 app.use(cors())

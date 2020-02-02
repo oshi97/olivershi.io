@@ -1,4 +1,4 @@
-import sheetsRoot from '../consts/sheetsRoot'
+import { sheetsRoot } from './consts'
 
 /**
  * 
