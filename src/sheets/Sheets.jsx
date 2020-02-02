@@ -41,18 +41,19 @@ export default class Sheets extends React.Component {
     constructor(props) {
 		super(props)
 		this.state = {
-			sheetsJson: {}
+			sheetsJson: props.sheetsJson || {}
 		}
-		this.sheetsJson = {}
 	}
 
 	componentDidMount() {
-		sheetsJson().then(res => {
-			const sheetsJson = JSON.parse(res.response)
-			this.setState({ sheetsJson })
-		}).catch(err => {
-			console.error(err)
-		})
+        if (!this.state.sheetsJson) {
+            sheetsJson().then(res => {
+                const sheetsJson = JSON.parse(res.response)
+                this.setState({ sheetsJson })
+            }).catch(err => {
+                console.error(err)
+            })
+        }
     }
 
     render() {
