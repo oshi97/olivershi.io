@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom'
 import './App.css'
 import { Link, Switch } from './router/Router'
 import Sheets from './sheets/Sheets'
+import Home from './home/Home'
 
 class App extends React.Component {
 	render() {
 		const routes = {
-			'/sheets': <Sheets/>
+			'/sheets': <Sheets/>,
+			'/': <Home/>
 		};
 		return (
 			<div className='app'>
