@@ -17,6 +17,10 @@ const Navbar = () => (
 			<Image src='rem.gif'/>
 			オタク
 		</Link>
+		<a className='item' href='/dome/index.html' target='_blank'>
+			<i className='material-icons'>videogame_asset</i>
+			Dome
+		</a>
 	</div>
 )
 
