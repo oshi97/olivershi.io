@@ -6,7 +6,7 @@ import json
 
 dirFile = 'docs/data/sheets.json'
 
-def scan(currentDir = './docs/public/sheets'):
+def scan(currentDir = './public/sheets'):
   obj = {}
   scanDir = os.scandir(currentDir)
   currentDir = currentDir.replace('\\', '/')
@@ -27,9 +27,10 @@ def scan(currentDir = './docs/public/sheets'):
   obj['contents'] = contents
   return obj
 
-def write(dirs = {}, name = dirFile):
+def write(dirs = {}, name = '../' + dirFile):
   with io.open(name, "w", encoding="utf-8") as f:
     json_str = json.dumps(dirs)
     f.write(json_str)
 
+os.chdir('docs')
 write(scan())

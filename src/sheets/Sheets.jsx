@@ -1,5 +1,4 @@
 import React from 'react'
-import { sheetsRoot } from '../tools/consts'
 import { fetchSheets } from '../tools/ajax'
 import './Sheets.css'
 
@@ -10,9 +9,10 @@ import './Sheets.css'
  */
 function routeDirEntry(dirEntry, rootDir) {
 	if (typeof dirEntry === 'string') {
+		console.log(dirEntry, rootDir)
 		return <File
 			name={dirEntry}
-			full_path={sheetsRoot + rootDir + dirEntry}
+			full_path={rootDir + dirEntry}
 			key={rootDir + dirEntry}
 		/>;
 	} else if (typeof dirEntry === 'object') {

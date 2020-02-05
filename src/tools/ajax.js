@@ -1,5 +1,3 @@
-import { sheetsRoot } from './consts'
-
 /**
  * 
  * @param {string} url 
@@ -14,11 +12,11 @@ function _ajax(url, isStatic = false) {
       })
     })
   }
-  if (isStatic && localStorage.getItem(url)) {
+  if (isStatic && sessionStorage.getItem(url)) {
     return new Promise(resolve => {
       resolve({
         status: 200,
-        response: localStorage.getItem(url)
+        response: sessionStorage.getItem(url)
       })
     })
   }
@@ -29,7 +27,7 @@ function _ajax(url, isStatic = false) {
         return;
       if (xhttp.status >= 200 && xhttp.status < 300) {
         if (isStatic) {
-          localStorage.setItem(url, xhttp.response)
+          sessionStorage.setItem(url, xhttp.response)
         }
         resolve(xhttp)
       }
@@ -42,5 +40,5 @@ function _ajax(url, isStatic = false) {
 }
 
 export function fetchSheets() {
-  return _ajax(sheetsRoot + 'sheets.json', true)
+  return _ajax('data/sheets.json', true)
 }
