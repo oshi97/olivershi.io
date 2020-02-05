@@ -1,1 +1,1 @@
-export const sheetsRoot = 'public/sheets/';
+export const sheetsRoot = 'data/';

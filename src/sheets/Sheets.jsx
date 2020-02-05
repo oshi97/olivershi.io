@@ -1,6 +1,6 @@
 import React from 'react'
 import { sheetsRoot } from '../tools/consts'
-import { sheetsJson } from '../tools/ajax'
+import { fetchSheets } from '../tools/ajax'
 import './Sheets.css'
 
 /**
@@ -42,17 +42,15 @@ export default class Sheets extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			sheetsJson: JSON.parse(localStorage.getItem('sheetsJson')) || {}
+			sheetsJson: {}
 		}
 	}
 
 	componentDidMount() {
 		if (Object.entries(this.state.sheetsJson).length === 0) {
-			sheetsJson().then(res => {
-				const sheetsJson = res.response
-				localStorage.setItem('sheetsJson', sheetsJson)
+			fetchSheets().then(res => {
 				this.setState({ 
-					sheetsJson: JSON.parse(sheetsJson) 
+					sheetsJson: JSON.parse(res.response)
 				})
 			}).catch(err => {
 				console.error(err)

@@ -5,7 +5,7 @@ import { sheetsRoot } from './consts'
  * @param {string} url 
  * @param {string} method 
  */
-function ajax(url, method='GET') {
+function _ajax(url, isStatic = false) {
   if (!url || url === '') {
     return new Promise((_, reject) => {
       reject({
@@ -14,24 +14,33 @@ function ajax(url, method='GET') {
       })
     })
   }
+  if (isStatic && localStorage.getItem(url)) {
+    return new Promise(resolve => {
+      resolve({
+        status: 200,
+        response: localStorage.getItem(url)
+      })
+    })
+  }
   let xhttp = new XMLHttpRequest()
   return new Promise((resolve, reject) => {
     xhttp.onreadystatechange = () => {
       if (xhttp.readyState !== 4) 
         return;
-      if (xhttp.status >= 200 && xhttp.status < 300)
+      if (xhttp.status >= 200 && xhttp.status < 300) {
+        if (isStatic) {
+          localStorage.setItem(url, xhttp.response)
+        }
         resolve(xhttp)
+      }
       else
-        reject({
-          status: xhttp.status,
-          statusText: xhttp.statusText
-        })
+        reject(xhttp)
     }
-    xhttp.open(method, url)
+    xhttp.open('GET', url)
     xhttp.send()
   })
 }
 
-export function sheetsJson() {
-  return ajax(sheetsRoot + 'sheets.json')
+export function fetchSheets() {
+  return _ajax(sheetsRoot + 'sheets.json', true)
 }
