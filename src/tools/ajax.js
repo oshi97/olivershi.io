@@ -33,5 +33,5 @@ function ajax(url, method='GET') {
 }
 
 export function sheetsJson() {
-  return ajax(sheetsRoot + 'dir.json')
+  return ajax(sheetsRoot + 'sheets.json')
 }

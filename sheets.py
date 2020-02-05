@@ -4,9 +4,9 @@ import os
 import io
 import json
 
-dirFile = 'dir.json'
+dirFile = 'docs/data/sheets.json'
 
-def scan(currentDir = './'):
+def scan(currentDir = './docs/public/sheets'):
   obj = {}
   scanDir = os.scandir(currentDir)
   currentDir = currentDir.replace('\\', '/')

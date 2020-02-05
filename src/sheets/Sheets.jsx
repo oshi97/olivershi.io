@@ -1,6 +1,7 @@
 import React from 'react'
 import { sheetsRoot } from '../tools/consts'
 import { sheetsJson } from '../tools/ajax'
+import './Sheets.css'
 
 /**
  * 
@@ -14,8 +15,8 @@ function routeDirEntry(dirEntry, rootDir) {
 			full_path={sheetsRoot + rootDir + dirEntry}
 			key={rootDir + dirEntry}
 		/>;
-	} else if (typeof dirEntry === 'object')  {
-		return (<Directory {...dirEntry} key={dirEntry.full_path}/>)
+	} else if (typeof dirEntry === 'object') {
+		return (<Directory {...dirEntry} key={dirEntry.full_path} />)
 	}
 }
 
@@ -38,27 +39,30 @@ const File = ({ name, full_path }) => (
 )
 
 export default class Sheets extends React.Component {
-    constructor(props) {
+	constructor(props) {
 		super(props)
 		this.state = {
-			sheetsJson: props.sheetsJson || {}
+			sheetsJson: JSON.parse(localStorage.getItem('sheetsJson')) || {}
 		}
 	}
 
 	componentDidMount() {
-        if (!this.state.sheetsJson) {
-            sheetsJson().then(res => {
-                const sheetsJson = JSON.parse(res.response)
-                this.setState({ sheetsJson })
-            }).catch(err => {
-                console.error(err)
-            })
-        }
-    }
+		if (Object.entries(this.state.sheetsJson).length === 0) {
+			sheetsJson().then(res => {
+				const sheetsJson = res.response
+				localStorage.setItem('sheetsJson', sheetsJson)
+				this.setState({ 
+					sheetsJson: JSON.parse(sheetsJson) 
+				})
+			}).catch(err => {
+				console.error(err)
+			})
+		}
+	}
 
-    render() {
-        return (
-            <Directory {...this.state.sheetsJson}/>
-        );
-    }
+	render() {
+		return (
+			<Directory {...this.state.sheetsJson} />
+		);
+	}
 }
