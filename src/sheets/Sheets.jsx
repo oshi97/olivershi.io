@@ -9,7 +9,6 @@ import './Sheets.css'
  */
 function routeDirEntry(dirEntry, rootDir) {
 	if (typeof dirEntry === 'string') {
-		console.log(dirEntry, rootDir)
 		return <File
 			name={dirEntry}
 			full_path={rootDir + dirEntry}
