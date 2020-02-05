@@ -12,6 +12,10 @@ export default class Switch extends React.Component {
         window.addEventListener('history.pushstate', () => {
             this.setState({ pathname: window.location.pathname })
         })
+
+        window.addEventListener('popstate', () => {
+            this.setState({ pathname: window.location.pathname })
+        })
     }
 
     render() {
