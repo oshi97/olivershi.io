@@ -3,7 +3,7 @@ import React from 'react'
 export default class Link extends React.Component {
     pushState() {
         history.pushState({}, '', this.props.href)
-        window.dispatchEvent(new Event('history.pushstate'))
+        window.dispatchEvent(new CustomEvent('history.pushstate'))
     }
 
     render() {

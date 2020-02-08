@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import 'core-js'
+import 'custom-event-polyfill'
 import './App.css'
 import { Switch } from './router/Router'
 import Sheets from './sheets/Sheets'
