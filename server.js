@@ -12,7 +12,7 @@ const PORT = 3000
 app.use('/', express.static('docs'))
 
 app.get('*', (_, res) => {
-  res.sendFile(path.join(__dirname + '/docs/index.html'))
+  res.sendFile(path.join(__dirname + '/docs/dev.html'))
 })
 
 console.log('*** \n\n\nRUNNING IN - ' + process.env.ENV + '\n\n\n***')
