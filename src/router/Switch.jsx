@@ -6,27 +6,33 @@ export default class Switch extends React.Component {
         this.state = {
             pathname: window.location.pathname
         }
+        this.updatePathname = this.updatePathname.bind(this);
     }
 
-    componentDidMount() {
-        window.addEventListener('history.pushstate', () => {
-            this.setState({ pathname: window.location.pathname })
-        })
+    updatePathname() {
+        this.setState({ pathname: window.location.pathname })
+    }
 
-        window.addEventListener('popstate', () => {
-            this.setState({ pathname: window.location.pathname })
-        })
+
+    componentDidMount() {
+        window.addEventListener('history.pushstate', this.updatePathname)
+        window.addEventListener('popstate', this.updatePathname)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('history.pushstate', this.updatePathname)
+        window.removeEventListener('popstate', this.updatePathname)
     }
 
     render() {
         const routes = this.props.routes;
         const pathname = this.state.pathname;
         for (let path in routes) {
-            if (pathname.startsWith(path)) {
+            if (this.props.exact ? pathname === path : pathname.startsWith(path)) {
                 return routes[path]
             }
         }
-        return routes['404'] || (
+        return routes['default'] || routes['404'] || (
             <div>
                 404, {pathname} not found in {JSON.stringify(Object.keys(routes))}!
             </div>

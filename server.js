@@ -9,6 +9,10 @@ const app = express()
 app.use(cors())
 const PORT = 3000
 
+app.get('/', (_, res) => {
+  res.sendFile(path.join(__dirname + '/docs/dev.html'))
+})
+
 app.use('/', express.static('docs'))
 
 app.get('*', (_, res) => {

@@ -1,4 +1,5 @@
 import React from 'react'
+import './Link.css'
 
 export default class Link extends React.Component {
     pushState() {
@@ -8,7 +9,7 @@ export default class Link extends React.Component {
 
     render() {
         return (
-            <div className={this.props.className} onClick={this.pushState.bind(this)}>
+            <div className={this.props.className + ' link'} onClick={this.pushState.bind(this)}>
                 {this.props.children}
             </div>
         )
