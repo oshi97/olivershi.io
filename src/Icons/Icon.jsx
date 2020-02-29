@@ -12,6 +12,6 @@ const Icon = ({ type, size }) => {
     const markup = {
         __html: svg
     }
-    return <div dangerouslySetInnerHTML={markup}></div>
+    return <div className={'Icon-' + type + '-' + size} dangerouslySetInnerHTML={markup}></div>
 }
 export default Icon

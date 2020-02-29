@@ -8,6 +8,7 @@
     "webpack": "npx webpack -w --mode development",
     "node": "node server.js",
     "sass-sqwatch": "sass --watch src/css/index.sass docs/index.css",
+
     "build": "npm-run-all webpack-b sass sheets",
     "webpack-b": "npx webpack --mode production",
     "sass": "sass src/css/index.sass docs/index.css",
