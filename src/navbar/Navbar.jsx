@@ -1,8 +1,7 @@
 import React from 'react'
-import './Navbar.css'
 import Image from '../components/Image'
 
-import { Link } from '../router/Router'
+import Link from '../router/Link'
 const Navbar = () => (
 	<div className='navbar'>
 		<Link href='/'>

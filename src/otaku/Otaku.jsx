@@ -2,7 +2,6 @@ import React from 'react'
 import Switch from '../router/Switch'
 import Link from '../router/Link'
 import Daoko from './Daoko'
-import './Otaku.css'
 
 export default class Otaku extends React.Component {
   constructor(props) {

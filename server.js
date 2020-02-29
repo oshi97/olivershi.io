@@ -21,4 +21,3 @@ app.get('*', (_, res) => {
 
 console.log('*** \n\n\nRUNNING IN - ' + process.env.ENV + '\n\n\n***')
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))
-

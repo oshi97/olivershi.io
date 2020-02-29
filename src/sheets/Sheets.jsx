@@ -1,6 +1,5 @@
 import React from 'react'
 import { fetchSheets } from '../tools/ajax'
-import './Sheets.css'
 
 /**
  * 

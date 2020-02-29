@@ -4,11 +4,14 @@
   "description": "Updating livershi.com to use newer tech",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel webpack node",
-    "build": "npx webpack --mode production",
-    "sheets": "python ./sheets.py",
+    "start": "npm-run-all --parallel webpack node sass-sqwatch",
+    "webpack": "npx webpack -w --mode development",
     "node": "node server.js",
-    "webpack": "npx webpack -w --mode development"
+    "sass-sqwatch": "sass --watch src/css/index.sass docs/index.css",
+    "build": "npm-run-all webpack-b sass sheets",
+    "webpack-b": "npx webpack --mode production",
+    "sass": "sass src/css/index.sass docs/index.css",
+    "sheets": "python ./sheets.py"
   },
   "repository": {
     "type": "git",
@@ -38,6 +41,7 @@
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
     "npm-run-all": "^4.1.5",
+    "sass": "^1.26.1",
     "style-loader": "^1.1.3",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
