@@ -1,0 +1,15 @@
+.dir {
+  background-color: aliceblue;
+}
+
+.dir .dir {
+  margin-left: 2em;
+}
+
+.dir-content {
+  margin-left: 2em;
+}
+
+.file {
+  background-color: rgb(230, 213, 193);
+}
