@@ -28,9 +28,12 @@ export default class Switch extends React.Component {
         const routes = this.props.routes;
         const pathname = this.state.pathname;
         for (let path in routes) {
-            if (this.props.exact ? pathname === path : pathname.startsWith(path)) {
+            if (pathname === path) {
                 return routes[path]
             }
+        }
+        if (routes['default'] && this.props.defaultURL) {
+            window.location.href = this.props.defaultURL
         }
         return routes['default'] || routes['404'] || (
             <div>

@@ -14,12 +14,13 @@ const App = () => {
 	const routes = {
 		'/sheets': <Sheets/>,
 		'/otaku': <Otaku />,
-		'/': <Home />
+		'/': <Home />,
+		default: <Home />
 	};
 	return (
 		<div className='app'>
 			<Navbar />
-			<Switch routes={routes}></Switch>
+			<Switch routes={routes} defaultURL='/'></Switch>
 		</div>
 	)
 }
