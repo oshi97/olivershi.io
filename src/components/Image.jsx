@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Image = props => {
-  console.log(window)
   const css = { 
     minWidth: '2em',
     minHeight: '2em',
