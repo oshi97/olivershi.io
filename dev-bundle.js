@@ -1489,6 +1489,95 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 
 /***/ }),
 
+/***/ "./src/Icons/Icon.jsx":
+/*!****************************!*\
+  !*** ./src/Icons/Icon.jsx ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar validIcons = ['home', 'libary_music', 'videogame_asset'];\n\nvar Icon = function Icon(_ref) {\n  var type = _ref.type,\n      size = _ref.size;\n\n  if (!type || validIcons.indexOf(type) === -1) {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null);\n  }\n\n  if (!size) {\n    size = 24;\n  }\n\n  var svg = __webpack_require__(\"./src/Icons/svg sync recursive ^\\\\.\\\\/.*px\\\\.svg$\")(\"./\".concat(type, \"-\").concat(size, \"px.svg\"));\n\n  var markup = {\n    __html: svg\n  };\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    dangerouslySetInnerHTML: markup\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Icon);\n\n//# sourceURL=webpack:///./src/Icons/Icon.jsx?");
+
+/***/ }),
+
+/***/ "./src/Icons/svg sync recursive ^\\.\\/.*px\\.svg$":
+/*!********************************************!*\
+  !*** ./src/Icons/svg sync ^\.\/.*px\.svg$ ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var map = {\n\t\"./home-24px.svg\": \"./src/Icons/svg/home-24px.svg\",\n\t\"./home-48px.svg\": \"./src/Icons/svg/home-48px.svg\",\n\t\"./library_music-24px.svg\": \"./src/Icons/svg/library_music-24px.svg\",\n\t\"./library_music-48px.svg\": \"./src/Icons/svg/library_music-48px.svg\",\n\t\"./videogame_asset-24px.svg\": \"./src/Icons/svg/videogame_asset-24px.svg\",\n\t\"./videogame_asset-48px.svg\": \"./src/Icons/svg/videogame_asset-48px.svg\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/Icons/svg sync recursive ^\\\\.\\\\/.*px\\\\.svg$\";\n\n//# sourceURL=webpack:///./src/Icons/svg_sync_^\\.\\/.*px\\.svg$?");
+
+/***/ }),
+
+/***/ "./src/Icons/svg/home-24px.svg":
+/*!*************************************!*\
+  !*** ./src/Icons/svg/home-24px.svg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" height=\\\"24\\\" viewBox=\\\"0 0 24 24\\\" width=\\\"24\\\"><path d=\\\"M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z\\\"/><path d=\\\"M0 0h24v24H0z\\\" fill=\\\"none\\\"/></svg>\";\n\n//# sourceURL=webpack:///./src/Icons/svg/home-24px.svg?");
+
+/***/ }),
+
+/***/ "./src/Icons/svg/home-48px.svg":
+/*!*************************************!*\
+  !*** ./src/Icons/svg/home-48px.svg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" height=\\\"48\\\" viewBox=\\\"0 0 48 48\\\" width=\\\"48\\\"><path d=\\\"M20 40V28h8v12h10V24h6L24 6 4 24h6v16z\\\"/><path d=\\\"M0 0h48v48H0z\\\" fill=\\\"none\\\"/></svg>\";\n\n//# sourceURL=webpack:///./src/Icons/svg/home-48px.svg?");
+
+/***/ }),
+
+/***/ "./src/Icons/svg/library_music-24px.svg":
+/*!**********************************************!*\
+  !*** ./src/Icons/svg/library_music-24px.svg ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" height=\\\"24\\\" viewBox=\\\"0 0 24 24\\\" width=\\\"24\\\"><path d=\\\"M0 0h24v24H0z\\\" fill=\\\"none\\\"/><path d=\\\"M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 5h-3v5.5c0 1.38-1.12 2.5-2.5 2.5S10 13.88 10 12.5s1.12-2.5 2.5-2.5c.57 0 1.08.19 1.5.51V5h4v2zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z\\\"/></svg>\";\n\n//# sourceURL=webpack:///./src/Icons/svg/library_music-24px.svg?");
+
+/***/ }),
+
+/***/ "./src/Icons/svg/library_music-48px.svg":
+/*!**********************************************!*\
+  !*** ./src/Icons/svg/library_music-48px.svg ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" height=\\\"48\\\" viewBox=\\\"0 0 48 48\\\" width=\\\"48\\\"><path d=\\\"M0 0h48v48H0z\\\" fill=\\\"none\\\"/><path d=\\\"M40 4H16c-2.21 0-4 1.79-4 4v24c0 2.21 1.79 4 4 4h24c2.21 0 4-1.79 4-4V8c0-2.21-1.79-4-4-4zm-4 10h-6v11c0 2.76-2.24 5-5 5s-5-2.24-5-5 2.24-5 5-5c1.13 0 2.16.39 3 1.02V10h8v4zM8 12H4v28c0 2.21 1.79 4 4 4h28v-4H8V12z\\\"/></svg>\";\n\n//# sourceURL=webpack:///./src/Icons/svg/library_music-48px.svg?");
+
+/***/ }),
+
+/***/ "./src/Icons/svg/videogame_asset-24px.svg":
+/*!************************************************!*\
+  !*** ./src/Icons/svg/videogame_asset-24px.svg ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" height=\\\"24\\\" viewBox=\\\"0 0 24 24\\\" width=\\\"24\\\"><path d=\\\"M0 0v24h24V0H0zm23 16c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V8c0-1.1.9-2 2-2h18c1.1 0 2 .9 2 2v8z\\\" fill=\\\"none\\\"/><path d=\\\"M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z\\\"/></svg>\";\n\n//# sourceURL=webpack:///./src/Icons/svg/videogame_asset-24px.svg?");
+
+/***/ }),
+
+/***/ "./src/Icons/svg/videogame_asset-48px.svg":
+/*!************************************************!*\
+  !*** ./src/Icons/svg/videogame_asset-48px.svg ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" height=\\\"48\\\" viewBox=\\\"0 0 48 48\\\" width=\\\"48\\\"><path d=\\\"M0 0v48h48V0H0zm46 32c0 2.21-1.79 4-4 4H6c-2.21 0-4-1.79-4-4V16c0-2.21 1.79-4 4-4h36c2.21 0 4 1.79 4 4v16z\\\" fill=\\\"none\\\"/><path d=\\\"M42 12H6c-2.21 0-4 1.79-4 4v16c0 2.21 1.79 4 4 4h36c2.21 0 4-1.79 4-4V16c0-2.21-1.79-4-4-4zM22 26h-6v6h-4v-6H6v-4h6v-6h4v6h6v4zm9 4c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm8-6c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z\\\"/></svg>\";\n\n//# sourceURL=webpack:///./src/Icons/svg/videogame_asset-48px.svg?");
+
+/***/ }),
+
 /***/ "./src/components/Image.jsx":
 /*!**********************************!*\
   !*** ./src/components/Image.jsx ***!
@@ -1497,7 +1586,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar Image = function Image(props) {\n  var css = {\n    minWidth: '2em',\n    minHeight: '2em',\n    backgroundSize: 'contain',\n    backgroundRepeat: 'no-repeat',\n    backgroundImage: \"url(public/images/\".concat(props.src, \")\")\n  };\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: css\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Image);\n\n//# sourceURL=webpack:///./src/components/Image.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar Image = function Image(props) {\n  console.log(window);\n  var css = {\n    minWidth: '2em',\n    minHeight: '2em',\n    backgroundSize: 'contain',\n    backgroundRepeat: 'no-repeat',\n    backgroundImage: \"url(https://\".concat(window.location.host, \"/public/images/\").concat(props.src, \")\")\n  };\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: css\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Image);\n\n//# sourceURL=webpack:///./src/components/Image.jsx?");
 
 /***/ }),
 
@@ -1521,7 +1610,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_Image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Image */ \"./src/components/Image.jsx\");\n/* harmony import */ var _router_Link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../router/Link */ \"./src/router/Link.jsx\");\n\n\n\n\nvar Navbar = function Navbar() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"navbar\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_router_Link__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    href: \"/\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"i\", {\n    className: \"material-icons\"\n  }, \"home\"), \"Home\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_router_Link__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    href: \"/sheets\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"i\", {\n    className: \"material-icons\"\n  }, \"library_music\"), \"Sheets\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_router_Link__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    href: \"/otaku\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Image__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    src: \"rem.gif\"\n  }), \"\\u30AA\\u30BF\\u30AF\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"a\", {\n    className: \"link\",\n    href: \"/dome/index.html\",\n    target: \"_blank\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"i\", {\n    className: \"material-icons\"\n  }, \"videogame_asset\"), \"Dome\"));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Navbar);\n\n//# sourceURL=webpack:///./src/navbar/Navbar.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_Image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Image */ \"./src/components/Image.jsx\");\n/* harmony import */ var _Icons_Icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Icons/Icon */ \"./src/Icons/Icon.jsx\");\n/* harmony import */ var _router_Link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../router/Link */ \"./src/router/Link.jsx\");\n\n\n\n\n\nvar Navbar = function Navbar() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"navbar\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_router_Link__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    href: \"/\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Icons_Icon__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    type: \"home\"\n  }), \"Home\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_router_Link__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    href: \"/sheets\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Icons_Icon__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    type: \"library_music\"\n  }), \"Sheets\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_router_Link__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    href: \"/otaku\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Image__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    src: \"rem.gif\"\n  }), \"\\u30AA\\u30BF\\u30AF\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"a\", {\n    className: \"link\",\n    href: \"/dome/index.html\",\n    target: \"_blank\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Icons_Icon__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    type: \"videogame_asset\"\n  }), \"Dome\"));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Navbar);\n\n//# sourceURL=webpack:///./src/navbar/Navbar.jsx?");
 
 /***/ }),
 

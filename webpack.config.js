@@ -14,8 +14,8 @@ let config = { entry, resolve, output,
         options: { presets: ['@babel/env'] }
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        test: /\.(svg)/,
+        loader: path.resolve('raw-loader.js')
       }
     ]
   }
@@ -24,6 +24,7 @@ let config = { entry, resolve, output,
 module.exports = (_, argv) => {
   if (argv.mode === 'development') {
     config.output.filename = 'dev-bundle.js';
+    config.output.path = path.resolve(__dirname)
   }
 
   return {

@@ -1,15 +1,16 @@
 import React from 'react'
 import Image from '../components/Image'
+import Icon from '../Icons/Icon'
 
 import Link from '../router/Link'
 const Navbar = () => (
 	<div className='navbar'>
 		<Link href='/'>
-			<i className='material-icons'>home</i>
+			<Icon type='home'/>
 			Home
 		</Link>
 		<Link href='/sheets'>
-			<i className='material-icons'>library_music</i>
+			<Icon type='library_music'/>
 			Sheets
 		</Link>
 		<Link href='/otaku'>
@@ -17,7 +18,7 @@ const Navbar = () => (
 			オタク
 		</Link>
 		<a className='link' href='/dome/index.html' target='_blank'>
-			<i className='material-icons'>videogame_asset</i>
+			<Icon type='videogame_asset'/>
 			Dome
 		</a>
 	</div>
