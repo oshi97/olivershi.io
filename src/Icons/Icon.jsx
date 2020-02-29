@@ -1,6 +1,6 @@
 import React from 'react'
 
-const validIcons = ['home', 'libary_music', 'videogame_asset']
+const validIcons = ['home', 'library_music', 'videogame_asset']
 const Icon = ({ type, size }) => {
     if (!type || validIcons.indexOf(type) === -1) {
         return <div></div>;
