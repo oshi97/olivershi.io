@@ -1,4 +1,4 @@
-# !/usr/bin/python
+#!/usr/bin/python
 
 import os
 import io
@@ -29,8 +29,10 @@ def scan(currentDir = './public/sheets'):
 
 def write(dirs = {}, name = '../' + dirFile):
   with io.open(name, "w", encoding="utf-8") as f:
-    json_str = json.dumps(dirs)
+    json_str = json.dumps(dirs,indent=2)
     f.write(json_str)
 
 os.chdir('docs')
 write(scan())
+
+print('sheets.json generated! :)')

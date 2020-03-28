@@ -15,9 +15,9 @@ export default class Otaku extends React.Component {
   renderDirectory() {
     return (
       <div className='otaku-navbar'>
-        <Link className='item' href='/otaku/daoko'>
-          Daoko
-        </Link>
+        {/* <Link className='item' href='/otaku/daoko'> */}
+          WEeeebb
+        {/* </Link> */}
       </div>
     )
   }

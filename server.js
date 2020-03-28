@@ -11,10 +11,6 @@ const app = express()
 app.use(cors())
 const PORT = 3000
 
-app.get('/', (_, res) => {
-  res.sendFile(path.join(__dirname + '/docs/dev.html'))
-})
-
 app.get('/index.css', (_, res) => {
   res.sendFile(path.join(__dirname + '/docs/index.css'))
 })
@@ -23,10 +19,14 @@ app.get('/dev-bundle.js', (_, res) => {
   res.sendFile(path.join(__dirname + '/dev-bundle.js'))
 })
 
+app.get('/', (_, res) => {
+  res.sendFile(path.join(__dirname + '/dev.html'))
+})
+
 app.use('/', express.static('docs'))
 
 app.get('*', (_, res) => {
-  res.sendFile(path.join(__dirname + '/docs/dev.html'))
+  res.sendFile(path.join(__dirname + '/dev.html'))
 })
 
 console.log('*** \n\n\nRUNNING IN - ' + process.env.ENV + '\n\n\n***')
