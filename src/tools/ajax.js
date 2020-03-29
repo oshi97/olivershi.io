@@ -29,9 +29,17 @@ function _ajax(url) {
 }
 
 export function fetchSheets() {
-  return _ajax('api/sheets.json')
+  return _ajax('/api/sheets.json').then(res => {
+    return JSON.parse(res.response)
+  }).catch(err => {
+    console.error(err)
+  })
 }
 
 export function fetchJapanese(song_name) {
-  return _ajax('api/japanese/' + song_name + '.json')
+  return _ajax('/api/japanese/' + song_name + '.json').then(res => {
+    return JSON.parse(res.response)
+  }).catch(err => {
+    console.error(err)
+  })
 }

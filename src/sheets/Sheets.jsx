@@ -46,13 +46,7 @@ export default class Sheets extends React.Component {
 
 	componentDidMount() {
 		if (Object.entries(this.state.sheetsJson).length === 0) {
-			fetchSheets().then(res => {
-				this.setState({ 
-					sheetsJson: JSON.parse(res.response)
-				})
-			}).catch(err => {
-				console.error(err)
-			})
+			fetchSheets().then(sheetsJson => this.setState({ sheetsJson }))
 		}
 	}
 

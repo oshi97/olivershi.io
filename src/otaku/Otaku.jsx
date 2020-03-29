@@ -1,7 +1,7 @@
 import React from 'react'
 import Switch from '../router/Switch'
 import Link from '../router/Link'
-import Konosuba_ed_2 from './Konosuba_ed_2'
+import Konosuba_ed_2 from './konosuba_ed_2'
 
 export default class Otaku extends React.Component {
   constructor(props) {
@@ -16,7 +16,7 @@ export default class Otaku extends React.Component {
     return (
       <div className='otaku-navbar'>
         <Link className='item' href='/otaku/konosuba_ed_2'>
-          Konosuba_ed_2
+          konosuba_ed_2
         </Link>
       </div>
     )

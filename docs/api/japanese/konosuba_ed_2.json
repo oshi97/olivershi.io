@@ -1,0 +1,55 @@
+{
+  "何": {
+    "what": {
+      "pronunciation": "なに"
+    }
+  },
+  "も": {
+    "too/also": {
+      "meaning": "Too or also, like in \"Me too!\"",
+      "partOfSpeech": "PARTICLE",
+      "notes": "to make it more formal, add です at the end.",
+      "source": "https://www.punipunijapan.com/mo/"
+    }
+  },
+  "何も": {
+    "nothing": {}
+  },
+  "言": {
+    "say": {
+      "pronunciation": "い",
+      "source": "http://www.romajidesu.com/kanji/%E8%A8%80"
+    }
+  },
+  "言わずに": {
+    "without speaking": {
+      "pronunciation": "いわずに",
+      "notes": "ずに is used to negate a verb.",
+      "source": "https://jref.com/articles/negation-in-japanese.125/"
+    }
+  },
+  "家": {
+    "house": {
+      "pronunciation": "いえ"
+    }
+  },
+  "を": {
+    "direct object": {
+      "meaning": "Used to mark the direct object of a sentence",
+      "partOfSpeech": "PARTICLE",
+      "source": "https://www.punipunijapan.com/grammar-lesson-7-particle-%E3%82%92-o/"
+    }
+  },
+  "出": {
+    "exit": {
+      "pronunciation": "で"
+    }
+  },
+  "て": {
+    "combine two clauses": {
+      "partOfSpeech": "PARTICLE",
+      "meaning": "The -te particle is used at the end of a verb to combine the first verb with a following one",
+      "source": "https://www.imabi.net/theparticlete.htm"
+    }
+  }
+}

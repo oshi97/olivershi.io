@@ -4,13 +4,16 @@ export default class Switch extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            pathname: window.location.pathname
+            route: this.getRenderedRoute()
         }
         this.updatePathname = this.updatePathname.bind(this);
     }
 
     updatePathname() {
-        this.setState({ pathname: window.location.pathname })
+        const route = this.getRenderedRoute();
+        if (this.state.route !== route) {
+            this.setState({ route })
+        }
     }
 
 
@@ -24,13 +27,20 @@ export default class Switch extends React.Component {
         window.removeEventListener('popstate', this.updatePathname)
     }
 
-    render() {
-        const routes = this.props.routes;
-        const pathname = this.state.pathname;
-        for (let path in routes) {
-            if (pathname === path) {
-                return routes[path]
+    getRenderedRoute() {
+        const routes = this.props.routes || {}
+        const pathname = window.location.pathname
+        for (const path of Object.keys(routes)) {
+            if (pathname.startsWith(path)) {
+                return path
             }
+        }
+    }
+
+    render() {
+        const routes = this.props.routes || {}
+        if (this.state.route in routes) {
+            return routes[this.state.route]
         }
         if (routes['default'] && this.props.defaultURL) {
             window.location.href = this.props.defaultURL
