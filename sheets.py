@@ -4,7 +4,7 @@ import os
 import io
 import json
 
-dirFile = 'docs/data/sheets.json'
+dirFile = 'docs/api/sheets.json'
 
 def scan(currentDir = './public/sheets'):
   obj = {}

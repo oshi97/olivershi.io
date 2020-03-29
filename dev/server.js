@@ -12,7 +12,7 @@ app.use(cors())
 const PORT = 3000
 
 app.get('/index.css', (_, res) => {
-  res.sendFile(path.join(__dirname + '/docs/index.css'))
+  res.sendFile(path.join(__dirname + '/../docs/index.css'))
 })
 
 app.get('/dev-bundle.js', (_, res) => {
@@ -23,7 +23,7 @@ app.get('/', (_, res) => {
   res.sendFile(path.join(__dirname + '/dev.html'))
 })
 
-app.use('/', express.static('docs'))
+app.use('/', express.static(__dirname + '/../docs'))
 
 app.get('*', (_, res) => {
   res.sendFile(path.join(__dirname + '/dev.html'))
@@ -31,6 +31,6 @@ app.get('*', (_, res) => {
 
 console.log('*** \n\n\nRUNNING IN - ' + process.env.ENV + '\n\n\n***')
 https.createServer({
-  key: fs.readFileSync('server.key'),
-  cert: fs.readFileSync('server.cert')
+  key: fs.readFileSync(__dirname + '/server.key'),
+  cert: fs.readFileSync(__dirname + '/server.cert')
 }, app).listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))

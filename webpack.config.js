@@ -23,7 +23,7 @@ let config = { entry, resolve, output,
 
 module.exports = (_, argv) => {
   if (argv.mode === 'development') {
-    config.output.filename = 'dev-bundle.js';
+    config.output.filename = 'dev/dev-bundle.js';
     config.output.path = path.resolve(__dirname)
   }
 

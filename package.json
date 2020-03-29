@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npm-run-all --parallel webpack node sass-sqwatch",
     "webpack": "npx webpack -w --mode development",
-    "node": "node server.js",
+    "node": "node ./dev/server.js",
     "sass-sqwatch": "sass --watch src/css/index.sass docs/index.css",
     "build": "npm-run-all webpack-b sass sheets",
     "webpack-b": "npx webpack --mode production",
@@ -26,14 +26,14 @@
   "homepage": "https://github.com/oshi97/olivershi.io#readme",
   "dependencies": {
     "core-js": "^3.6.4",
-    "cors": "^2.8.5",
     "custom-event-polyfill": "^1.0.7",
-    "express": "^4.17.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "serve-index": "^1.9.1"
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "serve-index": "^1.9.1",
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",

@@ -29,5 +29,9 @@ function _ajax(url) {
 }
 
 export function fetchSheets() {
-  return _ajax('data/sheets.json')
+  return _ajax('api/sheets.json')
+}
+
+export function fetchJapanese(song_name) {
+  return _ajax('api/japanese/' + song_name + '.json')
 }

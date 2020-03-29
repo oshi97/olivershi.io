@@ -1,13 +1,13 @@
 import React from 'react'
 import Switch from '../router/Switch'
 import Link from '../router/Link'
-import Daoko from './Daoko'
+import Konosuba_ed_2 from './Konosuba_ed_2'
 
 export default class Otaku extends React.Component {
   constructor(props) {
     super(props)
     this.routes = {
-      '/otaku/daoko': <Daoko/>,
+      '/otaku/konosuba_ed_2': <Konosuba_ed_2/>,
       'default': this.renderDirectory()
     };
   }
@@ -15,9 +15,9 @@ export default class Otaku extends React.Component {
   renderDirectory() {
     return (
       <div className='otaku-navbar'>
-        {/* <Link className='item' href='/otaku/daoko'> */}
-          WEeeebb
-        {/* </Link> */}
+        <Link className='item' href='/otaku/konosuba_ed_2'>
+          Konosuba_ed_2
+        </Link>
       </div>
     )
   }
