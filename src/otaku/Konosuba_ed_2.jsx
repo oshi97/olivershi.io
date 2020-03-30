@@ -1,31 +1,14 @@
 import React from 'react'
+import Japanese from '../components/Japanese'
+
 const lyrics = '何も言わずに家を出て'
 
-import { fetchJapanese } from '../tools/ajax'
-
 export default class Konosuba_ed_2 extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      japaneseJson: {}
-    }
-  }
-  componentDidMount() {
-    fetchJapanese('konosuba_ed_2').then(japaneseJson => this.setState({ japaneseJson }))
-  }
-
-  renderChar(char) {
-    return (
-      <div>{char}</div>
-    )
-  }
-
   render() {
     return (
-      <React.Fragment>
-        <div>{lyrics}</div>
-        <div>{Object.keys(this.state.japaneseJson).map(char => this.renderChar(char))}</div>
-      </React.Fragment>
+      <div className='konosuba-ed-2'>
+        <Japanese text={lyrics} file='konosuba_ed_2'/>
+      </div>
     )
   }
 }

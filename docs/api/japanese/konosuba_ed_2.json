@@ -1,4 +1,14 @@
 {
+  "言わずに": {
+    "without speaking": {
+      "pronunciation": "いわずに",
+      "notes": "ずに is used to negate a verb.",
+      "source": "https://jref.com/articles/negation-in-japanese.125/"
+    }
+  },
+  "何も": {
+    "nothing": {}
+  },
   "何": {
     "what": {
       "pronunciation": "なに"
@@ -12,20 +22,10 @@
       "source": "https://www.punipunijapan.com/mo/"
     }
   },
-  "何も": {
-    "nothing": {}
-  },
   "言": {
     "say": {
       "pronunciation": "い",
       "source": "http://www.romajidesu.com/kanji/%E8%A8%80"
-    }
-  },
-  "言わずに": {
-    "without speaking": {
-      "pronunciation": "いわずに",
-      "notes": "ずに is used to negate a verb.",
-      "source": "https://jref.com/articles/negation-in-japanese.125/"
     }
   },
   "家": {

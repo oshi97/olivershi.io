@@ -35,6 +35,10 @@ body {
   background-color: lightgreen;
 }
 
+.japanese {
+  font-size: 24px;
+}
+
 .dir {
   background-color: aliceblue;
 }
