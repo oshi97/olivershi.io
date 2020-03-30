@@ -7,12 +7,12 @@
     "dev": "npm-run-all --parallel webpack node sass-sqwatch",
     "webpack": "npx webpack -w --mode development",
     "node": "node ./dev/server.js",
-    "sass-sqwatch": "sass --watch src/css/index.sass docs/index.css",
+    "sass-sqwatch": "npx sass --watch src/css/index.sass docs/index.css",
     "build": "npm-run-all webpack-b sass copyData sheets",
     "webpack-b": "npx webpack --mode production",
-    "sass": "sass src/css/index.sass docs/index.css",
-    "sheets": "./sheets.py",
-    "copyData": "./copyData.js"
+    "sass": "npx sass src/css/index.sass docs/index.css",
+    "sheets": "python sheets.py",
+    "copyData": "node copyData.js"
   },
   "repository": {
     "type": "git",
