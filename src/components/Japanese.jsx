@@ -5,10 +5,10 @@ export default class Japanese extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      translatedText: '',
+      translatedText: [],
       dictionary: {}
     }
-    this.updateTranslatedText = this.updateTranslatedText.bind(this)
+    this.handleMouseUp = this.handleMouseUp.bind(this)
   }
 
   componentDidMount() {
@@ -16,47 +16,52 @@ export default class Japanese extends React.Component {
       this.sortedDictionaryKeys = Object.keys(dictionary).sort((a, b) => b.length - a.length)
       this.setState({ dictionary })
     })
-    window.addEventListener('mouseup', this.updateTranslatedText)
+    window.addEventListener('mouseup', this.handleMouseUp)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('mouseup', this.handleMouseUp)
   }
 
   removeOtherText (text) {
     let startIndex = 0
     let endIndex = text.length
-    while (!this.props.text.includes(text[startIndex]) && startIndex < text.length) {
+    while (this.props.text.indexOf(text[startIndex]) === -1 && startIndex < text.length) {
       startIndex++
     }
-    while (!this.props.text.includes(text[startIndex]) && endIndex > startIndex) {
+    while (this.props.text.includes(text[startIndex]) === -1 && endIndex > startIndex) {
       endIndex--
     }
     return text.slice(startIndex, endIndex)
   }
 
   translate(text) {
-    let tokens = [ text ];
-    console.log('---', text)
-    for (const word of this.sortedDictionaryKeys) {
-      if (!text.includes(word))
-        continue
-      else if (text === word) {
-        tokens = [ word ]
-        break
-      }
-      const subTexts = text.split(word);
-      console.log(text, word, subTexts)
-      if (subTexts.length > 1)
-        tokens = [ ...this.translate(subTexts[0]), word, ...this.translate(subTexts[1]) ]
-      else if (text.startsWith(subTexts[0]))
-        tokens = [ word, ...this.translate(subTexts[0])]
-      else
-        tokens = [ ...this.translate(subTexts[0]), word ]
-      break
+    if (!text) {
+      return []
     }
-    console.log('---', tokens)
-    return tokens
+    for (let i = 0; i < this.sortedDictionaryKeys.length; i++) {
+      const word = this.sortedDictionaryKeys[i]
+      const index = text.indexOf(word)
+      if (index === -1)
+        continue
+      else if (text === word)
+        return [ word ]
+      const secondHalf = text.slice(index + word.length)
+      const firstHalf = text.slice(0, index)
+      return [ ...this.translate(firstHalf), word, ...this.translate(secondHalf) ]
+    }
+    return [ text ]
+  }
+
+  handleMouseUp(e) {
+    if (e.target.classList.contains('js-japanese-translation')) {
+      return
+    }
+    this.updateTranslatedText()
   }
 
   updateTranslatedText() {
-    const selectedText = window.getSelection().toString()
+    const selectedText = window.getSelection().toString().trim()
     if (!selectedText) {
       return
     }
@@ -68,20 +73,35 @@ export default class Japanese extends React.Component {
     // https://stackoverflow.com/questions/27241281/what-is-anchornode-basenode-extentnode-and-focusnode-in-the-object-returned
     const trimmedText = this.removeOtherText(selectedText)
     const translatedText = this.translate(trimmedText)
+    const duplicatesRemoved = [...new Set(translatedText)]
     if (this.state.translatedText !== translatedText) {
-      this.setState({ translatedText })
+      this.setState({ translatedText: duplicatesRemoved })
     }
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('mouseup', this.updateTranslatedText)
+  renderWordTranslation(word) {
+    const { dictionary } = this.state
+    if (!dictionary[word]) {
+      return null
+    }
+    const data = dictionary[word]
+    return (
+      <div key={word} className="japanese-translationWord js-japanese-translation">
+        <div>{word}</div>
+        {Object.keys(data).map(property => (
+          <div key={property} className="japanese-translationProperty js-japanese-translation">
+            {property}: {data[property]}
+          </div>
+        ))}
+      </div>
+    )
   }
 
   renderTranslatedText() {
     const { translatedText } = this.state
     return (
       <div>
-        boo
+        {translatedText.map(word => this.renderWordTranslation(word))}
       </div>
     )
   }
@@ -94,11 +114,11 @@ export default class Japanese extends React.Component {
         <div className="japanese-text">
           {text}
         </div>
-        <div>Highlight test</div>
+        <div>Try highlighting stuff!</div>
         <br/>
         <br/>
         <br/>
-        <div className="japanese-translation">
+        <div className="japanese-translation js-japanese-translation">
             {this.renderTranslatedText()}
         </div>
       </div>

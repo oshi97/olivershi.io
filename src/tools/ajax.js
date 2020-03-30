@@ -37,7 +37,6 @@ export function fetchSheets() {
 }
 
 export function fetchJapanese(song_name) {
-  console.log(song_name)
   return _ajax('/api/japanese/' + song_name + '.json').then(res => {
     return JSON.parse(res.response)
   }).catch(err => {

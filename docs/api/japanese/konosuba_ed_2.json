@@ -1,55 +1,52 @@
 {
   "言わずに": {
-    "without speaking": {
-      "pronunciation": "いわずに",
-      "notes": "ずに is used to negate a verb.",
-      "source": "https://jref.com/articles/negation-in-japanese.125/"
-    }
+    "pronunciation": "いわずに",
+    "notes": "ずに is used to negate a verb.",
+    "source": "https://jref.com/articles/negation-in-japanese.125/",
+    "meaning": "without speaking"
   },
   "何も": {
-    "nothing": {}
+    "pronunciation": "何も",
+    "meaning": "nothing"
   },
   "何": {
-    "what": {
-      "pronunciation": "なに"
-    }
+    "pronunciation": "なに",
+    "meaning": "what"
   },
   "も": {
-    "too/also": {
-      "meaning": "Too or also, like in \"Me too!\"",
-      "partOfSpeech": "PARTICLE",
-      "notes": "to make it more formal, add です at the end.",
-      "source": "https://www.punipunijapan.com/mo/"
-    }
+    "pronunciation": "も",
+    "meaning": "Too or also, like in \"Me too!\"",
+    "partOfSpeech": "PARTICLE",
+    "notes": "to make it more formal, add です at the end.",
+    "source": "https://www.punipunijapan.com/mo/"
   },
   "言": {
-    "say": {
-      "pronunciation": "い",
-      "source": "http://www.romajidesu.com/kanji/%E8%A8%80"
-    }
+    "pronunciation": "い",
+    "source": "http://www.romajidesu.com/kanji/%E8%A8%80",
+    "meaning": "say"
   },
   "家": {
-    "house": {
-      "pronunciation": "いえ"
-    }
+    "pronunciation": "いえ",
+    "meaning": "house"
   },
   "を": {
-    "direct object": {
-      "meaning": "Used to mark the direct object of a sentence",
-      "partOfSpeech": "PARTICLE",
-      "source": "https://www.punipunijapan.com/grammar-lesson-7-particle-%E3%82%92-o/"
-    }
+    "pronunciation": "を",
+    "meaning": "Particle used to mark the direct object",
+    "partOfSpeech": "PARTICLE",
+    "source": "https://www.punipunijapan.com/grammar-lesson-7-particle-%E3%82%92-o/"
   },
   "出": {
-    "exit": {
-      "pronunciation": "で"
-    }
+    "pronunciation": "で",
+    "meaning": "leave"
   },
   "て": {
-    "combine two clauses": {
-      "partOfSpeech": "PARTICLE",
-      "meaning": "The -te particle is used at the end of a verb to combine the first verb with a following one",
-      "source": "https://www.imabi.net/theparticlete.htm"
-    }
+    "pronunciation": "て",
+    "partOfSpeech": "PARTICLE",
+    "meaning": "The -te particle is used at the end of a verb to combine the first verb with a following one",
+    "source": "https://www.imabi.net/theparticlete.htm"
+  },
+  "出て": {
+    "pronunciation": "でて",
+    "meaning": "leave"
   }
 }
