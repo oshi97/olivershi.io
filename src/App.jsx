@@ -4,11 +4,11 @@ import 'core-js/features/string/starts-with'
 import 'core-js/features/object/entries'
 import 'core-js/features/promise'
 import 'custom-event-polyfill'
-import Switch from './router/Switch'
-import Sheets from './sheets/Sheets'
-import Home from './home/Home'
-import Navbar from './navbar/Navbar'
-import Otaku from './otaku/Otaku'
+import Switch from './components/Switch'
+import Sheets from './Sheets'
+import Home from './Home'
+import Navbar from './Navbar'
+import Otaku from './Otaku'
 
 const App = () => {
 	const routes = {

@@ -1,8 +1,8 @@
 import React from 'react'
-import Image from '../components/Image'
-import Icon from '../Icons/Icon'
+import Image from './components/Image'
+import Icon from './components/Icon'
+import Link from './components/Link'
 
-import Link from '../router/Link'
 const Navbar = () => (
 	<div className='navbar'>
 		<Link href='/'>

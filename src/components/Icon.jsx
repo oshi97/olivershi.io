@@ -8,7 +8,7 @@ const Icon = ({ type, size }) => {
     if (!size) {
         size = 24
     }
-    const svg = require(`./svg/${type}-${size}px.svg`)
+    const svg = require(`../icons/${type}-${size}px.svg`)
     const markup = {
         __html: svg
     }

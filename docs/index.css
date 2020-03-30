@@ -28,6 +28,13 @@ body {
   display: flex;
 }
 
+.otaku-item {
+  border: 1px solid blue;
+}
+.otaku-item:hover {
+  background-color: lightgreen;
+}
+
 .dir {
   background-color: aliceblue;
 }

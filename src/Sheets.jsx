@@ -1,5 +1,5 @@
 import React from 'react'
-import { fetchSheets } from '../tools/ajax'
+import { fetchSheets } from './tools/ajax'
 
 /**
  * 

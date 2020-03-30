@@ -1,7 +1,7 @@
 import React from 'react'
-import Switch from '../router/Switch'
-import Link from '../router/Link'
-import Konosuba_ed_2 from './konosuba_ed_2'
+import Switch from './components/Switch'
+import Link from './components/Link'
+import Konosuba_ed_2 from './otaku/konosuba_ed_2'
 
 export default class Otaku extends React.Component {
   constructor(props) {
@@ -15,7 +15,7 @@ export default class Otaku extends React.Component {
   renderDirectory() {
     return (
       <div className='otaku-navbar'>
-        <Link className='item' href='/otaku/konosuba_ed_2'>
+        <Link cssClasses='otaku-item' href='/otaku/konosuba_ed_2'>
           konosuba_ed_2
         </Link>
       </div>

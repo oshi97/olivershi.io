@@ -6,12 +6,17 @@ export default class Link extends React.Component {
         window.dispatchEvent(new CustomEvent('history.pushstate'))
     }
 
-    render() {
+    getCssClasses() {
         let className = 'link'
-        if (this.props.className && this.props.className !== '')
-            className += ' ' + this.props.classname;
+        const { cssClasses } = this.props;
+        if (cssClasses)
+            className += ' ' + [cssClasses].flat().join(' ');
+        return className;
+    }
+
+    render() {
         return (
-            <div className={className} onClick={this.pushState.bind(this)}>
+            <div className={this.getCssClasses()} onClick={this.pushState.bind(this)}>
                 {this.props.children}
             </div>
         )
