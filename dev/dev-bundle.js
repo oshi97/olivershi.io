@@ -1592,7 +1592,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var map = {\n\t\"./home-24px.svg\": \"./src/icons/home-24px.svg\",\n\t\"./home-48px.svg\": \"./src/icons/home-48px.svg\",\n\t\"./library_music-24px.svg\": \"./src/icons/library_music-24px.svg\",\n\t\"./library_music-48px.svg\": \"./src/icons/library_music-48px.svg\",\n\t\"./videogame_asset-24px.svg\": \"./src/icons/videogame_asset-24px.svg\",\n\t\"./videogame_asset-48px.svg\": \"./src/icons/videogame_asset-48px.svg\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/icons sync recursive ^\\\\.\\\\/.*px\\\\.svg$\";\n\n//# sourceURL=webpack:///./src/icons_sync_^\\.\\/.*px\\.svg$?");
+eval("var map = {\n\t\"./home-24px.svg\": \"./src/icons/home-24px.svg\",\n\t\"./library_music-24px.svg\": \"./src/icons/library_music-24px.svg\",\n\t\"./videogame_asset-24px.svg\": \"./src/icons/videogame_asset-24px.svg\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/icons sync recursive ^\\\\.\\\\/.*px\\\\.svg$\";\n\n//# sourceURL=webpack:///./src/icons_sync_^\\.\\/.*px\\.svg$?");
 
 /***/ }),
 
@@ -1607,17 +1607,6 @@ eval("module.exports = \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" height=\\
 
 /***/ }),
 
-/***/ "./src/icons/home-48px.svg":
-/*!*********************************!*\
-  !*** ./src/icons/home-48px.svg ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" height=\\\"48\\\" viewBox=\\\"0 0 48 48\\\" width=\\\"48\\\"><path d=\\\"M20 40V28h8v12h10V24h6L24 6 4 24h6v16z\\\"/><path d=\\\"M0 0h48v48H0z\\\" fill=\\\"none\\\"/></svg>\";\n\n//# sourceURL=webpack:///./src/icons/home-48px.svg?");
-
-/***/ }),
-
 /***/ "./src/icons/library_music-24px.svg":
 /*!******************************************!*\
   !*** ./src/icons/library_music-24px.svg ***!
@@ -1629,17 +1618,6 @@ eval("module.exports = \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" height=\\
 
 /***/ }),
 
-/***/ "./src/icons/library_music-48px.svg":
-/*!******************************************!*\
-  !*** ./src/icons/library_music-48px.svg ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" height=\\\"48\\\" viewBox=\\\"0 0 48 48\\\" width=\\\"48\\\"><path d=\\\"M0 0h48v48H0z\\\" fill=\\\"none\\\"/><path d=\\\"M40 4H16c-2.21 0-4 1.79-4 4v24c0 2.21 1.79 4 4 4h24c2.21 0 4-1.79 4-4V8c0-2.21-1.79-4-4-4zm-4 10h-6v11c0 2.76-2.24 5-5 5s-5-2.24-5-5 2.24-5 5-5c1.13 0 2.16.39 3 1.02V10h8v4zM8 12H4v28c0 2.21 1.79 4 4 4h28v-4H8V12z\\\"/></svg>\";\n\n//# sourceURL=webpack:///./src/icons/library_music-48px.svg?");
-
-/***/ }),
-
 /***/ "./src/icons/videogame_asset-24px.svg":
 /*!********************************************!*\
   !*** ./src/icons/videogame_asset-24px.svg ***!
@@ -1648,17 +1626,6 @@ eval("module.exports = \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" height=\\
 /***/ (function(module, exports) {
 
 eval("module.exports = \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" height=\\\"24\\\" viewBox=\\\"0 0 24 24\\\" width=\\\"24\\\"><path d=\\\"M0 0v24h24V0H0zm23 16c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V8c0-1.1.9-2 2-2h18c1.1 0 2 .9 2 2v8z\\\" fill=\\\"none\\\"/><path d=\\\"M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z\\\"/></svg>\";\n\n//# sourceURL=webpack:///./src/icons/videogame_asset-24px.svg?");
-
-/***/ }),
-
-/***/ "./src/icons/videogame_asset-48px.svg":
-/*!********************************************!*\
-  !*** ./src/icons/videogame_asset-48px.svg ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" height=\\\"48\\\" viewBox=\\\"0 0 48 48\\\" width=\\\"48\\\"><path d=\\\"M0 0v48h48V0H0zm46 32c0 2.21-1.79 4-4 4H6c-2.21 0-4-1.79-4-4V16c0-2.21 1.79-4 4-4h36c2.21 0 4 1.79 4 4v16z\\\" fill=\\\"none\\\"/><path d=\\\"M42 12H6c-2.21 0-4 1.79-4 4v16c0 2.21 1.79 4 4 4h36c2.21 0 4-1.79 4-4V16c0-2.21-1.79-4-4-4zM22 26h-6v6h-4v-6H6v-4h6v-6h4v6h6v4zm9 4c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm8-6c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z\\\"/></svg>\";\n\n//# sourceURL=webpack:///./src/icons/videogame_asset-48px.svg?");
 
 /***/ }),
 
