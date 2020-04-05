@@ -10,6 +10,8 @@ jobs:
       - node/with-cache:
           steps:
             - run: ls && ls src && ls src/css
+            - run: stat src/css/index.sass
+            - run: stat src/css/Index.sass
             - run: npm install
             - run: npx webpack --mode production
             - run: npx sass src/css/Index.sass docs/index.css
