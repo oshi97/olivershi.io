@@ -37,7 +37,15 @@ export default class JapaneseTranslation extends React.Component {
   renderJapaneseOriginal() {
     const { text, meanings } = this.props
     if (!Object.keys(meanings).length) {
-      return <React.Fragment>{text}</React.Fragment>
+      return (<React.Fragment>
+        {text.map((line, lineIndex) => 
+          <div className="japanese-original-line" key={lineIndex + line}>
+            {line.map((word, wordIndex) =>
+              <div className="japanese-original-word" key={wordIndex + word}>{word}</div>
+            )}
+          </div>
+        )}
+      </React.Fragment>)
     }
     return (
       <React.Fragment>

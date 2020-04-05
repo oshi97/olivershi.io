@@ -4,7 +4,7 @@
 Because I am a forgetful fuck
 
 ```bash
-npm run dev
+npm start
 ```
 Site will be served at https://localhost:3000
 
