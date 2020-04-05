@@ -168,12 +168,15 @@ body {
 .japanese-original-word {
   display: inline-block;
   background-color: #eaeaea;
-  padding-left: 0.1em;
-  padding-right: 0.1em;
+  padding: 0.1em;
   margin-right: 0.1em;
+  cursor: pointer;
+}
+.japanese-original-word:hover {
+  background-color: #babafa;
 }
 .japanese-original-word--active {
-  background-color: #cacaea;
+  background-color: #cacafa;
 }
 .japanese-meaning {
   width: 50%;
