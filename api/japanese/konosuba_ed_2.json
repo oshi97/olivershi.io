@@ -1,7 +1,33 @@
 {
   "title": [
     {
-      "word": "title"
+      "word": "おうち",
+      "pronunciation": "おうち",
+      "romaji": "o u chi",
+      "meaning": "your home"
+    },
+    {
+      "word": "に",
+      "pronunciation": "に",
+      "romaji": "ni",
+      "meaning": "to be at",
+      "notes": "The particle に has a lot of uses, here I think it makes \"to be at\" home.",
+      "source": "https://www.wasabi-jpn.com/japanese-grammar/japanese-particle-ni-clear-up-all-doubts-you-may-have/#2"
+    },
+    {
+      "word": "帰り",
+      "pronunciation": "かえり",
+      "romaji": "ka e ri",
+      "meaning": "to return home",
+      "notes": "It seems like this is an inflection of 帰る, kae ru, in the -ri form, which turns it from the verb \"return\" into this noun. I.e. it turns it into a gerund!"
+    },
+    {
+      "word": "たい",
+      "pronunciation": "たい",
+      "romaji": "ta i",
+      "meaning": "To express a wish/desire",
+      "notes": "the -tai form of a verb expresses a wish or desire",
+      "source": "https://www.brighthubeducation.com/learning-japanese/37489-tai-verb-structure-want-to-do-not-want-to/"
     }
   ],
   "text": [

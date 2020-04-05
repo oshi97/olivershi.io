@@ -1,7 +1,22 @@
 {
   "title": [
     {
-      "word": "title"
+      "word": "異世界",
+      "pronunciation": "いせかい",
+      "romaji": "i se kai",
+      "meaning": "alternate universe/parallel world. 世界 (sekai) meaning world. "
+    },
+    {
+      "word": "ショー",
+      "meaning": "show",
+      "pronunciation": "ショー",
+      "notes": "this is an english word written with katakana"
+    },
+    {
+      "word": "タイム",
+      "meaning": "time",
+      "pronunciation": "タイム",
+      "notes": "this is an english word written with katakana"
     }
   ],
   "text": [
