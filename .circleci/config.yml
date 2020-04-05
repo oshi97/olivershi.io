@@ -9,7 +9,7 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: npm install
+            - run: npm install --only=dev
             - run: npm install gh-pages
             - run: git config --global user.name "circleci-build"
             - run: git config --global user.name "circleci"
@@ -17,7 +17,7 @@ jobs:
             - run: npx sass src/css/Index.sass docs/index.css
             - run: python3 sheets.py
             - run: node japanese.js
-            - run: npx gh-pages --dist docs
+            - run: gh-pages -m 'auto commit [ci skip]' -d docs
 
 workflows:
     build:
