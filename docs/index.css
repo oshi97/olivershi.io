@@ -1,5 +1,15 @@
 body {
-  background-color: rgb(255, 254, 240);
+  background-color: #fffef0;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  max-width: 1200px;
+  flex-grow: 1;
 }
 
 .link {
@@ -18,18 +28,25 @@ body {
 .navbar {
   display: flex;
   margin-bottom: 1em;
+  justify-content: center;
 }
-
 .navbar i {
   margin-right: 0.1em;
 }
 
 .otaku-navbar {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .otaku-item {
   border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+}
+.otaku-item-image {
+  width: 300px;
+  max-height: 300px;
 }
 .otaku-item:hover {
   background-color: lightgreen;
@@ -82,6 +99,12 @@ body {
 }
 .japanese-meaning {
   width: 50%;
+}
+
+.image {
+  width: 2em;
+  height: 2em;
+  objectFit: contain;
 }
 
 /*# sourceMappingURL=index.css.map */

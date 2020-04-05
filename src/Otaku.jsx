@@ -2,14 +2,14 @@ import React from 'react'
 import Switch from './components/Switch'
 import Link from './components/Link'
 import songs from './songs/songs'
-import SongRouter from './SongRouter'
-
+import SongLoader from './songs/SongLoader'
+import Image from './components/Image'
 
 const songRoutes = {}
 for (const songName of Object.keys(songs)) {
   const { text, translation } = songs[songName]
   songRoutes['/otaku/' + songName] =
-    <SongRouter songName={songName}
+    <SongLoader songName={songName}
       text={text}
       translation={translation}/>
 }
@@ -21,8 +21,9 @@ const Otaku = () => (
 const Directory = () => (
   <div className='otaku-navbar'>
     {Object.keys(songs).map(songName => (
-      <Link cssClasses='otaku-item' href={'/otaku/' + songName}>
+      <Link key={songName} className='otaku-item' href={'/otaku/' + songName}>
         {songName}
+        <Image className="otaku-item-image" src={songs[songName].image}/>
       </Link>
     ))}
   </div>

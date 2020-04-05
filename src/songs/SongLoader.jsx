@@ -1,8 +1,8 @@
 import React from 'react'
-import JapaneseTranslation from './components/JapaneseTranslation'
-import { fetchJapanese } from './tools/ajax'
+import JapaneseTranslation from '../components/JapaneseTranslation'
+import { fetchJapanese } from '../tools/ajax'
 
-export default class SongRouter extends React.Component {
+export default class SongLoader extends React.Component {
   constructor(props) {
     super(props)
     this.state = {

@@ -8,9 +8,8 @@ export default class Link extends React.Component {
 
     getCssClasses() {
         let className = 'link'
-        const { cssClasses } = this.props;
-        if (cssClasses)
-            className += ' ' + [cssClasses].flat().join(' ');
+        if (this.props.className)
+            className += ' ' + this.props.className;
         return className;
     }
 
