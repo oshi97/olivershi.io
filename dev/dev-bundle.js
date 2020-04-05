@@ -1707,7 +1707,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _doc
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _konosuba_ed_2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./konosuba_ed_2 */ \"./src/songs/konosuba_ed_2.js\");\n/* harmony import */ var _isekai_quartet_op_2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./isekai_quartet_op_2 */ \"./src/songs/isekai_quartet_op_2.js\");\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  'konosuba_ed_2': _konosuba_ed_2__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  'isekai_quartet_op_2': _isekai_quartet_op_2__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\n});\n\n//# sourceURL=webpack:///./src/songs/songs.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _konosuba_ed_2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./konosuba_ed_2 */ \"./src/songs/konosuba_ed_2.js\");\n/* harmony import */ var _isekai_quartet_op_2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./isekai_quartet_op_2 */ \"./src/songs/isekai_quartet_op_2.js\");\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  'konosuba_ed_2': _konosuba_ed_2__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  'isekai_quartet_op_2': _isekai_quartet_op_2__WEBPACK_IMPORTED_MODULE_1__[\"default\"]\n});\n\n//# sourceURL=webpack:///./src/songs/songs.js?");
 
 /***/ }),
 

@@ -10,7 +10,7 @@
     "sass-sqwatch": "npx sass --watch src/css/index.sass docs/index.css",
     "build": "npm-run-all webpack-b sass api",
     "webpack-b": "npx webpack --mode production",
-    "sass": "npx sass src/css/index.sass docs/index.css",
+    "sass": "npx sass src/css/Index.sass docs/index.css",
     "api": "npm-run-all japanese sheets",
     "sheets": "python sheets.py",
     "japanese": "node japanese.js"
