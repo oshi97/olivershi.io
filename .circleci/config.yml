@@ -10,10 +10,15 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm install
+            - run: npm install gh-pages
+            - run: git config --global user.name "circleci-build"
+            - run: git config --global user.name "circleci"
             - run: npx webpack --mode production
             - run: npx sass src/css/Index.sass docs/index.css
             - run: python3 sheets.py
             - run: node japanese.js
+            - run: npx gh-pages --dist docs
+
 workflows:
     build:
       jobs:
