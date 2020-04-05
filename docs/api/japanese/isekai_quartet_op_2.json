@@ -1,7 +1,22 @@
 {
   "title": [
     {
-      "word": "poo"
+      "word": "異世界",
+      "pronunciation": "いせかい",
+      "romaji": "i se kai",
+      "meaning": "alternate universe/parallel world. 世界 (sekai) meaning world. "
+    },
+    {
+      "word": "ショー",
+      "meaning": "show",
+      "pronunciation": "ショー",
+      "notes": "this is an english word using katakana"
+    },
+    {
+      "word": "タイム",
+      "meaning": "time",
+      "pronunciation": "タイム",
+      "notes": "this is an english word using katakana"
     }
   ],
   "text": [

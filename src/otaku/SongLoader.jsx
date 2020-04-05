@@ -17,13 +17,14 @@ export default class SongLoader extends React.Component {
   }
 
   render() {
-    const { text, title, translation } = this.props;
+    const { text, title, textTranslation, titleTranslation } = this.props;
     const { translationData } = this.state;
     return (
       <JapaneseTranslation
         title={title}
         text={text}
-        translation={translation}
+        textTranslation={textTranslation}
+        titleTranslation={titleTranslation}
         titleData={translationData.title}
         textData={translationData.text}
       />

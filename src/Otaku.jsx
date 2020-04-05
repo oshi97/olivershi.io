@@ -7,12 +7,13 @@ import Image from './components/Image'
 
 const songRoutes = {}
 for (const songName of Object.keys(songs)) {
-  const { text, title, translation } = songs[songName]
+  const { text, title, textTranslation, titleTranslation } = songs[songName]
   songRoutes['/otaku/' + songName] =
     <SongLoader songName={songName}
       text={text}
       title={title}
-      translation={translation}/>
+      textTranslation={textTranslation}
+      titleTranslation={titleTranslation}/>
 }
 
 const Otaku = () => (

@@ -63,9 +63,9 @@ export default class JapaneseTranslation extends React.Component {
 
   renderMeaning() {
     const { lineIndex, wordIndex  } = this.state
-    const { translation } = this.props
+    const { textTranslation } = this.props
     if (lineIndex === null || wordIndex === null) {
-      return <React.Fragment>{translation}</React.Fragment>
+      return <React.Fragment>{textTranslation}</React.Fragment>
     }
     const selectedWordData =
       lineIndex === -1 ? this.props.titleData[wordIndex] : this.props.textData[lineIndex][wordIndex]
@@ -76,7 +76,7 @@ export default class JapaneseTranslation extends React.Component {
         <div>meaning: {meaning}</div>
         <div>pronunciation: {pronunciation} {romaji}</div>
         {notes && <div>notes: {notes}</div>}
-        {source && <div>source: <a href={source} target='_blank'>{source}</a></div>}
+        {source && <div>source: <a href={source} target='_blank'>For more info</a></div>}
       </React.Fragment>
     )
   }
@@ -84,10 +84,13 @@ export default class JapaneseTranslation extends React.Component {
   renderTitle() {
     const { title } = this.props
     return (
-      <div className='japanese-title'>
-        {title.map((word, wordIndex) =>
-          this.renderWord(-1, wordIndex, word)
-        )}
+      <div className='japanese-translation-title'>
+        <div className='japanese-original'>
+          {title.map((word, wordIndex) =>
+            this.renderWord(-1, wordIndex, word)
+          )}
+        </div>
+        <div className='japanese-meaning' onClick={e => e.stopPropagation()}>{this.props.titleTranslation}</div>
       </div>
     )
   }
