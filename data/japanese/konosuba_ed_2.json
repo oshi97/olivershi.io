@@ -1,49 +1,60 @@
-{
-  "言わずに": {
-    "pronunciation": "いわずに",
-    "notes": "ずに is used to negate a verb.",
-    "source": "https://jref.com/articles/negation-in-japanese.125/",
-    "meaning": "without speaking"
-  },
-  "何も": {
-    "meaning": "nothing"
-  },
-  "何": {
-    "pronunciation": "なに",
-    "meaning": "what"
-  },
-  "も": {
-    "meaning": "Too or also, like in \"Me too!\"",
-    "partOfSpeech": "PARTICLE",
-    "notes": "to make it more formal, add です at the end.",
-    "source": "https://www.punipunijapan.com/mo/"
-  },
-  "言": {
-    "pronunciation": "い",
-    "source": "http://www.romajidesu.com/kanji/%E8%A8%80",
-    "meaning": "say"
-  },
-  "家": {
-    "pronunciation": "いえ",
-    "meaning": "house"
-  },
-  "を": {
-    "meaning": "Used to mark the direct object of a sentence",
-    "partOfSpeech": "PARTICLE",
-    "source": "https://www.punipunijapan.com/grammar-lesson-7-particle-%E3%82%92-o/",
-    "meaning": "Particle used to mark the direct object"
-  },
-  "出": {
-    "pronunciation": "で",
-    "meaning": "leave"
-  },
-  "て": {
-    "partOfSpeech": "PARTICLE",
-    "meaning": "The -te particle is used at the end of a verb to combine the first verb with a following one",
-    "source": "https://www.imabi.net/theparticlete.htm"
-  },
-  "出て": {
-    "pronunciation": "でて",
-    "meaning": "leave"
-  }
-}
+[
+  [
+    {
+      "word": "何",
+      "pronunciation": "なに",
+      "romaji": "nani",
+      "meaning": "what?"
+    },
+    {
+      "word": "も",
+      "pronunciation": "も",
+      "romaji": "mo",
+      "meaning": "Adding も to the end of a question word is like turns it into the \"null\"  answer for the question. I.e. if somebody were to ask the question \"what?\" or 何 the null answer would be \"nothing\", 何も",
+      "partOfSpeech": "PARTICLE",
+      "source": "https://www.punipunijapan.com/nothing-in-japanese/"
+    },
+    {
+      "word": "言わ",
+      "pronunciation": "いわ",
+      "romaji": "i wa",
+      "meaning": "say",
+      "notes": "This is likely an inflection of 言 pronounced(いう iu)",
+      "source": "http://www.romajidesu.com/dictionary/meaning-of-%E8%A8%80%E3%82%8F.html"
+    },
+    {
+      "word": "ずに",
+      "pronunciation": "ずに",
+      "romaji": "zu ni",
+      "meaning": "ずに is used to negate 言わ to become \"without speaking\"",
+      "partOfSpeech": "ADJECTIVE",
+      "source": "https://jref.com/articles/negation-in-japanese.125/"
+    },
+    {
+      "word": "家",
+      "pronunciation": "いえ",
+      "romaji": "ie",
+      "meaning": "house"
+    },
+    {
+      "word": "を",
+      "meaning": "Here, を makes 家 as the direct object of the sentence",
+      "romaji": "o",
+      "source": "https://www.punipunijapan.com/grammar-lesson-7-particle-%E3%82%92-o/"
+    },
+    {
+      "word": "出",
+      "pronunciation": "で",
+      "romaji": "de",
+      "meaning": "leave"
+    },
+    {
+      "word": "て",
+      "pronunciation": "て",
+      "romaji": "te",
+      "meaning": "て is used here combine the first verb (出) with the next ones on the following line",
+      "partOfSpeech": "PARTICLE",
+      "source": "https://www.imabi.net/theparticlete.htm"
+    }
+  ]
+]

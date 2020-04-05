@@ -1,32 +1,31 @@
 import React from 'react'
 import Switch from './components/Switch'
 import Link from './components/Link'
-import Konosuba_ed_2 from './otaku/konosuba_ed_2'
+import songs from './songs/songs'
+import SongRouter from './SongRouter'
 
-export default class Otaku extends React.Component {
-  constructor(props) {
-    super(props)
-    this.routes = {
-      '/otaku/konosuba_ed_2': <Konosuba_ed_2/>,
-      'default': this.renderDirectory()
-    };
-  }
 
-  renderDirectory() {
-    return (
-      <div className='otaku-navbar'>
-        <Link cssClasses='otaku-item' href='/otaku/konosuba_ed_2'>
-          konosuba_ed_2
-        </Link>
-      </div>
-    )
-  }
-
-  render() {
-    return (
-      <div>
-        <Switch routes={this.routes} exact={true}></Switch>
-      </div>
-    )
-  }
+const songRoutes = {}
+for (const songName of Object.keys(songs)) {
+  const { text, translation } = songs[songName]
+  songRoutes['/otaku/' + songName] =
+    <SongRouter songName={songName}
+      text={text}
+      translation={translation}/>
 }
+
+const Otaku = () => (
+  <Switch routes={{ ...songRoutes, 'default': <Directory/>}} exact={true}></Switch>
+)
+
+const Directory = () => (
+  <div className='otaku-navbar'>
+    {Object.keys(songs).map(songName => (
+      <Link cssClasses='otaku-item' href={'/otaku/' + songName}>
+        {songName}
+      </Link>
+    ))}
+  </div>
+)
+
+export default Otaku

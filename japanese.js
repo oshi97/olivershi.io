@@ -7,14 +7,7 @@ const srcDir = path.join(__dirname, 'data')
 const newDir = path.join(__dirname, 'docs/api')
 
 function transformJapanese(data) {
-  const transformedData = {}
-  Object.keys(data).forEach(word => {
-    transformedData[word] = {
-      pronunciation: word,
-      ...data[word]
-    }
-  })
-  return transformedData
+  return data
 }
 
 async function copyDir (dir = '/') {

@@ -35,10 +35,6 @@ body {
   background-color: lightgreen;
 }
 
-.japanese {
-  font-size: 24px;
-}
-
 .dir {
   background-color: aliceblue;
 }
@@ -57,6 +53,35 @@ body {
 
 .Icon-videogame_asset-24 {
   margin-right: 0.25em;
+}
+
+.japanese-lyrics {
+  font-size: 24px;
+  text-align: center;
+}
+.japanese-translation {
+  width: 100%;
+  display: flex;
+}
+.japanese-translation-divider {
+  border: solid black 3px;
+  margin: 0em 1em;
+}
+.japanese-original {
+  width: 50%;
+}
+.japanese-original-word {
+  display: inline-block;
+  background-color: #eaeaea;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  margin-right: 0.1em;
+}
+.japanese-original-word--active {
+  background-color: #cacaea;
+}
+.japanese-meaning {
+  width: 50%;
 }
 
 /*# sourceMappingURL=index.css.map */
