@@ -1,35 +1,42 @@
-[
-  [
+{
+  "title": [
     {
-      "word": "さあ",
-      "pronunciation": "さあ",
-      "romaji": "sa a",
-      "meaning": "Used as a kind of interjection, something similar to \"there is\" maybe?"
-    },
-    {
-      "word": "異世界",
-      "pronunciation": "いせかい",
-      "romaji": "i se kai",
-      "meaning": "alternate universe/parallel world. 世界 (sekai) meaning world. "
-    },
-    {
-      "word": "から",
-      "pronunciation": "から",
-      "romaji": "ka ra",
-      "meaning": "originating from"
-    },
-    {
-      "word": "の",
-      "pronunciation": "の",
-      "romaji": "no",
-      "meaning": "from",
-      "source": "https://www.japaneseprofessor.com/lessons/beginning/modifying-particle-no/"
-    },
-    {
-      "word": "招待",
-      "pronunciation": "しょうたい",
-      "romaji": "sho tai (shi yo u ta i)",
-      "meaning": "invitation"
+      "word": "poo"
     }
+  ],
+  "text": [
+    [
+      {
+        "word": "さあ",
+        "pronunciation": "さあ",
+        "romaji": "sa a",
+        "meaning": "Used as a kind of interjection, something similar to \"there is\" maybe?"
+      },
+      {
+        "word": "異世界",
+        "pronunciation": "いせかい",
+        "romaji": "i se kai",
+        "meaning": "alternate universe/parallel world. 世界 (sekai) meaning world. "
+      },
+      {
+        "word": "から",
+        "pronunciation": "から",
+        "romaji": "ka ra",
+        "meaning": "originating from"
+      },
+      {
+        "word": "の",
+        "pronunciation": "の",
+        "romaji": "no",
+        "meaning": "from",
+        "source": "https://www.japaneseprofessor.com/lessons/beginning/modifying-particle-no/"
+      },
+      {
+        "word": "招待",
+        "pronunciation": "しょうたい",
+        "romaji": "sho tai (shi yo u ta i)",
+        "meaning": "invitation"
+      }
+    ]
   ]
-]
+}

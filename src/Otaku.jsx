@@ -1,16 +1,17 @@
 import React from 'react'
 import Switch from './components/Switch'
 import Link from './components/Link'
-import songs from './songs/songs'
-import SongLoader from './songs/SongLoader'
+import songs from './otaku/songs'
+import SongLoader from './otaku/SongLoader'
 import Image from './components/Image'
 
 const songRoutes = {}
 for (const songName of Object.keys(songs)) {
-  const { text, translation } = songs[songName]
+  const { text, title, translation } = songs[songName]
   songRoutes['/otaku/' + songName] =
     <SongLoader songName={songName}
       text={text}
+      title={title}
       translation={translation}/>
 }
 

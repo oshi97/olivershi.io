@@ -150,11 +150,11 @@ body {
   margin-right: 0.25em;
 }
 
-.japanese-lyrics {
+.japanese-translation {
   font-size: 24px;
   text-align: center;
 }
-.japanese-translation {
+.japanese-translation-content {
   width: 100%;
   display: flex;
 }
