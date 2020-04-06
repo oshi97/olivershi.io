@@ -5,5 +5,5 @@ export default {
   title: konosuba_ed_2.title.map(word => word.word),
   textTranslation: 'Leaving the house without saying a word',
   titleTranslation: 'Wanna Go Home',
-  image: 'japanese/konosuba_ed_2.jpeg'
+  image: 'japanese/konosuba_ed_2.jpg'
 }
