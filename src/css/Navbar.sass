@@ -1,11 +1,9 @@
 .navbar
   display: flex
-  margin-bottom: 1em
+  margin-bottom: 0.5em
   justify-content: center
   flex-wrap: wrap
-  padding-left: 0.5em
-  padding-right: 0.5em
-  padding-top: 0.5em
+  padding: 0.5em
   background-color: #cacafa
 
   .link
@@ -18,4 +16,16 @@
 
   & i
     margin-right: 0.1em
+
+  &-rem
+    width: 2em
+    height: 2em
+    background-size: contain
+
+    img
+      width: 100%
+      visibility: hidden
+    
+    &:hover img
+      visibility: visible
 

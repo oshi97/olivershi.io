@@ -14,7 +14,11 @@ const Navbar = () => (
 			Sheets
 		</Link>
 		<Link href='/otaku'>
-			<Image className='navbar-rem' src='rem.gif'/>
+			<div className='navbar-rem' style={{
+				backgroundImage: `url('https://${window.location.host}/public/images/rem_0.gif')`
+			}}>
+				<Image src='rem.gif'/>
+			</div>
 			オタク
 		</Link>
 		<a className='link' href='/dome/index.html' target='_blank'>
