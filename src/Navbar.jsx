@@ -14,7 +14,7 @@ const Navbar = () => (
 			Sheets
 		</Link>
 		<Link href='/otaku'>
-			<Image className='navbar-rem' src='rem.gif'/>
+			<Image className='navbar-rem' src='optimized_rem.gif'/>
 			オタク
 		</Link>
 		<a className='link' href='/dome/index.html' target='_blank'>
