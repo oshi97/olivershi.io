@@ -19,9 +19,9 @@ function routeDirEntry(dirEntry, rootDir) {
 }
 
 const Directory = (props) => {
-	const { contents, name, full_path } = props
+	const { contents, name, full_path, className } = props
 	return (
-		<div className='dir'>
+		<div className={className ? 'dir ' + className : 'dir'}>
 			{name || './'}
 			<div className='dir-content'>
 				{contents && contents.map(dirEntry => routeDirEntry(dirEntry, full_path))}
@@ -32,7 +32,7 @@ const Directory = (props) => {
 
 const File = ({ name, full_path }) => (
 	<div className='file'>
-		<a href={full_path}>{name}</a>
+		<a href={full_path}>{name.split('.')[0]}</a>
 	</div>
 )
 
@@ -52,7 +52,7 @@ export default class Sheets extends React.Component {
 
 	render() {
 		return (
-			<Directory {...this.state.sheetsJson} />
+			<Directory className='sheets' {...this.state.sheetsJson} />
 		);
 	}
 }

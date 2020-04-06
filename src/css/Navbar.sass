@@ -6,13 +6,24 @@
   padding: 0.5em
   background-color: #cacafa
 
-  .link
+  &-link
     display: flex
     align-items: center
     margin-left: 0.5em
     margin-right: 0.5em
     color: black
     word-break: keep-all
+    border-bottom: 1px solid
+    border-color: transparent
+
+    &--first
+      margin-left: calc(50% - 100px)
+
+    &-dome
+      margin-left: auto
+
+    &:hover
+      border-color: blue
 
   & i
     margin-right: 0.1em
