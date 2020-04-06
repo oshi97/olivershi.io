@@ -171,6 +171,9 @@ body {
   background-color: #f0e9d5;
 }
 
+.Icon svg {
+  fill: currentColor;
+}
 .Icon-videogame_asset-24 {
   margin-right: 0.25em;
 }
