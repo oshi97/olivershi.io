@@ -20,10 +20,11 @@ async function copyDir (dir = '/') {
     const newPath = path.join(newDir, direntPath)
     if (dirent.isFile()) {
       const data = await fsPromises.readFile(srcPath)
-      console.log('wrote new file', srcPath)
       const json = JSON.parse(data)
       const jsonString = JSON.stringify(transformJapanese(json), null, 2)
-      fsPromises.writeFile(newPath, jsonString).catch(e => console.warn(e))
+      fsPromises.writeFile(newPath, jsonString)
+        .then(() => console.log('wrote new file', srcPath))
+        .catch(e => console.warn(e))
     } else if (dirent.isDirectory()) {
       fsPromises.stat(newPath).catch(() => {
         fsPromises.mkdir(newPath)
@@ -35,4 +36,4 @@ async function copyDir (dir = '/') {
   }
 }
 
-copyDir('japanese')
+copyDir('/')
