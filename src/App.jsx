@@ -18,10 +18,12 @@ const App = () => {
 		default: <Home />
 	};
 	return (
-		<div className='app'>
+		<React.Fragment>
 			<Navbar />
-			<Switch routes={routes} defaultURL='/'></Switch>
-		</div>
+			<div className='app'>
+				<Switch routes={routes} defaultURL='/'></Switch>
+			</div>
+		</React.Fragment>
 	)
 }
 
