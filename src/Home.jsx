@@ -1,8 +1,10 @@
 import React from 'react'
+import Image from './components/Image'
 
 const Home = () => (
-    <div>
-        いらっしゃいませ!!
+    <div className='home'>
+        <div>いらっしゃいませ!!</div>
+        <Image src='avocado.gif'/>
     </div>
 )
 
