@@ -27,7 +27,7 @@ export default class JapaneseTranslation extends React.Component {
     this.setState({ lineIndex, wordIndex })
   }
 
-  _getOriginalWordClass(s, li, wi) {
+  _getOriginalWordClass(li, wi) {
     const isSelected = li !== this.state.lineIndex || wi !== this.state.wordIndex
     if (isSelected) {
       return 'japanese-original-word'
@@ -37,7 +37,7 @@ export default class JapaneseTranslation extends React.Component {
 
   renderWord(lineIndex, wordIndex, word) {
     return (
-      <div className={this._getOriginalWordClass('text', lineIndex, wordIndex)}
+      <div className={this._getOriginalWordClass(lineIndex, wordIndex)}
         key={wordIndex + word}
         onClick={e => this.onWordClick(e, lineIndex, wordIndex)}
       >
