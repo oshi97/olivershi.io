@@ -1,5 +1,5 @@
 import React from 'react'
-import { fetchSheets } from './tools/ajax'
+import sheetsJson from '../docs/api/sheets.json'
 
 /**
  * 
@@ -36,23 +36,6 @@ const File = ({ name, full_path }) => (
 	</div>
 )
 
-export default class Sheets extends React.Component {
-	constructor(props) {
-		super(props)
-		this.state = {
-			sheetsJson: {}
-		}
-	}
-
-	componentDidMount() {
-		if (Object.entries(this.state.sheetsJson).length === 0) {
-			fetchSheets().then(sheetsJson => this.setState({ sheetsJson }))
-		}
-	}
-
-	render() {
-		return (
-			<Directory className='sheets' {...this.state.sheetsJson} />
-		);
-	}
-}
+export default () => (
+	<Directory className='sheets' {...sheetsJson} />
+);
