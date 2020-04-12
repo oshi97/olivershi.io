@@ -9,11 +9,13 @@ import Sheets from './Sheets'
 import Home from './Home'
 import Navbar from './Navbar'
 import Otaku from './Otaku'
+import Blog from './Blog'
 
 const App = () => {
 	const routes = {
 		'/sheets': <Sheets/>,
 		'/otaku': <Otaku />,
+		'/blog': <Blog />,
 		'/': <Home />,
 		default: <Home />
 	};

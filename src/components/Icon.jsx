@@ -1,6 +1,6 @@
 import React from 'react'
 
-const validIcons = ['home-black', 'library_music-black', 'videogame_asset-black']
+const validIcons = ['face-black', 'home-black', 'library_music-black', 'videogame_asset-black', 'face-black']
 const Icon = ({ type, size }) => {
     if (!type || validIcons.indexOf(type) === -1) {
         console.warn(`Icon type: ${type} not found in ${validIcons}`)
