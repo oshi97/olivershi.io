@@ -61,6 +61,7 @@ body {
   flex-grow: 1;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1em;
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -72,6 +73,7 @@ body {
 
 .link:hover {
   color: blue;
+  opacity: 1;
 }
 
 .navbar {
@@ -80,7 +82,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   padding: 0.5em;
-  background-color: #aacaff;
+  background-color: #8bcbff;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .navbar-link {
@@ -246,12 +248,19 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   display: flex;
   margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
 }
 .breadcrumbs div {
   margin-right: 0.25em;
 }
+.breadcrumbs-active {
+  color: #0210d6;
+}
 .breadcrumbs-previous {
-  color: #5a8aff;
+  color: #6a88ff;
+  opacity: 0.7;
 }
 
 /*# sourceMappingURL=index.css.map */
