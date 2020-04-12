@@ -6,11 +6,11 @@ import Link from './components/Link'
 const Navbar = () => (
 	<div className='navbar'>
 		<Link className='navbar-link navbar-link--first' href='/'>
-			<Icon type='home'/>
+			<Icon type='home-black'/>
 			Home
 		</Link>
 		<Link className='navbar-link' href='/sheets'>
-			<Icon type='library_music'/>
+			<Icon type='library_music-black'/>
 			Sheets
 		</Link>
 		<Link className='navbar-link' href='/otaku'>
@@ -18,7 +18,7 @@ const Navbar = () => (
 			オタク
 		</Link>
 		<a className='link navbar-link navbar-link-dome' href='/dome/index.html' target='_blank'>
-			<Icon type='videogame_asset'/>
+			<Icon type='videogame_asset-black'/>
 			Dome
 		</a>
 	</div>
