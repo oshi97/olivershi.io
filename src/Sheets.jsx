@@ -1,5 +1,5 @@
 import React from 'react'
-import sheetsJson from '../docs/api/sheets.json'
+import sheetsJson from '../data/sheets.json'
 
 /**
  * 

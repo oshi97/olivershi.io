@@ -16,7 +16,6 @@ jobs:
             - run: npx webpack --mode production
             - run: npx sass src/css/Index.sass docs/index.css
             - run: python3 sheets.py
-            - run: node japanese.js
             - run: npx gh-pages -m 'auto commit [ci skip]' -d docs
 
 workflows:

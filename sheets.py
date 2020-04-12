@@ -6,7 +6,7 @@ import json
 
 # Hmmm I should have just used node for this huh, then I wouldn't have to deal with python versions
 # but python tho....
-dirFile = 'docs/api/sheets.json'
+dirFile = 'data/sheets.json'
 
 def scan(currentDir = './public/sheets'):
   obj = {}
