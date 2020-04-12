@@ -24,8 +24,8 @@ class App extends React.Component {
 		return (
 			<React.Fragment>
 				<Navbar />
+				<Breadcrumbs />
 				<div className='app'>
-					<Breadcrumbs />
 					<Switch routes={routes} defaultURL='/'></Switch>
 				</div>
 			</React.Fragment>
@@ -33,4 +33,4 @@ class App extends React.Component {
 	}
 }
 
-ReactDOM.render(<App />, document.getElementById("root"))
+ReactDOM.render(<App />, document.getElementById('root'))

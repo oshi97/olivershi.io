@@ -37,35 +37,41 @@ export default class BreadCrumbs extends React.Component {
   render () {
     const { pathname, previousPathname } = this.state
     let href = ''
-    const crumbs = [
-      <Link key='home' href={'/'}>home</Link>
-    ]
-    pathname.split('/').filter(c => c).forEach(c => {
-      href += '/' + c
-      crumbs.push(
-        <div key={c + '-divider'} className='breadcrumbs-divider'>></div>
-      )
-      crumbs.push(
-        <Link className='breadcrumbs-link' key={c} href={href}>{c}</Link>
-      )
-    })
+    const splitPath = pathname.split('/').filter(c => c)
+    const activeCrumbs = splitPath.map(c => ({
+      href: href += '/' + c,
+      value: c
+    }))
+    if (activeCrumbs.length) {
+      activeCrumbs[activeCrumbs.length - 1].className = 'breadcrumbs-active'
+    }
+    let previousCrumbs = []
     if (previousPathname.startsWith(pathname)) {
-      previousPathname
-        .replace(pathname, '')
-        .split('/').filter(c => c)
-        .forEach(c => {
-          href += '/' + c
-          crumbs.push(
-            <div key={c + '-divider'} className='breadcrumbs-divider breadcrumbs-previous'>></div>
-          )
-          crumbs.push(
-            <Link className='breadcrumbs-link breadcrumbs-previous' key={c} href={href}>{c}</Link>
-          )
-        })
+      const previousSplitPath = previousPathname.replace(pathname, '').split('/').filter(c => c)
+      previousCrumbs = previousSplitPath.map(c => ({
+        href: href += '/' + c,
+        value: c
+      }))
     }
     return (
       <div className='breadcrumbs'>
-        {crumbs}
+        <Link className={!activeCrumbs.length && 'breadcrumbs-active'} href='/'>home</Link>
+        {activeCrumbs.map((c, index) => 
+          <React.Fragment>
+            <div key={c + '-divider'}>></div>
+            <Link className={c.className} key={c.value + '/active'} href={c.href}>
+              {c.value}
+            </Link>
+          </React.Fragment>
+        )}
+        {previousCrumbs.map(c => 
+          <React.Fragment>
+            <div key={c + '-divider'} className='breadcrumbs-previous'>></div>
+            <Link className='breadcrumbs-previous' key={c.key + '/previous'} href={c.href}>
+              {c.value}
+            </Link>
+          </React.Fragment>
+        )}
       </div>
     )
   }
