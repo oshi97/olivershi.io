@@ -13,9 +13,9 @@ jobs:
             - run: npm install gh-pages
             - run: git config --global user.name "circleci-build"
             - run: git config --global user.name "circleci"
+            - run: python3 sheets.py
             - run: npx webpack --mode production
             - run: npx sass src/css/Index.sass docs/index.css
-            - run: python3 sheets.py
             - run: npx gh-pages -m 'auto commit [ci skip]' -d docs
 
 workflows:
