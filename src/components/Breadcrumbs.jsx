@@ -28,9 +28,11 @@ export default class BreadCrumbs extends React.Component {
 	handleHistoryChange () {
     if (this.state.pathname === window.location.pathname) 
       return
+    const paths = [this.state.pathname, this.state.previousPathname, window.location.pathname]
+    const longerPathname = paths.reduce(function (a, b) { return a.length > b.length ? a : b; });
     this.setState({
       pathname: window.location.pathname,
-      previousPathname: this.state.pathname
+      previousPathname: longerPathname
     })
   }
   
@@ -38,12 +40,12 @@ export default class BreadCrumbs extends React.Component {
     const { pathname, previousPathname } = this.state
     let href = ''
     const splitPath = pathname.split('/').filter(c => c)
-    const activeCrumbs = splitPath.map(c => ({
+    const currentCrumbs = splitPath.map(c => ({
       href: href += '/' + c,
       value: c
     }))
-    if (activeCrumbs.length) {
-      activeCrumbs[activeCrumbs.length - 1].className = 'breadcrumbs-active'
+    if (currentCrumbs.length) {
+      currentCrumbs[currentCrumbs.length - 1].className = 'breadcrumbs-active'
     }
     let previousCrumbs = []
     if (previousPathname.startsWith(pathname)) {
@@ -55,19 +57,19 @@ export default class BreadCrumbs extends React.Component {
     }
     return (
       <div className='breadcrumbs'>
-        <Link className={!activeCrumbs.length && 'breadcrumbs-active'} href='/'>home</Link>
-        {activeCrumbs.map((c, index) => 
-          <React.Fragment>
-            <div key={c + '-divider'}>></div>
-            <Link className={c.className} key={c.value + '/active'} href={c.href}>
+        <Link key='home' className={!currentCrumbs.length && 'breadcrumbs-active'} href='/'>home</Link>
+        {currentCrumbs.map(c => 
+          <React.Fragment key={c.href + '/current'}>
+            <div>></div>
+            <Link className={c.className}  href={c.href}>
               {c.value}
             </Link>
           </React.Fragment>
         )}
         {previousCrumbs.map(c => 
-          <React.Fragment>
-            <div key={c + '-divider'} className='breadcrumbs-previous'>></div>
-            <Link className='breadcrumbs-previous' key={c.key + '/previous'} href={c.href}>
+          <React.Fragment key={c.href + '/previous'}>
+            <div className='breadcrumbs-previous'>></div>
+            <Link className='breadcrumbs-previous' href={c.href}>
               {c.value}
             </Link>
           </React.Fragment>
