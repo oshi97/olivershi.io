@@ -11,7 +11,6 @@ jobs:
           steps:
             - run: npm install --only=dev
             - run: npm install gh-pages
-            - run: git config --global user.name "circleci-build"
             - run: git config --global user.name "circleci"
             - run: python3 sheets.py
             - run: npx webpack --mode production
