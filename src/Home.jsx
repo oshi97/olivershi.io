@@ -4,7 +4,7 @@ import Image from './components/Image'
 const Home = () => (
     <div className='home'>
         <div>いらっしゃいませ!!</div>
-        <Image src='avocado.gif'/>
+        <Image src='piano-beluga.gif'/>
     </div>
 )
 
