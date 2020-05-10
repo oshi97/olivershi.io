@@ -4,15 +4,19 @@ import Link from './components/Link'
 import Image from './components/Image'
 import JapaneseTranslation from './components/JapaneseTranslation'
 
-const SongLoader = ({ songName }) => {
-  const translationData = require(`../data/japanese/${songName}`).default
-  return <JapaneseTranslation {...translationData}/>
-}
-const songFiles = ['isekai_quartet_op_2', 'konosuba_ed_2', 'takagi_op_2']
-const songRoutes = {}
-for (const songName of songFiles) {
-  songRoutes['/otaku/' + songName] = <SongLoader songName={songName}/>
-}
+const _context = require.context('../data/japanese/', true, /\.js$/)
+const songContext = _context.keys().reduce((songContext, key) => {
+  const _key = key.replace('./', '').replace('.js', '')
+  const translationData = _context(key).default
+  songContext[_key] =  <JapaneseTranslation {...translationData}/>
+  return songContext
+}, {})
+
+const songRoutes = Object.keys(songContext).reduce((songRoutes, key) => {
+  const _key = '/otaku/' + key
+  songRoutes[_key] = songContext[key]
+  return songRoutes
+}, {})
 
 const Otaku = () => (
   <Switch routes={{ ...songRoutes, default: <Directory/>}} exact={true}></Switch>
@@ -20,7 +24,7 @@ const Otaku = () => (
 
 const Directory = () => (
   <div className='otaku-navbar'>
-    {songFiles.map(songName => (
+    {Object.keys(songContext).map(songName => (
       <Link key={songName} className='otaku-item' href={'/otaku/' + songName}>
         {songName}
         <Image className="otaku-item-image" src={'japanese/'+songName}/>
