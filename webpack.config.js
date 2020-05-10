@@ -1,6 +1,6 @@
-const path = require('path');
+const path = require('path')
 
-const entry = { bundle: './src/App' };
+const entry = { bundle: './src/App' }
 const resolve = {
   extensions: ['.js', '.json', '.jsx', '.svg', '.png', '.ico', '.gif', '.jpeg', '.jpg', '.webp']
 }
@@ -28,7 +28,7 @@ const config = {
       }
     ]
   }
-};
+}
 
 // https://webpack.js.org/configuration/configuration-types/
 module.exports = (env, argv) => {
@@ -44,4 +44,4 @@ module.exports = (env, argv) => {
     ...config,
     mode: argv.mode
   }
-};
+}

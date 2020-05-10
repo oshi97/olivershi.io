@@ -8,7 +8,7 @@
     "webpack": "npx webpack -w --mode development",
     "node": "node dev/server.js",
     "sass-sqwatch": "npx sass --watch src/css/Index.sass docs/index.css",
-    "eslint": "npx eslint --ext .jsx --ext .js src/ data/ --fix"
+    "eslint": "npx eslint --ext .jsx --ext .js src/ data/ .eslintrc.js webpack.config.js --fix"
   },
   "repository": {
     "type": "git",
