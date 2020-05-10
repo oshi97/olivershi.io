@@ -3,3 +3,4 @@ node_modules
 dev/dev-bundle.js
 docs/index.css
 docs/index.css.map
+docs/bundle.js

@@ -7,14 +7,13 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install --only=dev
-            - run: git config --global user.name "circleci"
-            - run: python3 sheets.py
-            - run: npx webpack --mode production
-            - run: npx sass src/css/Index.sass docs/index.css
-            - run: npx gh-pages -m 'auto commit [ci skip]' -d docs
+      - node/install-packages
+      - run: python3 sheets.py
+      - run: npx webpack --mode production
+      - run: npx sass src/css/Index.sass docs/index.css
+      - run: git config --global user.email "shishishi123@gmail.com"
+      - run: git config --global user.name "circleci"
+      - run: npx gh-pages -m 'auto commit [ci skip]' -d docs
 
 workflows:
     build:
