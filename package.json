@@ -33,7 +33,6 @@
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.1.0",
     "gh-pages": "^2.2.0",
-    "null-loader": "^4.0.0",
     "raw-loader": "^4.0.1",
     "sass": "^1.26.5",
     "webpack": "^4.43.0",

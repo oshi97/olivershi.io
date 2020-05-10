@@ -24,7 +24,7 @@ const config = {
       },
       {
         test: /\.(png|gif|jpe?g)/,
-        loader: 'null-loader'
+        loader: path.resolve(__dirname, 'image-url-loader.js')
       }
     ]
   }
