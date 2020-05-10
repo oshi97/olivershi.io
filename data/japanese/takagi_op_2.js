@@ -1,6 +1,51 @@
-const titleData = []
+const titleData = [
+  {
+    word: 'ゼロセンチメートル',
+    romaji: 'ze ro se n chi me- to ru',
+    meaning: 'Zero Centimeters',
+  }
+]
 const contentData = [
-  []
+  [
+    {
+      word: '隙間',
+      pronunciation: 'すきま',
+      romaji: 'su ki ma',
+      meaning: 'gap',
+    },
+    {
+      word: 'は',
+      romaji: 'wa',
+      meaning: '-wa particle, used after the topic to be talked the speaker wants to talk about',
+      source: 'https://www.japanesepod101.com/japanese-particles/',
+      notes: 'Wa（は）follows the topic the speaker wants to talk about. Therefore, wa（は）is often called topic marking particle. It is often used in a sentence pattern like, "[ A ] wa [ B ] desu." which means "[ A ] is [ B ]."'
+    },
+    {
+      word: 'ゼロ',
+      romaji: 'ze ro',
+      meaning: 'zero',
+    },
+    {
+      word: 'センチメートル',
+      romaji: 'se n chi meー to ru',
+      meaning: 'centimeter',
+      notes: 'the ー symbol is the long vowel symbol',
+      source: 'https://en.wikipedia.org/wiki/Ch%C5%8Donpu'
+    }
+  ],
+  [
+    {
+      word: '隠し',
+      pronunciation: 'かくし',
+      romaji: 'ka ku shi',
+      meaning: 'being hidden'
+    },
+    {
+      word: 'きれない',
+      romaji: 'ki re na i',
+      meaning: '-nai negation of 切れる (ki re ru)'
+    }
+  ]
 ]
 
 const englishContent =

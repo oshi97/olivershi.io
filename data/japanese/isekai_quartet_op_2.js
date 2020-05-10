@@ -55,9 +55,32 @@ const contentData = [
   ]
 ]
 
-const englishContent = [
-  'Here\'s an invitation from the other world'
-]
+const englishContent = 
+`Here's an invitation from the other world
+
+The other world, it's the other world
+Strange events are waiting for you
+The other world, it's like a dream
+
+I won't let you go home, I won't let you go
+I won't let you return back to your world
+It's a forbidden passport
+
+It's a story of four countries
+Once a week, there's a gathering of the Other World Quartet
+
+The other world, it's the other world
+Here's the dangerous journey
+E, e, e, e, eh～!?
+
+Other world Showtime, you have no choice
+You'll hear the warning bell again today
+It's not strange when anything happens
+That's the same as reality
+
+I won't let you go home, I won't let you go
+Other world, other world, other world, other world,
+Ah～, it's showtime!`
 
 export default {
   titleData: titleData,
@@ -65,5 +88,5 @@ export default {
   japaneseTitle: titleData.map(word => word.word),
   japaneseContent: contentData.map(line => line.map(word => word.word)),
   englishTitle: 'Isekai Showtime!',
-  englishContent: englishContent,
+  englishContent: englishContent.split('\n').filter(line => line),
 }
