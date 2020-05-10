@@ -2,7 +2,7 @@ import React from 'react'
 import Switch from './components/Switch'
 import Link from './components/Link'
 import Image from './components/Image'
-import JapaneseTranslation from './otaku/JapaneseTranslation'
+import JapaneseTranslation from './components/JapaneseTranslation'
 
 const SongLoader = ({ songName }) => {
   const translationData = require(`../data/japanese/${songName}`).default
