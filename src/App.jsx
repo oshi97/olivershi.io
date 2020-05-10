@@ -13,24 +13,24 @@ import Blog from './Blog'
 import Breadcrumbs from './components/Breadcrumbs'
 
 class App extends React.Component {
-	render () {
-		const routes = {
-			'/sheets': <Sheets/>,
-			'/otaku': <Otaku />,
-			'/blog': <Blog />,
-			'/': <Home />,
-			default: <Home />
-		};
-		return (
-			<React.Fragment>
-				<Navbar />
-				<Breadcrumbs />
-				<div className='app'>
-					<Switch routes={routes} defaultURL='/'></Switch>
-				</div>
-			</React.Fragment>
-		)
-	}
+  render () {
+    const routes = {
+      '/sheets': <Sheets/>,
+      '/otaku': <Otaku />,
+      '/blog': <Blog />,
+      '/': <Home />,
+      default: <Home />
+    }
+    return (
+      <React.Fragment>
+        <Navbar />
+        <Breadcrumbs />
+        <div className='app'>
+          <Switch routes={routes} defaultURL='/'></Switch>
+        </div>
+      </React.Fragment>
+    )
+  }
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))

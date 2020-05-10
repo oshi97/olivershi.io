@@ -22,7 +22,7 @@ export default class JapaneseTranslation extends React.Component {
     window.removeEventListener('click', this.onWordBlur)
   }
 
-  onWordClick(e, lineIndex, wordIndex ) {
+  onWordClick(e, lineIndex, wordIndex) {
     e.stopPropagation()
     this.setState({ lineIndex, wordIndex })
   }
@@ -50,7 +50,7 @@ export default class JapaneseTranslation extends React.Component {
     const { japaneseContent } = this.props
     return (
       <div className='japanese-original'>
-        {japaneseContent.map((line, lineIndex) =>              
+        {japaneseContent.map((line, lineIndex) =>
           <div className='japanese-original-line' key={lineIndex + line.join('')}>
             {line.map((word, wordIndex) =>
               this.renderWord(lineIndex, wordIndex, word)
@@ -62,7 +62,7 @@ export default class JapaneseTranslation extends React.Component {
   }
 
   renderMeaning() {
-    const { lineIndex, wordIndex  } = this.state
+    const { lineIndex, wordIndex } = this.state
     const { englishContent, titleData, contentData } = this.props
     if (lineIndex === null || wordIndex === null) {
       return <React.Fragment>{englishContent}</React.Fragment>
@@ -76,7 +76,13 @@ export default class JapaneseTranslation extends React.Component {
         <div>meaning: {meaning}</div>
         <div>pronunciation: {pronunciation} {romaji}</div>
         {notes && <div>notes: {notes}</div>}
-        {source && <div>source: <a href={source} target='_blank'>For more info</a></div>}
+        {source &&
+          <div>
+            source:
+            <a href={source} target='_blank' rel="noopener noreferrer">
+              For more info
+            </a>
+          </div>}
       </React.Fragment>
     )
   }

@@ -5,3 +5,5 @@ const Post = () => (
     markdown
   </div>
 )
+
+export default Post

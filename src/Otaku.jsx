@@ -15,7 +15,7 @@ for (const songName of songFiles) {
 }
 
 const Otaku = () => (
-  <Switch routes={{ ...songRoutes, 'default': <Directory/>}} exact={true}></Switch>
+  <Switch routes={{ ...songRoutes, default: <Directory/>}} exact={true}></Switch>
 )
 
 const Directory = () => (

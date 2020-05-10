@@ -3,7 +3,7 @@ const contentData = [
   []
 ]
 
-const englishContent = 
+const englishContent =
 `The gap between us is 0cm
 Our shoulders lined up with no space to hide anything
 
