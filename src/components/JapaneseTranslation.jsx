@@ -65,7 +65,11 @@ export default class JapaneseTranslation extends React.Component {
     const { lineIndex, wordIndex } = this.state
     const { englishContent, titleData, contentData } = this.props
     if (lineIndex === null || wordIndex === null) {
-      return <React.Fragment>{englishContent}</React.Fragment>
+      return (
+        <React.Fragment>
+          {englishContent.map((line, i) => <div key={i}>{line}</div>)}
+        </React.Fragment>
+      )
     }
     const selectedWordData =
       lineIndex === -1 ? titleData[wordIndex] : contentData[lineIndex][wordIndex]

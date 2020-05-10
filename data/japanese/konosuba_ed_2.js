@@ -91,9 +91,45 @@ const titleData = [
   }
 ]
 
-const englishContent = [
-  'Leaving the house without saying a word'
-]
+const englishContent =
+`Leaving the house without saying a word,
+I've made it all the way out here.
+But once the sun goes down,
+I turn into a hopeless, sniveling mess.
+
+The sky above the city is stained red,
+A crow cries as it passes on by.
+My long shadow, stretching out along this path,
+Pulls at my sleeve, urging me to head home.
+
+The smell of grilled fish...
+The wonderful smell of dinner...
+
+Even my stomach begins to cry out,
+And I'm getting tired of being stubborn.
+I really should go apologize right away—
+Ahh, I wanna go home!
+
+Before my hopeless eyes,
+A single child passes on by.
+She sniffles, sobbing loudly...
+Not bothering to look her way, I keep on running.
+
+A figure departing into the darkness
+Reminds me of who I was back when.
+
+Running... running... wiping my eyes...
+Chasing a waning moon—
+If I go apologize right away,
+I'll still make it in time for dinner!
+
+The smell of grilled fish...
+The wonderful smell of dinner...
+
+Even my stomach begins to cry out,
+And I'm getting tired of being stubborn.
+I really should go apologize right away—
+Ahh, I wanna go home!`
 
 export default {
   titleData: titleData,
@@ -101,5 +137,5 @@ export default {
   japaneseTitle: titleData.map(word => word.word),
   japaneseContent: contentData.map(line => line.map(word => word.word)),
   englishTitle: 'Wanna Go Home',
-  englishContent: englishContent,
+  englishContent: englishContent.replace(',\n', '\n').split('\n').filter(line => line),
 }

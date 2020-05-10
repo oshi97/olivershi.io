@@ -43,7 +43,7 @@ If you can take your time to realize it, that would be great
 The tip of the hand I reach out
 Is what I wish for the most
 So, I'm going to wait for you
-With my hand open`.split('\n').filter(line => line)
+With my hand open`
 
 export default {
   titleData: titleData,
@@ -51,5 +51,5 @@ export default {
   japaneseTitle: titleData.map(word => word.word),
   japaneseContent: contentData.map(line => line.map(word => word.word)),
   englishTitle: 'Zero Centimeters',
-  englishContent: englishContent,
+  englishContent: englishContent.split('\n').filter(line => line),
 }
