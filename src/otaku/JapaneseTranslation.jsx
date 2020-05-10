@@ -47,10 +47,10 @@ export default class JapaneseTranslation extends React.Component {
   }
 
   renderOriginal() {
-    const { text } = this.props
+    const { japaneseContent } = this.props
     return (
       <div className='japanese-original'>
-        {text.map((line, lineIndex) =>              
+        {japaneseContent.map((line, lineIndex) =>              
           <div className='japanese-original-line' key={lineIndex + line.join('')}>
             {line.map((word, wordIndex) =>
               this.renderWord(lineIndex, wordIndex, word)
@@ -63,12 +63,12 @@ export default class JapaneseTranslation extends React.Component {
 
   renderMeaning() {
     const { lineIndex, wordIndex  } = this.state
-    const { textTranslation } = this.props
+    const { englishContent, titleData, contentData } = this.props
     if (lineIndex === null || wordIndex === null) {
-      return <React.Fragment>{textTranslation}</React.Fragment>
+      return <React.Fragment>{englishContent}</React.Fragment>
     }
     const selectedWordData =
-      lineIndex === -1 ? this.props.titleData[wordIndex] : this.props.textData[lineIndex][wordIndex]
+      lineIndex === -1 ? titleData[wordIndex] : contentData[lineIndex][wordIndex]
     const { word, meaning, romaji, pronunciation, notes, source } = selectedWordData
     return (
       <React.Fragment>
@@ -82,15 +82,15 @@ export default class JapaneseTranslation extends React.Component {
   }
 
   renderTitle() {
-    const { title } = this.props
+    const { japaneseTitle, englishTitle } = this.props
     return (
       <div className='japanese-translation-title'>
         <div className='japanese-original'>
-          {title.map((word, wordIndex) =>
+          {japaneseTitle.map((word, wordIndex) =>
             this.renderWord(-1, wordIndex, word)
           )}
         </div>
-        <div className='japanese-meaning' onClick={e => e.stopPropagation()}>{this.props.titleTranslation}</div>
+        <div className='japanese-meaning' onClick={e => e.stopPropagation()}>{englishTitle}</div>
       </div>
     )
   }

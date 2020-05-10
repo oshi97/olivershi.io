@@ -4,5 +4,24 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+    "workbench.colorTheme": "Cobalt2",
+    "window.zoomLevel": 2,
+    // "editor.suggestSelection": "first",
+    // "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.editor.tabSizing": "shrink",
+    "editor.tabSize": 2,
+    "[javascript]": {
+        "editor.snippetSuggestions": "none",
+        "editor.parameterHints.enabled": false,
+        "editor.quickSuggestions": false,
+        "editor.suggestOnTriggerCharacters": false,
+    },
+    "[javascriptreact]": {
+        "editor.snippetSuggestions": "none",
+        "editor.parameterHints.enabled": false,
+        "editor.quickSuggestions": false,
+        "editor.suggestOnTriggerCharacters": false,
+    }
+	}
 }

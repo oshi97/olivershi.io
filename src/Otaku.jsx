@@ -1,19 +1,17 @@
 import React from 'react'
 import Switch from './components/Switch'
 import Link from './components/Link'
-import songs from './otaku/songs'
-import SongLoader from './otaku/SongLoader'
 import Image from './components/Image'
+import JapaneseTranslation from './otaku/JapaneseTranslation'
 
+const SongLoader = ({ songName }) => {
+  const translationData = require(`../data/japanese/${songName}`).default
+  return <JapaneseTranslation {...translationData}/>
+}
+const songFiles = ['isekai_quartet_op_2', 'konosuba_ed_2', 'takagi_op_2']
 const songRoutes = {}
-for (const songName of Object.keys(songs)) {
-  const { text, title, textTranslation, titleTranslation } = songs[songName]
-  songRoutes['/otaku/' + songName] =
-    <SongLoader songName={songName}
-      text={text}
-      title={title}
-      textTranslation={textTranslation}
-      titleTranslation={titleTranslation}/>
+for (const songName of songFiles) {
+  songRoutes['/otaku/' + songName] = <SongLoader songName={songName}/>
 }
 
 const Otaku = () => (
@@ -22,10 +20,10 @@ const Otaku = () => (
 
 const Directory = () => (
   <div className='otaku-navbar'>
-    {Object.keys(songs).map(songName => (
+    {songFiles.map(songName => (
       <Link key={songName} className='otaku-item' href={'/otaku/' + songName}>
         {songName}
-        <Image className="otaku-item-image" src={songs[songName].image}/>
+        <Image className="otaku-item-image" src={'japanese/'+songName}/>
       </Link>
     ))}
   </div>

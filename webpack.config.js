@@ -1,10 +1,15 @@
 const path = require('path');
 
 const entry = { bundle: './src/App' };
-const resolve = { extensions: ['*', '.js', '.jsx'] }
+const resolve = {
+  extensions: ['.js', '.json', '.jsx', '.svg', '.png', '.ico', '.gif', '.jpeg', '.jpg', '.webp']
+}
 const output = { path: path.resolve(__dirname, 'docs/') }
 
-let config = { entry, resolve, output, 
+const config = {
+  entry: entry,
+  resolve: resolve,
+  output: output,
   module: {
     rules: [
       {
@@ -14,17 +19,25 @@ let config = { entry, resolve, output,
         options: { presets: ['@babel/env'] }
       },
       {
-        test: /\.(svg)/,
-        loader: path.resolve('raw-loader.js')
+        test: /\.(svg)$/,
+        loader: 'raw-loader'
+      },
+      {
+        test: /\.(png|gif|jpe?g)/,
+        loader: 'null-loader'
       }
     ]
   }
 };
 
-module.exports = (_, argv) => {
+// https://webpack.js.org/configuration/configuration-types/
+module.exports = (env, argv) => {
   if (argv.mode === 'development') {
-    config.output.filename = 'dev/dev-bundle.js';
-    config.output.path = path.resolve(__dirname)
+    config.output = {
+      ...config.output,
+      filename: 'dev/dev-bundle.js',
+      path: path.resolve(__dirname)
+    }
   }
 
   return {
