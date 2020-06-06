@@ -43,7 +43,15 @@ const contentData = [
     {
       word: 'きれない',
       romaji: 'ki re na i',
-      meaning: '-nai negation of 切れる (ki re ru)'
+      meaning: '-nai negation of 切れる (ki re ru) which by itself means to break/snap'
+    },
+    {
+      word: '距離',
+      pronunciation: 'きょり',
+      romaji: 'kyo ri',
+      meaning: 'distance',
+      notes: 'this is the small yo, which comes after hiragana (き, ぎ, し, じ, ち, に, ひ, び, ぴ, み, and り) and changes the sound from ki yo to kyo.',
+      source: 'https://hinative.com/en-US/questions/733819'
     }
   ]
 ]
