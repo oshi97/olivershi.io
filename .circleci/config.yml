@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  node: circleci/node@2.1.0
+  node: circleci/node@3.0.1
 jobs:
   build:
     executor:
@@ -8,6 +8,7 @@ jobs:
     steps:
       - checkout
       - node/install-packages
+      - run: node -v
       - run: python3 sheets.py
       - run: npx webpack --mode production
       - run: npx sass src/css/Index.sass docs/index.css
