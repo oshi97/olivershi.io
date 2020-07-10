@@ -1,8 +1,6 @@
 const express = require('express')
-var fs = require('fs')
 const path = require('path')
 var cors = require('cors')
-var https = require('https')
 const spawn = require('child_process').spawn
 
 spawn('python', ['sheets.py'])
@@ -30,7 +28,4 @@ app.get('*', (_, res) => {
 })
 
 console.log('*** \n\n\nRUNNING IN - ' + process.env.ENV + '\n\n\n***')
-https.createServer({
-  key: fs.readFileSync(__dirname + '/server.key'),
-  cert: fs.readFileSync(__dirname + '/server.cert')
-}, app).listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))
+app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))

@@ -9,7 +9,7 @@ const imageContext = _context.keys().reduce((imageContext, key) => {
 const Image = props => {
   const request = `./${props.src}`
   const filepath = imageContext[request].split('./docs/').pop()
-  const src = `https://${window.location.host}/${filepath}`
+  const src = `/${filepath}`
   return (
     <img className={props.className ? 'image ' + props.className : 'image'}
       src={src}
