@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from '../../src/components/Image'
+import Image from '../src/components/Image'
 
 const Home = () => (
   <div className='home'>
