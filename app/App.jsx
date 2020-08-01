@@ -4,13 +4,13 @@ import 'core-js/features/string/starts-with'
 import 'core-js/features/object/entries'
 import 'core-js/features/promise'
 import 'custom-event-polyfill'
-import Switch from './components/Switch'
+import Switch from '../src/components/Switch'
 import Sheets from './Sheets'
 import Home from './Home'
 import Navbar from './Navbar'
 import Otaku from './Otaku'
 import Blog from './Blog'
-import Breadcrumbs from './components/Breadcrumbs'
+import Breadcrumbs from '../src/components/Breadcrumbs'
 
 class App extends React.Component {
   render () {

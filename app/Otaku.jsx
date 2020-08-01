@@ -1,8 +1,8 @@
 import React from 'react'
-import Switch from './components/Switch'
-import Link from './components/Link'
-import Image from './components/Image'
-import JapaneseTranslation from './components/JapaneseTranslation'
+import Switch from '../src/components/Switch'
+import Link from '../src/components/Link'
+import Image from '../src/components/Image'
+import JapaneseTranslation from '../src/components/JapaneseTranslation'
 
 const _context = require.context('../data/japanese/', true, /\.js$/)
 const songContext = _context.keys().reduce((songContext, key) => {

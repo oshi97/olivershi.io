@@ -1,6 +1,6 @@
 const path = require('path')
 
-const entry = { bundle: './src/App' }
+const entry = { bundle: './app/App' }
 const resolve = {
   extensions: ['.js', '.json', '.jsx', '.svg', '.png', '.ico', '.gif', '.jpeg', '.jpg', '.webp']
 }

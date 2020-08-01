@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from './components/Image'
+import Image from '../src/components/Image'
 
 const Blog = () => (
   <div className='blog'>

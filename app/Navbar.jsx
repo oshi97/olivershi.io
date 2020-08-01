@@ -1,7 +1,7 @@
 import React from 'react'
-import Image from './components/Image'
-import Icon from './components/Icon'
-import Link from './components/Link'
+import Image from '../src/components/Image'
+import Icon from '../src/components/Icon'
+import Link from '../src/components/Link'
 
 const Navbar = () => (
   <div className='navbar'>
