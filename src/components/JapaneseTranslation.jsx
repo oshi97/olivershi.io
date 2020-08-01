@@ -47,7 +47,7 @@ export default class JapaneseTranslation extends React.Component {
   }
 
   renderOriginal() {
-    const { japaneseContent } = this.props
+    const { japaneseContent } = this.props;
     return (
       <div className='japanese-original'>
         {japaneseContent.map((line, lineIndex) =>
