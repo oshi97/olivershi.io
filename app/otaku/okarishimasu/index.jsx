@@ -1,5 +1,5 @@
 import JapaneseTranslation from 'Components/JapaneseTranslation'
-import translationData from '../../../data/japanese/okarishimasu_op'
+import translationData from './okarishimasu_op'
 
 export default () => (
   <div>
