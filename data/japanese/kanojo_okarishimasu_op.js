@@ -5,7 +5,7 @@ const contentData = [
   ]
 ]
 
-const englishContent = 
+const englishContent =
 `I can't say that it's fate
 How many more centimeters should I get close to you
 While I can't (While I can't) say it, you are the one I like, so I gaze at you from behind

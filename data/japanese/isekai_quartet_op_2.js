@@ -55,7 +55,7 @@ const contentData = [
   ]
 ]
 
-const englishContent = 
+const englishContent =
 `Here's an invitation from the other world
 
 The other world, it's the other world

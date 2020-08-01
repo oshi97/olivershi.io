@@ -2,7 +2,6 @@ import React from 'react'
 import sheetsJson from '../../data/sheets'
 
 /**
- *
  * @param {string || Object} dirEntry
  * @param {string} root
  */

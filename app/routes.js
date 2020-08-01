@@ -10,4 +10,4 @@ export default {
   '/blog': <Blog />,
   '/': <Home />,
   default: <Home />
-};
+}
