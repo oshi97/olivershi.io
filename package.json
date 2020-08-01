@@ -24,22 +24,22 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "custom-event-polyfill": "^1.0.7",
-    "npm-check-updates": "^7.0.1",
+    "npm-check-updates": "^7.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.4",
-    "@babel/core": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
-    "eslint": "^7.4.0",
-    "eslint-plugin-react": "^7.20.3",
+    "eslint": "^7.6.0",
+    "eslint-plugin-react": "^7.20.5",
     "gh-pages": "^3.1.0",
     "raw-loader": "^4.0.1",
     "sass": "^1.26.10",
-    "webpack": "^4.43.0",
+    "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   },
   "optionalDependencies": {
