@@ -1,5 +1,3 @@
-import React from 'react'
-
 const _context = require.context('../../docs/public/images', true)
 const imageContext = _context.keys().reduce((imageContext, key) => {
   imageContext[key] = _context(key).url

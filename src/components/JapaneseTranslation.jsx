@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default class JapaneseTranslation extends React.Component {
   constructor(props) {
     super(props)

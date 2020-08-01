@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from '../src/components/Image'
 import Icon from '../src/components/Icon'
 import Link from '../src/components/Link'

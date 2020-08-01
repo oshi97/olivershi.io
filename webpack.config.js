@@ -1,15 +1,16 @@
 const path = require('path')
-
-const entry = { bundle: './app/App' }
-const resolve = {
-  extensions: ['.js', '.json', '.jsx', '.svg', '.png', '.ico', '.gif', '.jpeg', '.jpg', '.webp']
-}
-const output = { path: path.resolve(__dirname, 'docs/') }
-
+const ProvidePlugin = require('webpack').ProvidePlugin;
 const config = {
-  entry: entry,
-  resolve: resolve,
-  output: output,
+  entry: { bundle: './app/App' },
+  resolve: {
+    extensions: ['.js', '.json', '.jsx', '.svg', '.png', '.ico', '.gif', '.jpeg', '.jpg', '.webp']
+  },
+  output: { path: path.resolve(__dirname, 'docs/') },
+  plugins: [
+    new ProvidePlugin({
+      'React': 'react'
+    })
+  ],
   module: {
     rules: [
       {
@@ -30,7 +31,6 @@ const config = {
   }
 }
 
-// https://webpack.js.org/configuration/configuration-types/
 module.exports = (env, argv) => {
   if (argv.mode === 'development') {
     config.output = {

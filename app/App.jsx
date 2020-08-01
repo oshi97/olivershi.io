@@ -3,7 +3,6 @@ import 'core-js/features/object/entries'
 import 'core-js/features/promise'
 import 'custom-event-polyfill'
 
-import React from 'react'
 import ReactDOM from 'react-dom'
 
 import Switch from '../src/components/Switch'

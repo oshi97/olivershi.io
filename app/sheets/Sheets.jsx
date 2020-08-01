@@ -1,4 +1,3 @@
-import React from 'react'
 import sheetsJson from '../../data/sheets'
 
 /**

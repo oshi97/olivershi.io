@@ -1,4 +1,3 @@
-import React from 'react'
 import Sheets from './sheets/Sheets'
 import Home from './Home'
 import Otaku from './otaku/Otaku'

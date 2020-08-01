@@ -1,35 +1,30 @@
-import React from 'react'
 import Switch from '../../src/components/Switch'
 import Link from '../../src/components/Link'
 import Image from '../../src/components/Image'
-import JapaneseTranslation from '../../src/components/JapaneseTranslation'
-
-const _context = require.context('../../data/japanese/', true, /\.js$/)
-const songContext = _context.keys().reduce((songContext, key) => {
-  const _key = key.replace('./', '').replace('.js', '')
-  const translationData = _context(key).default
-  songContext[_key] =  <JapaneseTranslation {...translationData}/>
-  return songContext
-}, {})
-
-const songRoutes = Object.keys(songContext).reduce((songRoutes, key) => {
-  const _key = '/otaku/' + key
-  songRoutes[_key] = songContext[key]
-  return songRoutes
-}, {})
+import routes from './routes.js'
 
 const Otaku = () => (
-  <Switch routes={{ ...songRoutes, default: <Directory/>}} exact={true}></Switch>
+  <Switch routes={{ ...routes, default: <Directory/>}} exact={true}></Switch>
 )
 
 const Directory = () => (
   <div className='otaku-navbar'>
-    {Object.keys(songContext).map(songName => (
-      <Link key={songName} className='otaku-item' href={'/otaku/' + songName}>
-        {songName}
-        <Image className="otaku-item-image" src={'japanese/'+songName}/>
-      </Link>
-    ))}
+    <Link className='otaku-item' href='/otaku/konosuba'>
+      Konosuba
+      <Image className='otaku-item-image' src='japanese/konosuba_ed_2'/>
+    </Link>
+    <Link className='otaku-item' href='/otaku/isekai-quartet'>
+      Isekai Quartet
+      <Image className='otaku-item-image' src='japanese/isekai_quartet_op_2'/>
+    </Link>
+    <Link className='otaku-item' href='/otaku/takagi'>
+      Takagi
+      <Image className='otaku-item-image' src='japanese/takagi_op_2'/>
+    </Link>
+    <Link className='otaku-item' href='/otaku/okarishimasu'>
+      Rent a Girlfriend
+      <Image className='otaku-item-image' src='japanese/okarishimasu_op'/>
+    </Link>
   </div>
 )
 

@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default class Link extends React.Component {
   pushState() {
     history.pushState({}, '', this.props.href)
