@@ -1,7 +1,7 @@
-import Takagi from './takagi/takagi'
-import IsekaiQuartet from './isekai-quartet/IsekaiQuartet'
-import Okarishimasu from './okarishimasu/Okarishimasu'
-import Konosuba from './konosuba/Konosuba'
+import Takagi from './takagi'
+import IsekaiQuartet from './isekai-quartet'
+import Okarishimasu from './okarishimasu'
+import Konosuba from './konosuba'
 
 export default {
   '/otaku/takagi': <Takagi/>,

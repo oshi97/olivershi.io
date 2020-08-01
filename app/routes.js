@@ -1,7 +1,7 @@
-import Sheets from './sheets/Sheets'
+import Sheets from './sheets'
 import Home from './Home'
-import Otaku from './otaku/Otaku'
-import Blog from './blog/Blog'
+import Otaku from './otaku'
+import Blog from './blog'
 
 export default {
   '/sheets': <Sheets/>,
