@@ -16,8 +16,20 @@ function routeDirEntry(dirEntry, rootDir) {
   }
 }
 
+function compareDirEntries(first, second) {
+  const firstIsDir = typeof first === 'object'
+  const secondIsDir = typeof second === 'object'
+  if (firstIsDir && secondIsDir) {
+    return first.name.localeCompare(second.name)
+  }
+  if (firstIsDir) return -1
+  if (secondIsDir) return 1
+  return first.localeCompare(second)
+}
+
 const Directory = (props) => {
   const { contents, name, full_path, className } = props
+  contents.sort(compareDirEntries)
   return (
     <div className={className ? 'dir ' + className : 'dir'}>
       {name || './'}
