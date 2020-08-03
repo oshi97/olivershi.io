@@ -5,7 +5,7 @@ import sheetsJson from '../../data/sheets'
  * @param {string} root
  */
 function routeDirEntry(dirEntry, rootDir) {
-  if (typeof dirEntry === 'string') {
+  if (typeof dirEntry === 'string' && dirEntry.split('.')[0]) {
     return <File
       name={dirEntry}
       full_path={rootDir + dirEntry}
@@ -30,12 +30,10 @@ const Directory = (props) => {
 
 const File = ({ name, full_path }) => (
   <div className='file'>
-    <a href={full_path}>{name.split('.')[0]}</a>
+    <a href={full_path}>{name}</a>
   </div>
 )
 
-const RootDirectory = () => (
+export default () => (
   <Directory className='sheets' {...sheetsJson} />
 )
-
-export default RootDirectory
