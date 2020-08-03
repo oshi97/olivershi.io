@@ -3,6 +3,9 @@ const ProvidePlugin = require('webpack').ProvidePlugin;
 const config = {
   entry: { bundle: './app/App' },
   resolve: {
+    alias: {
+      'Components': path.resolve(__dirname, 'src/components')
+    },
     extensions: ['.js', '.json', '.jsx', '.svg', '.png', '.ico', '.gif', '.jpeg', '.jpg', '.webp']
   },
   output: { path: path.resolve(__dirname, 'docs/') },

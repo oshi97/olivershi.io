@@ -1,4 +1,4 @@
-import Image from '../../src/components/Image'
+import Image from 'Components/Image'
 
 const Blog = () => (
   <div className='blog'>

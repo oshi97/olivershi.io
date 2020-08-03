@@ -5,9 +5,9 @@ import 'custom-event-polyfill'
 
 import ReactDOM from 'react-dom'
 
-import Switch from '../src/components/Switch'
+import Switch from 'Components/Switch'
 import Navbar from './Navbar'
-import Breadcrumbs from '../src/components/Breadcrumbs'
+import Breadcrumbs from 'Components/Breadcrumbs'
 import routes from './routes'
 
 const App = () => (

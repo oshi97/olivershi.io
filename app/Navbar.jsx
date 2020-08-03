@@ -1,6 +1,6 @@
-import Image from '../src/components/Image'
-import Icon from '../src/components/Icon'
-import Link from '../src/components/Link'
+import Image from 'Components/Image'
+import Icon from 'Components/Icon'
+import Link from 'Components/Link'
 
 const Navbar = () => (
   <div className='navbar'>

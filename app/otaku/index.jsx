@@ -1,6 +1,6 @@
-import Switch from '../../src/components/Switch'
-import Link from '../../src/components/Link'
-import Image from '../../src/components/Image'
+import Switch from 'Components/Switch'
+import Link from 'Components/Link'
+import Image from 'Components/Image'
 import routes from './routes.js'
 
 const Otaku = () => (
