@@ -2,6 +2,7 @@ const path = require('path')
 const ProvidePlugin = require('webpack').ProvidePlugin;
 const config = {
   entry: { bundle: './app/App' },
+  target: ['web', 'es5'],
   resolve: {
     alias: {
       'Components': path.resolve(__dirname, 'src/components')
