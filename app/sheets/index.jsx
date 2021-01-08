@@ -42,7 +42,7 @@ const Directory = (props) => {
 
 const File = ({ name, full_path }) => (
   <div className='file'>
-    <a href={full_path}>{name}</a>
+    <a href={encodeURIComponent(full_path)}>{name}</a>
   </div>
 )
 
