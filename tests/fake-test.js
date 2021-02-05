@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import Icon from '../src/components/Icon'
-import React from 'React'
+import React from 'react'
 
 describe('fake test for coverage', () => {
   it('tests stuff', () => {
