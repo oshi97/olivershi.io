@@ -1,3 +1,5 @@
+import React from 'react'
+
 const validIcons = ['face-black', 'home-black', 'library_music-black', 'videogame_asset-black', 'face-black']
 const Icon = ({ type, size }) => {
   if (!type || validIcons.indexOf(type) === -1) {
