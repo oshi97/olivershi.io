@@ -1,10 +1,11 @@
-import sheetsJson from '../../data/sheets'
+import sheetsJson from '../../data/sheets.json'
+import React from 'react'
 
 /**
  * @param {string || Object} dirEntry
  * @param {string} root
  */
-function routeDirEntry(dirEntry, rootDir) {
+function routeDirEntry(dirEntry: any & { contents: any; name: any; full_path: any; className: any }, rootDir: string) {
   if (typeof dirEntry === 'string' && dirEntry.split('.')[0]) {
     return <File
       name={dirEntry}
@@ -16,7 +17,7 @@ function routeDirEntry(dirEntry, rootDir) {
   }
 }
 
-function compareDirEntries(first, second) {
+function compareDirEntries(first: { name: string; localeCompare: (arg0: any) => any }, second: { name: any }) {
   const firstIsDir = typeof first === 'object'
   const secondIsDir = typeof second === 'object'
   if (firstIsDir && secondIsDir) {
@@ -27,20 +28,20 @@ function compareDirEntries(first, second) {
   return first.localeCompare(second)
 }
 
-const Directory = (props) => {
+const Directory = (props: { contents: any; name: any; full_path: any; className: any }) => {
   const { contents, name, full_path, className } = props
   contents.sort(compareDirEntries)
   return (
     <div className={className ? 'dir ' + className : 'dir'}>
       {name || './'}
       <div className='dir-content'>
-        {contents && contents.map(dirEntry => routeDirEntry(dirEntry, full_path))}
+        {contents && contents.map((dirEntry: any) => routeDirEntry(dirEntry, full_path))}
       </div>
     </div>
   )
 }
 
-const File = ({ name, full_path }) => (
+const File = ({ name, full_path } : {name: string, full_path: string}) => (
   <div className='file'>
     <a href={encodeURIComponent(full_path)}>{name}</a>
   </div>

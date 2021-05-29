@@ -7,7 +7,7 @@ const config = {
     alias: {
       'Components': path.resolve(__dirname, 'src/components')
     },
-    extensions: ['.js', '.json', '.jsx', '.svg', '.png', '.ico', '.gif', '.jpeg', '.jpg', '.webp']
+    extensions: ['.js', '.json', '.jsx', '.ts', '.tsx', '.svg', '.png', '.ico', '.gif', '.jpeg', '.jpg', '.webp']
   },
   output: { path: path.resolve(__dirname, 'docs/') },
   plugins: [
@@ -18,13 +18,20 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(j|t)sx?$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
         options: { presets: ['@babel/env'] }
       },
       {
-        test: /\.(svg)$/,
+        test: /\.tsx?$/,
+        exclude: '/node_modules/',
+        use: [
+          { loader: 'ts-loader' }
+        ]
+      },
+      {
+        test: /\.svg$/,
         loader: 'raw-loader'
       },
       {
