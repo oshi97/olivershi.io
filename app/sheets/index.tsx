@@ -42,7 +42,6 @@ const Directory = (props: { contents: any; name: any; full_path: any; className:
 }
 
 const File = ({ name, full_path }: { name: string, full_path: string }) => {
-  console.log('full_path', full_path, encodeURIComponent(full_path));
   return (
     <div className='file'>
       <a href={full_path}>{name}</a>
