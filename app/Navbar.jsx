@@ -1,6 +1,7 @@
 import Image from 'Components/Image'
 import Icon from 'Components/Icon'
 import Link from 'Components/Link'
+import { PropsWithChildren } from 'react'
 
 const Navbar = () => (
   <div className='navbar'>
@@ -19,6 +20,10 @@ const Navbar = () => (
     <Link className='navbar-link' href='/blog'>
       <Icon type='face-black'/>
 			Random!
+    </Link>
+    <Link className='navbar-link' href='/genshin'>
+      <Icon type='face-black'/>
+			Genshin!
     </Link>
     <a className='link navbar-link navbar-link-dome' href='/dome/index.html' target='_blank'>
       <Icon type='videogame_asset-black'/>
