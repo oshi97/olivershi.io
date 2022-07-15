@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.808aeb29.css",
+    "main.js": "/static/js/main.21b9196e.js",
+    "static/media/original_konosuba_ed_2.jpeg": "/static/media/original_konosuba_ed_2.75a1726cda7bb574177f.jpeg",
+    "static/media/chizuru.gif": "/static/media/chizuru.8c9a9db02c01e8d0ed2a.gif",
+    "static/media/okarishimasu_op.gif": "/static/media/okarishimasu_op.8c9a9db02c01e8d0ed2a.gif",
+    "static/media/takagi_op_2.gif": "/static/media/takagi_op_2.005dfca6b31b25e59311.gif",
+    "static/media/piano-beluga.gif": "/static/media/piano-beluga.46474aa842c176e954d4.gif",
+    "static/media/2.jpg": "/static/media/2.728d7d243b1a18af144c.jpg",
+    "static/media/transparent_rem.gif": "/static/media/transparent_rem.c3800d9bbfac324250c3.gif",
+    "static/media/rem.gif": "/static/media/rem.6835a0b537cc2e1b772d.gif",
+    "static/media/rem.jpg": "/static/media/rem.030734a624f8d0eac4fc.jpg",
+    "static/media/isekai_quartet_op_2.jpg": "/static/media/isekai_quartet_op_2.46e629399d7ab039c92e.jpg",
+    "static/media/avocado.gif": "/static/media/avocado.a6ebde6ee6b926f0b04d.gif",
+    "static/media/1.jpg": "/static/media/1.0fcb3728199be7bb5ec7.jpg",
+    "static/media/rem_0.gif": "/static/media/rem_0.cb712a515df583cafbbb.gif",
+    "static/media/fish.png": "/static/media/fish.055c4e04b591b4e1b876.png",
+    "static/media/4.jpeg": "/static/media/4.d0236db4424efe90f508.jpeg",
+    "static/media/optimized_rem.gif": "/static/media/optimized_rem.ebef082a7d03397ef5b7.gif",
+    "static/media/konosuba_ed_2.jpg": "/static/media/konosuba_ed_2.0883ac232c2c22d12b7e.jpg",
+    "static/media/plus.png": "/static/media/plus.a87f26e0f9fa11884a84.png",
+    "static/media/face-black-24dp.svg": "/static/media/face-black-24dp.18e5f54bd51e7724c2db.svg",
+    "static/media/videogame_asset-black-24dp.svg": "/static/media/videogame_asset-black-24dp.77673dc94465e7e3256b.svg",
+    "index.html": "/index.html",
+    "static/media/library_music-black-24dp.svg": "/static/media/library_music-black-24dp.60f191adaf0122c71404.svg",
+    "static/media/home-black-24dp.svg": "/static/media/home-black-24dp.93ce5ea32bbcaf907e6a.svg",
+    "main.808aeb29.css.map": "/static/css/main.808aeb29.css.map",
+    "main.21b9196e.js.map": "/static/js/main.21b9196e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.808aeb29.css",
+    "static/js/main.21b9196e.js"
+  ]
+}
