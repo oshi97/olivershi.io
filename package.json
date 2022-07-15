@@ -1,5 +1,5 @@
 {
-  "name": "olivershi",
+  "name": "olivershi.io",
   "version": "1.0.0",
   "description": "personal site",
   "main": "index.js",
@@ -10,14 +10,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint src .eslintrc.js --fix"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/oshi97/olivershi.io.git"
-  },
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/oshi97/olivershi.io/issues"
-  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
