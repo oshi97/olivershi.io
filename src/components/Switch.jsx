@@ -1,4 +1,4 @@
-import { Component } from "react"
+import { Component } from 'react'
 
 export default class Switch extends Component {
   constructor(props) {
@@ -15,7 +15,6 @@ export default class Switch extends Component {
       this.setState({ route })
     }
   }
-
 
   componentDidMount() {
     window.addEventListener('history.pushstate', this.updatePathname)

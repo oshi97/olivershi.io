@@ -1,3 +1,5 @@
+import { CSSProperties } from 'react'
+
 const _context = require.context('../../public/images/', true)
 
 const imageContext = _context.keys().reduce((imageContext, key) => {
@@ -5,9 +7,11 @@ const imageContext = _context.keys().reduce((imageContext, key) => {
   return imageContext
 }, {} as Record<string, string>)
 
-console.log(imageContext)
-
-const Image = (props: any) => {
+const Image = (props: {
+  src: string,
+  className?: string,
+  style?: CSSProperties
+}) => {
   const request = `./${props.src}`
 
   return (

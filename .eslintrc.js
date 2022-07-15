@@ -10,6 +10,9 @@ module.exports = {
       'warn',
       'never'
     ],
-    'import/no-anonymous-default-export': 'off'
+    'import/no-anonymous-default-export': 'off',
+    'react-perf/jsx-no-new-array-as-prop': 'off',
+    'react-perf/jsx-no-new-function-as-prop': 'off',
+    'react-perf/jsx-no-new-object-as-prop': 'off'
   }
 }

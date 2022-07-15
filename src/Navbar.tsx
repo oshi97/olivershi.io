@@ -1,7 +1,6 @@
 import Image from './components/Image'
 import Icon from './components/Icon'
 import Link from './components/Link'
-import { PropsWithChildren } from 'react'
 
 const Navbar = () => (
   <div className='navbar'>

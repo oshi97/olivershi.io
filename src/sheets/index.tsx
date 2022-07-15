@@ -1,3 +1,4 @@
+/* eslint-disable */
 import sheetsJson from '../data/sheets.json'
 
 /**

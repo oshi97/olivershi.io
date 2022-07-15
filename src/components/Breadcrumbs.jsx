@@ -2,7 +2,7 @@ import { Component, Fragment } from 'react'
 import Link from './Link'
 
 export default class BreadCrumbs extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       pathname: window.location.pathname,
@@ -11,32 +11,32 @@ export default class BreadCrumbs extends Component {
     this.handleHistoryChange = this.handleHistoryChange.bind(this)
   }
 
-  getCrumbs () {
+  getCrumbs() {
     return window.location.pathname.split('/')
   }
 
-  componentDidMount () {
+  componentDidMount() {
     window.addEventListener('history.pushstate', this.handleHistoryChange)
     window.addEventListener('popstate', this.handleHistoryChange)
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     window.removeEventListener('history.pushstate', this.handleHistoryChange)
     window.removeEventListener('popstate', this.handleHistoryChange)
   }
 
-  handleHistoryChange () {
+  handleHistoryChange() {
     if (this.state.pathname === window.location.pathname)
       return
     const paths = [this.state.pathname, this.state.previousPathname, window.location.pathname]
-    const longerPathname = paths.reduce(function (a, b) { return a.length > b.length ? a : b })
+    const longerPathname = paths.reduce(function(a, b) { return a.length > b.length ? a : b })
     this.setState({
       pathname: window.location.pathname,
       previousPathname: longerPathname
     })
   }
 
-  render () {
+  render() {
     const { pathname, previousPathname } = this.state
     let href = ''
     const splitPath = pathname.split('/').filter(c => c)
@@ -61,7 +61,7 @@ export default class BreadCrumbs extends Component {
         {currentCrumbs.map(c =>
           <Fragment key={c.href + '/current'}>
             <div>{'>'}</div>
-            <Link className={c.className}  href={c.href}>
+            <Link className={c.className} href={c.href}>
               {c.value}
             </Link>
           </Fragment>

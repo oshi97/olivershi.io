@@ -4,7 +4,7 @@ import Image from '../components/Image'
 import routes from './routes.js'
 
 const Otaku = () => (
-  <Switch routes={{ ...routes, default: <Directory/>}} exact={true}></Switch>
+  <Switch routes={{ ...routes, default: <Directory/> }} exact={true}></Switch>
 )
 
 const Directory = () => (
