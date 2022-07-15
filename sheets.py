@@ -7,17 +7,16 @@ import json
 # Hmmm I should have just used node for this huh, then I wouldn't have to deal with python versions
 # but python tho....
 dirFile = 'src/data/sheets.json'
+dirname = os.path.dirname(__file__)
 
-def scan(currentDir = os.path.join(os.path.dirname(__file__), './public/sheets')):
+def scan(currentDir = os.path.join(dirname, 'public/sheets')):
   obj = {}
   scanDir = os.scandir(currentDir)
   currentDir = currentDir.replace('\\', '/')
   name = currentDir.split('/')[-1]
+  currentDir += '/'
   obj['name'] = name
-  currentDir = currentDir[2:]
-  if currentDir:
-    currentDir = currentDir + '/'
-  obj['full_path'] = currentDir
+  obj['full_path'] = currentDir.split('/public')[1]
   contents = []
   for i in scanDir:
     if i.name == dirFile or i.name == __file__:
