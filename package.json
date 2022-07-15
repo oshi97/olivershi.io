@@ -1,58 +1,51 @@
 {
-  "name": "olivershi.io",
+  "name": "olivershi",
   "version": "1.0.0",
-  "description": "Updating livershi.com to use newer tech",
+  "description": "personal site",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel webpack node sass-sqwatch",
-    "webpack": "npx webpack -w --mode development",
-    "node": "node dev/server.js",
-    "sass-sqwatch": "npx sass --watch src/css/Index.sass docs/index.css",
-    "eslint": "npx eslint --ext .jsx --ext .js src/ data/ app/ .eslintrc.js webpack.config.js --fix"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src .eslintrc.js --fix"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/oshi97/olivershi.io.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/oshi97/olivershi.io/issues"
   },
-  "homepage": "https://github.com/oshi97/olivershi.io#readme",
   "dependencies": {
-    "core-js": "^3.16.1",
-    "custom-event-polyfill": "^1.0.7",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.14.8",
-    "@babel/core": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
-    "@babel/preset-react": "^7.14.5",
-    "@types/jest": "^26.0.24",
-    "@types/node": "^16.4.13",
-    "@types/react": "^17.0.16",
-    "@types/react-dom": "^17.0.9",
-    "babel-loader": "^8.2.2",
-    "eslint": "^7.32.0",
-    "eslint-plugin-react": "^7.24.0",
-    "gh-pages": "^3.2.3",
-    "jest": "^27.0.6",
-    "npm-check-updates": "^11.8.3",
-    "raw-loader": "^4.0.2",
-    "sass": "^1.37.5",
-    "ts-loader": "^9.2.5",
-    "typescript": "^4.3.5",
-    "webpack": "^5.49.0",
-    "webpack-cli": "^4.7.2"
+    "@types/jest": "^28.1.5",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@types/webpack-env": "^1.17.0",
+    "@yext/eslint-config-slapshot": "^0.4.0",
+    "eslint": "^8.19.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "gh-pages": "^4.0.0",
+    "jest": "^28.1.3",
+    "react": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "typescript": "^4.7.4"
   },
-  "optionalDependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "npm-run-all": "^4.1.5",
-    "serve-index": "^1.9.1"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

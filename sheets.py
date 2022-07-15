@@ -6,9 +6,9 @@ import json
 
 # Hmmm I should have just used node for this huh, then I wouldn't have to deal with python versions
 # but python tho....
-dirFile = 'data/sheets.json'
+dirFile = 'src/data/sheets.json'
 
-def scan(currentDir = './public/sheets'):
+def scan(currentDir = os.path.join(os.path.dirname(__file__), './public/sheets')):
   obj = {}
   scanDir = os.scandir(currentDir)
   currentDir = currentDir.replace('\\', '/')
@@ -34,7 +34,7 @@ def write(dirs = {}, name = '../' + dirFile):
     json_str = json.dumps(dirs,indent=2)
     f.write(json_str)
 
-os.chdir('docs')
+os.chdir('src')
 if not os.path.exists('../data'):
   os.makedirs('../data')
 write(scan())

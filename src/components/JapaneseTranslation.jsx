@@ -1,4 +1,6 @@
-export default class JapaneseTranslation extends React.Component {
+import { Component } from "react"
+
+export default class JapaneseTranslation extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -64,16 +66,16 @@ export default class JapaneseTranslation extends React.Component {
     const { englishContent, titleData, contentData } = this.props
     if (lineIndex === null || wordIndex === null) {
       return (
-        <React.Fragment>
+        <>
           {englishContent.map((line, i) => <div key={i}>{line}</div>)}
-        </React.Fragment>
+        </>
       )
     }
     const selectedWordData =
       lineIndex === -1 ? titleData[wordIndex] : contentData[lineIndex][wordIndex]
     const { word, meaning, romaji, pronunciation, notes, source } = selectedWordData
     return (
-      <React.Fragment>
+      <>
         <div>{word}</div>
         <div>meaning: {meaning}</div>
         <div>pronunciation: {pronunciation} {romaji}</div>
@@ -85,7 +87,7 @@ export default class JapaneseTranslation extends React.Component {
               For more info
             </a>
           </div>}
-      </React.Fragment>
+      </>
     )
   }
 

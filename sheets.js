@@ -6,9 +6,9 @@ const publicDir = 'public/sheets'
 const srcDir = path.join(__dirname, 'docs', publicDir)
 const dataDir = path.join(__dirname, 'data/sheets')
 
-function metadataFromPath (currentPath) {
+function metadataFromPath(currentPath) {
   const splitPath = currentPath.split('/').filter(el => el)
-  const metadata = {};
+  const metadata = {}
   if (splitPath.length > 0) {
     metadata.category = splitPath[0]
   }
@@ -18,14 +18,14 @@ function metadataFromPath (currentPath) {
   return metadata
 }
 
-async function createFileMetadata (currentPath, name, defaultMetadata = {}) {
+async function createFileMetadata(currentPath, name, defaultMetadata = {}) {
   const fileName = name + '.json'
   const filePath = path.join(dataDir, currentPath, fileName)
   let metadata = {
     ...defaultMetadata,
     path: path.join(publicDir, currentPath, name + '.pdf'),
     name: name
-  };
+  }
   try {
     const data = await fsPromises.readFile(filePath)
     metadata = { ...metadata, ...JSON.parse(data) }
@@ -35,7 +35,7 @@ async function createFileMetadata (currentPath, name, defaultMetadata = {}) {
     .catch(e => console.error(e))
 }
 
-function copyDir (currentPath, directoryName) {
+function copyDir(currentPath, directoryName) {
   const nextDir = path.join(currentPath, directoryName)
   const newPath = path.join(dataDir, currentPath, directoryName)
   return fsPromises.mkdir(newPath, { recursive: true })
@@ -43,7 +43,7 @@ function copyDir (currentPath, directoryName) {
     .catch(e => console.error(e))
 }
 
-async function createSheetsMetadata (currentPath = '/') {
+async function createSheetsMetadata(currentPath = '/') {
   const srcPath = path.join(srcDir, currentPath)
   const files = await fsPromises.readdir(srcPath, { withFileTypes: true })
   const ops = []
@@ -62,7 +62,7 @@ async function createSheetsMetadata (currentPath = '/') {
       ops.push(createSheetsMetadata(nextDir))
     }
   }
-  return Promise.all(ops).then(() => ops.length);
+  return Promise.all(ops).then(() => ops.length)
 }
 
 createSheetsMetadata().then(() => console.log('sheets metadata generated!'))

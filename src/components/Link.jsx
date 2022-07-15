@@ -1,6 +1,8 @@
-export default class Link extends React.Component {
+import { Component } from "react"
+
+export default class Link extends Component {
   pushState() {
-    history.pushState({}, '', this.props.href)
+    window.history.pushState({}, '', this.props.href)
     window.dispatchEvent(new CustomEvent('history.pushstate'))
   }
 

@@ -1,7 +1,3 @@
 node_modules
 **/.DS_store
-dev/dev-bundle.js
-docs/index.css
-docs/index.css.map
-docs/bundle.js
-data/sheets.json
+build

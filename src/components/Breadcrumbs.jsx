@@ -1,6 +1,7 @@
+import { Component, Fragment } from 'react'
 import Link from './Link'
 
-export default class BreadCrumbs extends React.Component {
+export default class BreadCrumbs extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -58,20 +59,20 @@ export default class BreadCrumbs extends React.Component {
       <div className='breadcrumbs'>
         <Link key='home' className={!currentCrumbs.length && 'breadcrumbs-active'} href='/'>home</Link>
         {currentCrumbs.map(c =>
-          <React.Fragment key={c.href + '/current'}>
+          <Fragment key={c.href + '/current'}>
             <div>{'>'}</div>
             <Link className={c.className}  href={c.href}>
               {c.value}
             </Link>
-          </React.Fragment>
+          </Fragment>
         )}
         {previousCrumbs.map(c =>
-          <React.Fragment key={c.href + '/previous'}>
+          <Fragment key={c.href + '/previous'}>
             <div className='breadcrumbs-previous'>{'>'}</div>
             <Link className='breadcrumbs-previous' href={c.href}>
               {c.value}
             </Link>
-          </React.Fragment>
+          </Fragment>
         )}
       </div>
     )

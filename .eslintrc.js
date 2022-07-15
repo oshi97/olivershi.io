@@ -1,51 +1,19 @@
 module.exports = {
-  settings: {
-    react: {
-      version: 'detect',
-    }
-  },
-  env: {
-    browser: true,
-    es6: true,
-    node: true
-  },
   extends: [
-    'eslint:recommended',
-    'plugin:react/recommended'
+    '@yext/slapshot/typescript-react'
   ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly'
-  },
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true
-    },
-    ecmaVersion: 11,
-    sourceType: 'module'
-  },
-  plugins: [
-    'react'
-  ],
+  plugins: ['unused-imports'],
+  ignorePatterns: ['lib', 'public'],
   rules: {
-    'react/prop-types': 'off',
-    'no-trailing-spaces': ['error'],
-    'quote-props': [2, 'as-needed'],
-    indent: [
-      'error',
-      2
-    ],
     'linebreak-style': [
-      'error',
-      'unix'
+      'warn',
+      'windows'
     ],
-    quotes: [
-      'error',
-      'single'
-    ],
-    semi: [
-      'error',
+    'unused-imports/no-unused-imports': 'warn',
+    '@typescript-eslint/semi': [
+      'warn',
       'never'
-    ]
+    ],
+    'import/no-anonymous-default-export': 'off'
   }
 }
