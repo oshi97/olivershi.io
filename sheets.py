@@ -3,13 +3,14 @@
 import os
 import io
 import json
+from pathlib import Path
 
 # Hmmm I should have just used node for this huh, then I wouldn't have to deal with python versions
 # but python tho....
 dirFile = 'src/data/sheets.json'
-dirname = os.path.dirname(__file__)
+dirname = Path(__file__).parent
 
-def scan(currentDir = os.path.join(dirname, 'public/sheets')):
+def scan(currentDir = os.path.join(dirname, 'public', 'sheets')):
   obj = {}
   scanDir = os.scandir(currentDir)
   currentDir = currentDir.replace('\\', '/')
@@ -28,14 +29,13 @@ def scan(currentDir = os.path.join(dirname, 'public/sheets')):
   obj['contents'] = contents
   return obj
 
-def write(dirs = {}, name = '../' + dirFile):
+def write(dirs = {}, name = dirFile):
   with io.open(name, "w", encoding="utf-8") as f:
     json_str = json.dumps(dirs,indent=2)
     f.write(json_str)
 
-os.chdir('src')
-if not os.path.exists('../data'):
-  os.makedirs('../data')
+if not os.path.exists('data'):
+  os.makedirs('data')
 write(scan())
 
 print('sheets.json generated! :)')
