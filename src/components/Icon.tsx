@@ -10,10 +10,7 @@ const validIcons = {
   'videogame_asset-black': gameIcon
 } as const
 
-const Icon = ({ type, size = 24 }: {
-  type: string,
-  size?: number
-}) => {
+const Icon = ({ type, size = 24 }: { type: string; size?: number }) => {
   if (!type || !(type in validIcons)) {
     console.warn(`Icon type: ${type} not found in ${validIcons}`)
     return <div></div>
@@ -21,7 +18,7 @@ const Icon = ({ type, size = 24 }: {
   const Icon = validIcons[type as keyof typeof validIcons]
   return (
     <div className={'Icon Icon-' + type + '-' + size}>
-      <Icon/>
+      <Icon />
     </div>
   )
 }

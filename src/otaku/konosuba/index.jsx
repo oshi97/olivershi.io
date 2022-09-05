@@ -4,6 +4,6 @@ import translationData from './konosuba_ed_2'
 export default () => (
   <div>
     Konosuba
-    <JapaneseTranslation {...translationData}/>
+    <JapaneseTranslation {...translationData} />
   </div>
 )

@@ -44,10 +44,13 @@ export default class Switch extends Component {
     if (routes['default'] && this.props.defaultURL) {
       window.location.href = this.props.defaultURL
     }
-    return routes['default'] || routes['404'] || (
-      <div>
-        404, {this.state.route} not found in {JSON.stringify(Object.keys(routes))}!
-      </div>
+    return (
+      routes['default'] ||
+      routes['404'] || (
+        <div>
+          404, {this.state.route} not found in {JSON.stringify(Object.keys(routes))}!
+        </div>
+      )
     )
   }
 }

@@ -26,10 +26,15 @@ export default class BreadCrumbs extends Component {
   }
 
   handleHistoryChange() {
-    if (this.state.pathname === window.location.pathname)
-      return
-    const paths = [this.state.pathname, this.state.previousPathname, window.location.pathname]
-    const longerPathname = paths.reduce(function(a, b) { return a.length > b.length ? a : b })
+    if (this.state.pathname === window.location.pathname) return
+    const paths = [
+      this.state.pathname,
+      this.state.previousPathname,
+      window.location.pathname
+    ]
+    const longerPathname = paths.reduce(function (a, b) {
+      return a.length > b.length ? a : b
+    })
     this.setState({
       pathname: window.location.pathname,
       previousPathname: longerPathname
@@ -41,7 +46,7 @@ export default class BreadCrumbs extends Component {
     let href = ''
     const splitPath = pathname.split('/').filter(c => c)
     const currentCrumbs = splitPath.map(c => ({
-      href: href += '/' + c,
+      href: (href += '/' + c),
       value: c
     }))
     if (currentCrumbs.length) {
@@ -49,31 +54,40 @@ export default class BreadCrumbs extends Component {
     }
     let previousCrumbs = []
     if (previousPathname.startsWith(pathname)) {
-      const previousSplitPath = previousPathname.replace(pathname, '').split('/').filter(c => c)
+      const previousSplitPath = previousPathname
+        .replace(pathname, '')
+        .split('/')
+        .filter(c => c)
       previousCrumbs = previousSplitPath.map(c => ({
-        href: href += '/' + c,
+        href: (href += '/' + c),
         value: c
       }))
     }
     return (
       <div className='breadcrumbs'>
-        <Link key='home' className={!currentCrumbs.length && 'breadcrumbs-active'} href='/'>home</Link>
-        {currentCrumbs.map(c =>
+        <Link
+          key='home'
+          className={!currentCrumbs.length && 'breadcrumbs-active'}
+          href='/'
+        >
+          home
+        </Link>
+        {currentCrumbs.map(c => (
           <Fragment key={c.href + '/current'}>
             <div>{'>'}</div>
             <Link className={c.className} href={c.href}>
               {c.value}
             </Link>
           </Fragment>
-        )}
-        {previousCrumbs.map(c =>
+        ))}
+        {previousCrumbs.map(c => (
           <Fragment key={c.href + '/previous'}>
             <div className='breadcrumbs-previous'>{'>'}</div>
             <Link className='breadcrumbs-previous' href={c.href}>
               {c.value}
             </Link>
           </Fragment>
-        )}
+        ))}
       </div>
     )
   }

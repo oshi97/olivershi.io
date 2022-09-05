@@ -55,8 +55,7 @@ const contentData = [
   ]
 ]
 
-const englishContent =
-`Here's an invitation from the other world
+const englishContent = `Here's an invitation from the other world
 
 The other world, it's the other world
 Strange events are waiting for you
@@ -88,5 +87,5 @@ export default {
   japaneseTitle: titleData.map(word => word.word),
   japaneseContent: contentData.map(line => line.map(word => word.word)),
   englishTitle: 'Isekai Showtime!',
-  englishContent: englishContent.split('\n').filter(line => line),
+  englishContent: englishContent.split('\n').filter(line => line)
 }

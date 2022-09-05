@@ -4,6 +4,6 @@ import translationData from './okarishimasu_op'
 export default () => (
   <div>
     Rent a Girlfriend
-    <JapaneseTranslation {...translationData}/>
+    <JapaneseTranslation {...translationData} />
   </div>
 )

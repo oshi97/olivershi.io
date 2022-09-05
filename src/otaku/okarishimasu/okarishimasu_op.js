@@ -1,12 +1,6 @@
-const contentData = [
-  [
-    {
-    }
-  ]
-]
+const contentData = [[{}]]
 
-const englishContent =
-`I can't say that it's fate
+const englishContent = `I can't say that it's fate
 How many more centimeters should I get close to you
 While I can't (While I can't) say it, you are the one I like, so I gaze at you from behind
 
@@ -34,5 +28,5 @@ export default {
   japaneseTitle: [],
   japaneseContent: contentData.map(line => line.map(word => word.word)),
   englishTitle: '『Centimeter』',
-  englishContent: englishContent.split('\n').filter(line => line),
+  englishContent: englishContent.split('\n').filter(line => line)
 }

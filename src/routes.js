@@ -5,7 +5,7 @@ import Blog from './blog/index'
 import Genshin from './genshin/index'
 
 export default {
-  '/sheets': <Sheets/>,
+  '/sheets': <Sheets />,
   '/otaku': <Otaku />,
   '/blog': <Blog />,
   '/genshin': <Genshin />,

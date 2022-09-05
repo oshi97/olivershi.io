@@ -1,18 +1,11 @@
 module.exports = {
-  extends: [
-    '@yext/slapshot/typescript-react'
-  ],
   plugins: ['unused-imports'],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2020
+  },
   ignorePatterns: ['lib', 'public'],
   rules: {
-    'unused-imports/no-unused-imports': 'warn',
-    '@typescript-eslint/semi': [
-      'warn',
-      'never'
-    ],
-    'import/no-anonymous-default-export': 'off',
-    'react-perf/jsx-no-new-array-as-prop': 'off',
-    'react-perf/jsx-no-new-function-as-prop': 'off',
-    'react-perf/jsx-no-new-object-as-prop': 'off'
+    'unused-imports/no-unused-imports': 'warn'
   }
 }

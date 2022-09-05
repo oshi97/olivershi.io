@@ -8,8 +8,7 @@ export default class Link extends Component {
 
   getCssClasses() {
     let className = 'link'
-    if (this.props.className)
-      className += ' ' + this.props.className
+    if (this.props.className) className += ' ' + this.props.className
     return className
   }
 

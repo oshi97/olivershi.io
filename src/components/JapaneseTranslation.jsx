@@ -37,7 +37,8 @@ export default class JapaneseTranslation extends Component {
 
   renderWord(lineIndex, wordIndex, word) {
     return (
-      <div className={this._getOriginalWordClass(lineIndex, wordIndex)}
+      <div
+        className={this._getOriginalWordClass(lineIndex, wordIndex)}
         key={wordIndex + word}
         onClick={e => this.onWordClick(e, lineIndex, wordIndex)}
       >
@@ -50,13 +51,11 @@ export default class JapaneseTranslation extends Component {
     const { japaneseContent } = this.props
     return (
       <div className='japanese-original'>
-        {japaneseContent.map((line, lineIndex) =>
+        {japaneseContent.map((line, lineIndex) => (
           <div className='japanese-original-line' key={lineIndex + line.join('')}>
-            {line.map((word, wordIndex) =>
-              this.renderWord(lineIndex, wordIndex, word)
-            )}
+            {line.map((word, wordIndex) => this.renderWord(lineIndex, wordIndex, word))}
           </div>
-        )}
+        ))}
       </div>
     )
   }
@@ -67,7 +66,9 @@ export default class JapaneseTranslation extends Component {
     if (lineIndex === null || wordIndex === null) {
       return (
         <>
-          {englishContent.map((line, i) => <div key={i}>{line}</div>)}
+          {englishContent.map((line, i) => (
+            <div key={i}>{line}</div>
+          ))}
         </>
       )
     }
@@ -78,15 +79,18 @@ export default class JapaneseTranslation extends Component {
       <>
         <div>{word}</div>
         <div>meaning: {meaning}</div>
-        <div>pronunciation: {pronunciation} {romaji}</div>
+        <div>
+          pronunciation: {pronunciation} {romaji}
+        </div>
         {notes && <div>notes: {notes}</div>}
-        {source &&
+        {source && (
           <div>
             source:
-            <a href={source} target='_blank' rel="noopener noreferrer">
+            <a href={source} target='_blank' rel='noopener noreferrer'>
               For more info
             </a>
-          </div>}
+          </div>
+        )}
       </>
     )
   }
@@ -96,11 +100,11 @@ export default class JapaneseTranslation extends Component {
     return (
       <div className='japanese-translation-title'>
         <div className='japanese-original'>
-          {japaneseTitle.map((word, wordIndex) =>
-            this.renderWord(-1, wordIndex, word)
-          )}
+          {japaneseTitle.map((word, wordIndex) => this.renderWord(-1, wordIndex, word))}
         </div>
-        <div className='japanese-meaning' onClick={e => e.stopPropagation()}>{englishTitle}</div>
+        <div className='japanese-meaning' onClick={e => e.stopPropagation()}>
+          {englishTitle}
+        </div>
       </div>
     )
   }
@@ -111,7 +115,10 @@ export default class JapaneseTranslation extends Component {
         {this.renderTitle()}
         <div className='japanese-translation-content'>
           {this.renderOriginal()}
-          <div className='japanese-translation-divider' onClick={e => e.stopPropagation()}></div>
+          <div
+            className='japanese-translation-divider'
+            onClick={e => e.stopPropagation()}
+          ></div>
           <div className='japanese-meaning' onClick={e => e.stopPropagation()}>
             {this.renderMeaning()}
           </div>

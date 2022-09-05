@@ -62,11 +62,12 @@ const defaultCharactersState = localStorageCharacters
   : characters
 
 export default function Genshin() {
-  const [checkedChars, setCheckedChars] = useState<GenshinCharacters>(defaultCharactersState)
+  const [checkedChars, setCheckedChars] =
+    useState<GenshinCharacters>(defaultCharactersState)
 
   return (
     <div>
-      <RandomTeamGenerator characters={checkedChars}/>
+      <RandomTeamGenerator characters={checkedChars} />
       <CharacterSelection
         onChange={(e, c) => {
           const copy = { ...checkedChars }
@@ -80,9 +81,7 @@ export default function Genshin() {
   )
 }
 
-function RandomTeamGenerator({ characters }: {
-  characters: GenshinCharacters
-}) {
+function RandomTeamGenerator({ characters }: { characters: GenshinCharacters }) {
   const [teams, setTeams] = useState<string[] | null>(null)
   const generateTeams = () => {
     const charactersArr = Object.keys(characters).filter(c => characters[c])
@@ -98,8 +97,8 @@ function RandomTeamGenerator({ characters }: {
   function renderTeams() {
     return (
       <div style={{ display: 'flex', margin: 10 }}>
-        <TeamDisplay team={teams.slice(0, 4)}/>
-        <TeamDisplay team={teams.slice(4, 8)}/>
+        <TeamDisplay team={teams.slice(0, 4)} />
+        <TeamDisplay team={teams.slice(4, 8)} />
       </div>
     )
   }
@@ -113,38 +112,37 @@ function RandomTeamGenerator({ characters }: {
 }
 
 function TeamDisplay({ team }: { team: string[] }) {
-  return <div style={{ marginRight: 30 }}>
-    {team.map(c => {
-      return (
-        <div key={c}>
-          {c}
-        </div>
-      )
-    })}
-  </div>
+  return (
+    <div style={{ marginRight: 30 }}>
+      {team.map(c => {
+        return <div key={c}>{c}</div>
+      })}
+    </div>
+  )
 }
 
-function CharacterSelection({ onChange, characters }: {
-  onChange: (e: ChangeEvent<HTMLInputElement>, value: string) => void,
+function CharacterSelection({
+  onChange,
+  characters
+}: {
+  onChange: (e: ChangeEvent<HTMLInputElement>, value: string) => void
   characters: GenshinCharacters
 }) {
   return (
     <div>
-      {
-        Object.keys(characters).map(c => {
-          return (
-            <div key={c}>
-              <input
-                id={c}
-                type='checkbox'
-                checked={characters[c]}
-                onChange={e => onChange(e, c)}
-              />
-              <label htmlFor={c}>{c}</label>
-            </div>
-          )
-        })
-      }
+      {Object.keys(characters).map(c => {
+        return (
+          <div key={c}>
+            <input
+              id={c}
+              type='checkbox'
+              checked={characters[c]}
+              onChange={e => onChange(e, c)}
+            />
+            <label htmlFor={c}>{c}</label>
+          </div>
+        )
+      })}
     </div>
   )
 }

@@ -34,8 +34,6 @@ def write(dirs = {}, name = dirFile):
     json_str = json.dumps(dirs,indent=2)
     f.write(json_str)
 
-if not os.path.exists('data'):
-  os.makedirs('data')
 write(scan())
 
 print('sheets.json generated! :)')

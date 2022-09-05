@@ -10,7 +10,8 @@ const contentData = [
       word: 'も',
       pronunciation: 'も',
       romaji: 'mo',
-      meaning: 'Adding も to the end of a question word is like turns it into the "null"  answer for the question. I.e. if somebody were to ask the question "what?" or 何 the null answer would be "nothing", 何も',
+      meaning:
+        'Adding も to the end of a question word is like turns it into the "null"  answer for the question. I.e. if somebody were to ask the question "what?" or 何 the null answer would be "nothing", 何も',
       partOfSpeech: 'PARTICLE',
       source: 'https://www.punipunijapan.com/nothing-in-japanese/'
     },
@@ -52,7 +53,8 @@ const contentData = [
       word: 'て',
       pronunciation: 'て',
       romaji: 'te',
-      meaning: 'て is used here combine the first verb (出) with the next ones on the following line',
+      meaning:
+        'て is used here combine the first verb (出) with the next ones on the following line',
       partOfSpeech: 'PARTICLE',
       source: 'https://www.imabi.net/theparticlete.htm'
     }
@@ -72,14 +74,16 @@ const titleData = [
     romaji: 'ni',
     meaning: 'to be at',
     notes: 'The particle に has a lot of uses, here I think it makes "to be at" home.',
-    source: 'https://www.wasabi-jpn.com/japanese-grammar/japanese-particle-ni-clear-up-all-doubts-you-may-have/#2'
+    source:
+      'https://www.wasabi-jpn.com/japanese-grammar/japanese-particle-ni-clear-up-all-doubts-you-may-have/#2'
   },
   {
     word: '帰り',
     pronunciation: 'かえり',
     romaji: 'ka e ri',
     meaning: 'to return home',
-    notes: 'It seems like this is an inflection of 帰る, kae ru, in the -ri form, which turns it from the verb "return" into this noun. I.e. it turns it into a gerund!'
+    notes:
+      'It seems like this is an inflection of 帰る, kae ru, in the -ri form, which turns it from the verb "return" into this noun. I.e. it turns it into a gerund!'
   },
   {
     word: 'たい',
@@ -87,12 +91,12 @@ const titleData = [
     romaji: 'ta i',
     meaning: 'To express a wish/desire',
     notes: 'the -tai form of a verb expresses a wish or desire',
-    source: 'https://www.brighthubeducation.com/learning-japanese/37489-tai-verb-structure-want-to-do-not-want-to/'
+    source:
+      'https://www.brighthubeducation.com/learning-japanese/37489-tai-verb-structure-want-to-do-not-want-to/'
   }
 ]
 
-const englishContent =
-`Leaving the house without saying a word,
+const englishContent = `Leaving the house without saying a word,
 I've made it all the way out here.
 But once the sun goes down,
 I turn into a hopeless, sniveling mess.
@@ -137,5 +141,8 @@ export default {
   japaneseTitle: titleData.map(word => word.word),
   japaneseContent: contentData.map(line => line.map(word => word.word)),
   englishTitle: 'Wanna Go Home',
-  englishContent: englishContent.replace(',\n', '\n').split('\n').filter(line => line),
+  englishContent: englishContent
+    .replace(',\n', '\n')
+    .split('\n')
+    .filter(line => line)
 }

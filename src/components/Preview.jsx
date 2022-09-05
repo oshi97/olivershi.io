@@ -1,11 +1,3 @@
-const Preview = () => (
-  <div>
-    title
-    image
-    text
-    date
-    tags
-  </div>
-)
+const Preview = () => <div>title image text date tags</div>
 
 export default Preview

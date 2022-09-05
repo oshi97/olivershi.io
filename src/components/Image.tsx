@@ -7,15 +7,12 @@ const imageContext = _context.keys().reduce((imageContext, key) => {
   return imageContext
 }, {} as Record<string, string>)
 
-const Image = (props: {
-  src: string,
-  className?: string,
-  style?: CSSProperties
-}) => {
+const Image = (props: { src: string; className?: string; style?: CSSProperties }) => {
   const request = `./${props.src}`
 
   return (
-    <img className={props.className ? 'image ' + props.className : 'image'}
+    <img
+      className={props.className ? 'image ' + props.className : 'image'}
       src={imageContext[request]}
       style={props.style}
       alt={request}

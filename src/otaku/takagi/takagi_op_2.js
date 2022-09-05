@@ -2,7 +2,7 @@ const titleData = [
   {
     word: 'ゼロセンチメートル',
     romaji: 'ze ro se n chi me- to ru',
-    meaning: 'Zero Centimeters',
+    meaning: 'Zero Centimeters'
   }
 ]
 const contentData = [
@@ -11,19 +11,21 @@ const contentData = [
       word: '隙間',
       pronunciation: 'すきま',
       romaji: 'su ki ma',
-      meaning: 'gap',
+      meaning: 'gap'
     },
     {
       word: 'は',
       romaji: 'wa',
-      meaning: '-wa particle, used after the topic to be talked the speaker wants to talk about',
+      meaning:
+        '-wa particle, used after the topic to be talked the speaker wants to talk about',
       source: 'https://www.japanesepod101.com/japanese-particles/',
-      notes: 'Wa（は）follows the topic the speaker wants to talk about. Therefore, wa（は）is often called topic marking particle. It is often used in a sentence pattern like, "[ A ] wa [ B ] desu." which means "[ A ] is [ B ]."'
+      notes:
+        'Wa（は）follows the topic the speaker wants to talk about. Therefore, wa（は）is often called topic marking particle. It is often used in a sentence pattern like, "[ A ] wa [ B ] desu." which means "[ A ] is [ B ]."'
     },
     {
       word: 'ゼロ',
       romaji: 'ze ro',
-      meaning: 'zero',
+      meaning: 'zero'
     },
     {
       word: 'センチメートル',
@@ -50,14 +52,14 @@ const contentData = [
       pronunciation: 'きょり',
       romaji: 'kyo ri',
       meaning: 'distance',
-      notes: 'this is the small yo, which comes after hiragana (き, ぎ, し, じ, ち, に, ひ, び, ぴ, み, and り) and changes the sound from ki yo to kyo.',
+      notes:
+        'this is the small yo, which comes after hiragana (き, ぎ, し, じ, ち, に, ひ, び, ぴ, み, and り) and changes the sound from ki yo to kyo.',
       source: 'https://hinative.com/en-US/questions/733819'
     }
   ]
 ]
 
-const englishContent =
-`The gap between us is 0cm
+const englishContent = `The gap between us is 0cm
 Our shoulders lined up with no space to hide anything
 
 Did you know?
@@ -104,5 +106,5 @@ export default {
   japaneseTitle: titleData.map(word => word.word),
   japaneseContent: contentData.map(line => line.map(word => word.word)),
   englishTitle: 'Zero Centimeters',
-  englishContent: englishContent.split('\n').filter(line => line),
+  englishContent: englishContent.split('\n').filter(line => line)
 }
