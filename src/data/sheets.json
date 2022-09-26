@@ -37,7 +37,10 @@
         {
           "name": "Liszt",
           "full_path": "/sheets/Classical/Liszt/",
-          "contents": ["Dans-Macabre-Liszt.pdf", "La Campanella.pdf"]
+          "contents": [
+            "Dans-Macabre-Liszt.pdf",
+            "La Campanella.pdf"
+          ]
         },
         {
           "name": "Beethoven",
@@ -51,18 +54,31 @@
         {
           "name": "Schumann",
           "full_path": "/sheets/Classical/Schumann/",
-          "contents": ["kinderzenen.pdf"]
+          "contents": [
+            "kinderzenen.pdf"
+          ]
+        },
+        {
+          "name": "Schubert",
+          "full_path": "/sheets/Classical/Schubert/",
+          "contents": [
+            "Schubert_Werke_Breitkopf_Serie_9_No_84_Op_103.pdf"
+          ]
         },
         "IMSLP00514-Debussy_-_Suite_Bergamasque_-_4_-_Passpied.pdf",
         {
           "name": "Scriabin",
           "full_path": "/sheets/Classical/Scriabin/",
-          "contents": ["Scriabin_-_Etude_in_D-sharp_Minor_-_Op_8_No_12.pdf"]
+          "contents": [
+            "Scriabin_-_Etude_in_D-sharp_Minor_-_Op_8_No_12.pdf"
+          ]
         },
         {
           "name": "Rachmaninoff",
           "full_path": "/sheets/Classical/Rachmaninoff/",
-          "contents": ["Rachmaninoff_-_Moments_Musical_4.pdf"]
+          "contents": [
+            "Rachmaninoff_-_Moments_Musical_4.pdf"
+          ]
         },
         "IMSLP136037-WIMA.8862-Satie_Gymnopedie_1.pdf"
       ]
@@ -75,13 +91,20 @@
         {
           "name": "czerny",
           "full_path": "/sheets/Exercises/czerny/",
-          "contents": ["50-100.pdf", "1-49.pdf"]
+          "contents": [
+            "50-100.pdf",
+            "1-49.pdf"
+          ]
         },
         "Hanon.pdf",
         {
           "name": "Scale & Arpeggio Manual",
           "full_path": "/sheets/Exercises/Scale & Arpeggio Manual/",
-          "contents": ["scales.pdf", "arpeggios.pdf", "double notes.pdf"]
+          "contents": [
+            "scales.pdf",
+            "arpeggios.pdf",
+            "double notes.pdf"
+          ]
         },
         {
           "name": "Liszts exercises",
@@ -106,7 +129,9 @@
     {
       "name": "Movies",
       "full_path": "/sheets/Movies/",
-      "contents": ["The_Kings_Speech.pdf"]
+      "contents": [
+        "The_Kings_Speech.pdf"
+      ]
     },
     {
       "name": "Anime",
@@ -125,17 +150,24 @@
         {
           "name": "Tokyo Ghoul",
           "full_path": "/sheets/Anime/Tokyo Ghoul/",
-          "contents": ["Unravel.pdf"]
+          "contents": [
+            "Unravel.pdf"
+          ]
         },
         {
           "name": "Seishun Buta Yarou",
           "full_path": "/sheets/Anime/Seishun Buta Yarou/",
-          "contents": ["Fukashigi_no_Carte.pdf", "Kimi_no_sei_HalcyonMusic.pdf"]
+          "contents": [
+            "Fukashigi_no_Carte.pdf",
+            "Kimi_no_sei_HalcyonMusic.pdf"
+          ]
         },
         {
           "name": "Golden Time",
           "full_path": "/sheets/Anime/Golden Time/",
-          "contents": ["Sweet & Sweet Cherry.pdf"]
+          "contents": [
+            "Sweet & Sweet Cherry.pdf"
+          ]
         },
         {
           "name": "Re Zero",
@@ -181,12 +213,17 @@
         {
           "name": "Hunter x Hunter",
           "full_path": "/sheets/Anime/Hunter x Hunter/",
-          "contents": ["Hyori Ittai - Animenz.pdf", "Departure - Animenz.pdf"]
+          "contents": [
+            "Hyori Ittai - Animenz.pdf",
+            "Departure - Animenz.pdf"
+          ]
         },
         {
           "name": "Miss Kobayashi's Dragon Maid",
           "full_path": "/sheets/Anime/Miss Kobayashi's Dragon Maid/",
-          "contents": ["Aozora no Rhapsody [Theishter]_v2.pdf"]
+          "contents": [
+            "Aozora no Rhapsody [Theishter]_v2.pdf"
+          ]
         },
         {
           "name": "Sword Art Online",
@@ -201,7 +238,9 @@
         {
           "name": "Princess Connect",
           "full_path": "/sheets/Anime/Princess Connect/",
-          "contents": ["Lost Princess (Full ver.) piano.pdf"]
+          "contents": [
+            "Lost Princess (Full ver.) piano.pdf"
+          ]
         },
         {
           "name": "Demon Slayer",
@@ -215,7 +254,10 @@
         {
           "name": "A Certain Scientific Railgun",
           "full_path": "/sheets/Anime/A Certain Scientific Railgun/",
-          "contents": ["Only my railgun (full ver).pdf", "final phase.pdf"]
+          "contents": [
+            "Only my railgun (full ver).pdf",
+            "final phase.pdf"
+          ]
         },
         {
           "name": "Bleach",
@@ -228,7 +270,9 @@
         {
           "name": "Love Live!",
           "full_path": "/sheets/Anime/Love Live!/",
-          "contents": ["Snow Halation.pdf"]
+          "contents": [
+            "Snow Halation.pdf"
+          ]
         },
         {
           "name": "Rent a Girlfriend",
@@ -252,17 +296,23 @@
         {
           "name": "Wotakoi",
           "full_path": "/sheets/Anime/Wotakoi/",
-          "contents": ["Fiction.pdf"]
+          "contents": [
+            "Fiction.pdf"
+          ]
         },
         {
           "name": "Fire Force",
           "full_path": "/sheets/Anime/Fire Force/",
-          "contents": ["Inferno - AnimePro.pdf"]
+          "contents": [
+            "Inferno - AnimePro.pdf"
+          ]
         },
         {
           "name": "Lycoris Recoil",
           "full_path": "/sheets/Anime/Lycoris Recoil/",
-          "contents": ["ALIVE - Ru's Piano.pdf"]
+          "contents": [
+            "ALIVE - Ru's Piano.pdf"
+          ]
         },
         {
           "name": "Kaguya Sama",
@@ -284,12 +334,17 @@
         {
           "name": "86",
           "full_path": "/sheets/Anime/86/",
-          "contents": ["avid - animenz.pdf"]
+          "contents": [
+            "avid - animenz.pdf"
+          ]
         },
         {
           "name": "Seven Deadly Sins",
           "full_path": "/sheets/Anime/Seven Deadly Sins/",
-          "contents": ["Netsujou no Spectrum.pdf", "ru-piano-netsujou-no-spectrum.pdf"]
+          "contents": [
+            "Netsujou no Spectrum.pdf",
+            "ru-piano-netsujou-no-spectrum.pdf"
+          ]
         },
         {
           "name": "The Melancholy of Haruhi Suzumiya",
@@ -313,29 +368,43 @@
             {
               "name": "Unlimited Blade Works",
               "full_path": "/sheets/Anime/Fate/Unlimited Blade Works/",
-              "contents": ["Brave Shine.pdf", "ideal white.pdf"]
+              "contents": [
+                "Brave Shine.pdf",
+                "ideal white.pdf"
+              ]
             },
             {
               "name": "Zero",
               "full_path": "/sheets/Anime/Fate/Zero/",
-              "contents": ["to_the_beginning_Animenz.pdf", "Oath Sign.pdf", "Manten.pdf"]
+              "contents": [
+                "to_the_beginning_Animenz.pdf",
+                "Oath Sign.pdf",
+                "Manten.pdf"
+              ]
             }
           ]
         },
         {
           "name": "Madoka Magica",
           "full_path": "/sheets/Anime/Madoka Magica/",
-          "contents": ["mata ashita.pdf"]
+          "contents": [
+            "mata ashita.pdf"
+          ]
         },
         {
           "name": "Domestic Kanojo",
           "full_path": "/sheets/Anime/Domestic Kanojo/",
-          "contents": ["Theishter - Kawaki wo Ameku.pdf"]
+          "contents": [
+            "Theishter - Kawaki wo Ameku.pdf"
+          ]
         },
         {
           "name": "Jujutsu Kaisen",
           "full_path": "/sheets/Anime/Jujutsu Kaisen/",
-          "contents": ["Kaikai_Kitan.pdf", "Kaikai_Kitan_-_Jujutsu_Kaisen_OP.pdf"]
+          "contents": [
+            "Kaikai_Kitan.pdf",
+            "Kaikai_Kitan_-_Jujutsu_Kaisen_OP.pdf"
+          ]
         },
         {
           "name": "Spy x Family",
@@ -357,17 +426,23 @@
         {
           "name": "Sailor Moon",
           "full_path": "/sheets/Anime/Sailor Moon/",
-          "contents": ["Moonlight Densetsu.pdf"]
+          "contents": [
+            "Moonlight Densetsu.pdf"
+          ]
         },
         {
           "name": "Kanojo mo Kanojo",
           "full_path": "/sheets/Anime/Kanojo mo Kanojo/",
-          "contents": ["Pinky_Hook.pdf"]
+          "contents": [
+            "Pinky_Hook.pdf"
+          ]
         },
         {
           "name": "Plastic Memories",
           "full_path": "/sheets/Anime/Plastic Memories/",
-          "contents": ["Ring of Fortune.pdf"]
+          "contents": [
+            "Ring of Fortune.pdf"
+          ]
         },
         {
           "name": "Naruto",
@@ -390,17 +465,24 @@
         {
           "name": "Oregairu",
           "full_path": "/sheets/Anime/Oregairu/",
-          "contents": ["Everyday World.pdf"]
+          "contents": [
+            "Everyday World.pdf"
+          ]
         },
         {
           "name": "Darling in the Franxx",
           "full_path": "/sheets/Anime/Darling in the Franxx/",
-          "contents": ["Torikago (Fonzi M.pdf"]
+          "contents": [
+            "Torikago (Fonzi M.pdf"
+          ]
         },
         {
           "name": "Digimon",
           "full_path": "/sheets/Anime/Digimon/",
-          "contents": ["Animenz - Butter-Fly.pdf", "Butterfly.pdf"]
+          "contents": [
+            "Animenz - Butter-Fly.pdf",
+            "Butterfly.pdf"
+          ]
         },
         {
           "name": "Dragon Ball",
@@ -413,7 +495,9 @@
         {
           "name": "Jaku Chara Tomozaki",
           "full_path": "/sheets/Anime/Jaku Chara Tomozaki/",
-          "contents": ["Jinsei_Easy.pdf"]
+          "contents": [
+            "Jinsei_Easy.pdf"
+          ]
         },
         {
           "name": "Ghibli",
@@ -427,7 +511,9 @@
         {
           "name": "No Game No Life",
           "full_path": "/sheets/Anime/No Game No Life/",
-          "contents": ["This Game (1).pdf"]
+          "contents": [
+            "This Game (1).pdf"
+          ]
         },
         {
           "name": "Steins;Gate",
@@ -493,7 +579,10 @@
         {
           "name": "Undertale",
           "full_path": "/sheets/Games/Undertale/",
-          "contents": ["Astronomia.pdf", "Megalovania.pdf"]
+          "contents": [
+            "Astronomia.pdf",
+            "Megalovania.pdf"
+          ]
         },
         "Octopath Traveler Main Theme.pdf",
         {
