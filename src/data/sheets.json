@@ -2,6 +2,7 @@
   "name": "sheets",
   "full_path": "/sheets/",
   "contents": [
+    ".git",
     {
       "name": "Anime",
       "full_path": "/sheets/Anime/",
@@ -400,6 +401,19 @@
             "Your_Lie_in_April_Medley__Fonzi_M.pdf"
           ]
         }
+      ]
+    },
+    {
+      "name": "Books",
+      "full_path": "/sheets/Books/",
+      "contents": [
+        "(Oxford Studies in Music Theory) Dmitri Tymoczko - Tonality_ An Owner's Manual-Oxford University Press (2023).pdf",
+        "Fabian Holt - Everyone Loves Live Music_ A Theory of Performance Institutions (2021, University of Chicago Press) [10.7208_9780226738680] - libgen.li.pdf",
+        "Miriam Iorwerth - Networked Music Performance_ Theory and Applications (2023, Focal Press) [10.4324_9781003268857] - libgen.li.pdf",
+        "Rolf Bader (auth.) - How Music Works_ A Physical Culture Theory (2021, Springer) [10.1007_978-3-030-67155-6] - libgen.li.pdf",
+        "[Big Issues in Music] Fabian Holt - Everyone Loves Live Music_ A Theory of Performance Institutions (2021, University of Chicago Press) - libgen.li.pdf",
+        "[Critical Political Theory and Radical Practice] Sabby Sagall - MUSIC and CAPITALISM_ Melody, Harmony and Rhythm in the Modern World (2021, Palgrave Macmillan) - libgen.li.pdf",
+        "[Routledge Research in Music] Bryan Parkhurst, Jeffrey Swinkin (eds.) - Perspectives on Contemporary Music Theory_ Essays in Honor of Kevin Korsyn (2023, Routledge) - libgen.li.pdf"
       ]
     },
     {
