@@ -14,6 +14,7 @@ jobs:
         with:
           node-version: 18
       - run: npm ci
+      - run: python sheets.py
       - run: npm run build
       - run: cp build/index.html build/404.html
       - name: Deploy
