@@ -19,7 +19,7 @@ jobs:
           STEPS_CONTEXT: ${{ toJson(steps) }}
         run: echo "$STEPS_CONTEXT"
       - run: exit 1
-        if: ${{ steps.commit_step.pushed != 'true' }}
+        if: ${{ steps.commit_step.pushed == 'true' }}
       - uses: actions/setup-node@v3
         with:
           node-version: 18
