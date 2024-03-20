@@ -6,6 +6,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - run: exit 1
       - uses: actions/checkout@v3
         with:
           submodules: true
@@ -13,6 +14,7 @@ jobs:
       - run: git submodule update --recursive --remote
       - run: python sheets.py
       - uses: EndBug/add-and-commit@v9
+        id: commit_step
       - uses: actions/setup-node@v3
         with:
           node-version: 18
