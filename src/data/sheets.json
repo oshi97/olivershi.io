@@ -127,7 +127,14 @@
             "Rachmaninoff-Prelude-Op.3-No.2.pdf"
           ]
         },
-        "IMSLP00513-Debussy_-_Suite_Bergamasque_-_3_-_Clair_de_Lune.pdf"
+        "IMSLP00513-Debussy_-_Suite_Bergamasque_-_3_-_Clair_de_Lune.pdf",
+        {
+          "name": "Cziffra",
+          "full_path": "/sheets/Classical/Cziffra/",
+          "contents": [
+            "cziffra flight of the bumblebee.pdf"
+          ]
+        }
       ]
     },
     ".git",
