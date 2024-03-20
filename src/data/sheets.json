@@ -2,74 +2,210 @@
   "name": "sheets",
   "full_path": "/sheets/",
   "contents": [
+    {
+      "name": "Exercises",
+      "full_path": "/sheets/Exercises/",
+      "contents": [
+        {
+          "name": "czerny",
+          "full_path": "/sheets/Exercises/czerny/",
+          "contents": [
+            "50-100.pdf",
+            "1-49.pdf"
+          ]
+        },
+        {
+          "name": "Scale & Arpeggio Manual",
+          "full_path": "/sheets/Exercises/Scale & Arpeggio Manual/",
+          "contents": [
+            "arpeggios.pdf",
+            "double notes.pdf",
+            "scales.pdf"
+          ]
+        },
+        {
+          "name": "Liszts exercises",
+          "full_path": "/sheets/Exercises/Liszts exercises/",
+          "contents": [
+            "11.pdf",
+            "6.pdf",
+            "8.pdf",
+            "10.pdf",
+            "9.pdf",
+            "5.pdf",
+            "4.pdf",
+            "3.pdf",
+            "7.pdf",
+            "book 1.pdf",
+            "12.pdf",
+            "2.pdf"
+          ]
+        },
+        "Hanon.pdf",
+        "Brahms 51 Exercises.pdf"
+      ]
+    },
+    {
+      "name": "Classical",
+      "full_path": "/sheets/Classical/",
+      "contents": [
+        {
+          "name": "Chopin",
+          "full_path": "/sheets/Classical/Chopin/",
+          "contents": [
+            "waterfall etude.pdf",
+            "tristesse (etude op. 10 no. 3).pdf",
+            "ocean etude (op 25 no. 12).PDF",
+            "IMSLP127777-WIMA.c2b3-Chopin_Prelude_Eminor.pdf",
+            "black keys etude (op 10 no. 5).pdf",
+            "fantasie impromptu.pdf",
+            "scherzo op. 30 no. 2.pdf",
+            "nocturnes op 48.pdf",
+            "Chopin, Waltz in E minor, B. 56 .pdf",
+            "Waltz B. 150 posthumous.pdf",
+            "Andante Spianato et Grand Polonaise Brillante.pdf"
+          ]
+        },
+        "IMSLP00514-Debussy_-_Suite_Bergamasque_-_4_-_Passpied.pdf",
+        {
+          "name": "Schumann",
+          "full_path": "/sheets/Classical/Schumann/",
+          "contents": [
+            "Schumann_The_Bird_As_Prophet_Op.82_No.7.pdf",
+            "kinderzenen.pdf"
+          ]
+        },
+        {
+          "name": "Scriabin",
+          "full_path": "/sheets/Classical/Scriabin/",
+          "contents": [
+            "Scriabin_-_Etude_in_D-sharp_Minor_-_Op_8_No_12.pdf"
+          ]
+        },
+        "IMSLP02377-Satie_-_Pi\u00e8ces_froides_(airs_\u00e0_faire_fuir).pdf",
+        {
+          "name": "Beethoven",
+          "full_path": "/sheets/Classical/Beethoven/",
+          "contents": [
+            "IMSLP03862-Beethoven_-_Piano_Sonatas_Lamond_-_7.3.pdf",
+            "moonlight sonata.pdf"
+          ]
+        },
+        {
+          "name": "Schubert",
+          "full_path": "/sheets/Classical/Schubert/",
+          "contents": [
+            "Schubert_Werke_Breitkopf_Serie_9_No_84_Op_103.pdf"
+          ]
+        },
+        "Flight_of_the_Bumble-Bee_(arr._Rachmaninoff_-_piano).pdf",
+        {
+          "name": "Mozart",
+          "full_path": "/sheets/Classical/Mozart/",
+          "contents": [
+            "Mozaft Pf Conerto 21 K467 II Andante.pdf",
+            "IMSLP56321-PMLP01846-Mozart_Werke_Breitkopf_Serie_20_KV331.pdf",
+            "Turksh March Volodos.pdf",
+            "IMSLP05898-Liszt_-_S550_Mozarts_Requiem_No2_Lacrimosa.pdf"
+          ]
+        },
+        "IMSLP136037-WIMA.8862-Satie_Gymnopedie_1.pdf",
+        {
+          "name": "Liszt",
+          "full_path": "/sheets/Classical/Liszt/",
+          "contents": [
+            "Dans-Macabre-Liszt.pdf",
+            "La Campanella.pdf"
+          ]
+        },
+        {
+          "name": "Rachmaninoff",
+          "full_path": "/sheets/Classical/Rachmaninoff/",
+          "contents": [
+            "Rachmaninoff_-_Moments_Musical_4.pdf",
+            "Rachmaninoff_-_Piano_Concerto_No.2_-_Mov.I.pdf",
+            "Rachmaninoff-Prelude-Op.3-No.2.pdf"
+          ]
+        },
+        "IMSLP00513-Debussy_-_Suite_Bergamasque_-_3_-_Clair_de_Lune.pdf"
+      ]
+    },
     ".git",
     {
       "name": "Anime",
       "full_path": "/sheets/Anime/",
       "contents": [
         {
-          "name": "86",
-          "full_path": "/sheets/Anime/86/",
+          "name": "Yoasobi",
+          "full_path": "/sheets/Anime/Yoasobi/",
           "contents": [
-            "avid - animenz.pdf"
+            "YOASOBI - \u591c\u306b\u99c6\u3051\u308bRacing into the Night - Ru's Piano.pdf"
           ]
         },
         {
-          "name": "A Certain Scientific Railgun",
-          "full_path": "/sheets/Anime/A Certain Scientific Railgun/",
+          "name": "Neon Genesis Evangelion",
+          "full_path": "/sheets/Anime/Neon Genesis Evangelion/",
           "contents": [
-            "final phase.pdf",
-            "Only my railgun (full ver).pdf"
+            "Evangelion OP - Cruel Angel's Thesis -theishter.pdf",
+            "Animenz - A Cruel Angels Thesis 2020.pdf"
           ]
         },
         {
-          "name": "Bakemonogatari",
-          "full_path": "/sheets/Anime/Bakemonogatari/",
+          "name": "Sword Art Online",
+          "full_path": "/sheets/Anime/Sword Art Online/",
           "contents": [
-            "Kimi no Shiranai Monogatari.pdf",
-            "Renai_Circulation_fonzi.pdf",
-            "Renai_Circulation_tv.pdf",
-            "Theishter - Kimi no Shiranai Monogatari.pdf"
+            "Sword Art Online - Crossing Field [tv size].pdf",
+            "\u5200\u528d\u795e\u57dfSword Art Online OP1 - Crossing Field - Ru's Piano.pdf",
+            "Theishter - courage.pdf",
+            "Swordland (Main Theme).pdf"
           ]
         },
         {
-          "name": "Bleach",
-          "full_path": "/sheets/Anime/Bleach/",
+          "name": "Princess Connect",
+          "full_path": "/sheets/Anime/Princess Connect/",
           "contents": [
-            "Bleach - Never Meant To Belong.pdf",
-            "Bleach-Will_of_the_Heart.pdf"
+            "Lost Princess (Full ver.) piano.pdf"
           ]
         },
         {
-          "name": "Chihayafuru",
-          "full_path": "/sheets/Anime/Chihayafuru/",
+          "name": "Oregairu",
+          "full_path": "/sheets/Anime/Oregairu/",
           "contents": [
-            "Akane Sora (Piano).pdf",
-            "Chihayafuru - Chihayafuru Main Theme (Piano vers.).pdf"
+            "Everyday World.pdf"
           ]
         },
         {
-          "name": "Darling in the Franxx",
-          "full_path": "/sheets/Anime/Darling in the Franxx/",
+          "name": "Jojo's Bizarre Adventure",
+          "full_path": "/sheets/Anime/Jojo's Bizarre Adventure/",
           "contents": [
-            "Torikago (Fonzi M.pdf"
+            "giorno's-theme-animenz.pdf",
+            "phantom blood - rus.pdf",
+            "bloody-stream-animenz.pdf",
+            "Giornos Theme (Theishter).pdf",
+            "traitors-requiem-animenz.pdf",
+            "Sono chi no sadame.pdf"
           ]
         },
         {
-          "name": "Demon Slayer",
-          "full_path": "/sheets/Anime/Demon Slayer/",
+          "name": "Madoka Magica",
+          "full_path": "/sheets/Anime/Madoka Magica/",
           "contents": [
-            "Animenz - Gurenge.pdf",
-            "Kamado Tanjiro no Uta (Animenz).pdf",
-            "Kamado Tanjiro no Uta Pianominion.pdf"
+            "mata ashita.pdf"
           ]
         },
         {
           "name": "Digimon",
           "full_path": "/sheets/Anime/Digimon/",
           "contents": [
-            "Animenz - Butter-Fly.pdf",
-            "Butterfly.pdf"
+            "Butterfly.pdf",
+            "Animenz - Butter-Fly.pdf"
+          ]
+        },
+        {
+          "name": "Kanojo mo Kanojo",
+          "full_path": "/sheets/Anime/Kanojo mo Kanojo/",
+          "contents": [
+            "Pinky_Hook.pdf"
           ]
         },
         {
@@ -80,73 +216,20 @@
           ]
         },
         {
-          "name": "Dragon Ball",
-          "full_path": "/sheets/Anime/Dragon Ball/",
+          "name": "Steins;Gate",
+          "full_path": "/sheets/Anime/Steins;Gate/",
           "contents": [
-            "Dan Dan.pdf",
-            "Dragon_Ball_-_Maka_Fushigi_Adventure_Opening_Theme.mscz.pdf"
+            "Hacking to the Gate - AnimePro.pdf",
+            "Hacking to the Gate - Animenz.pdf"
           ]
         },
         {
-          "name": "Fate",
-          "full_path": "/sheets/Anime/Fate/",
+          "name": "Spy x Family",
+          "full_path": "/sheets/Anime/Spy x Family/",
           "contents": [
-            {
-              "name": "Heaven's Feel",
-              "full_path": "/sheets/Anime/Fate/Heaven's Feel/",
-              "contents": [
-                "animenz-medley-heavens-feel.pdf",
-                "Theishter - Haru wa Yuku.pdf"
-              ]
-            },
-            {
-              "name": "Unlimited Blade Works",
-              "full_path": "/sheets/Anime/Fate/Unlimited Blade Works/",
-              "contents": [
-                "Brave Shine.pdf",
-                "ideal white.pdf"
-              ]
-            },
-            {
-              "name": "Zero",
-              "full_path": "/sheets/Anime/Fate/Zero/",
-              "contents": [
-                "Manten.pdf",
-                "Oath Sign.pdf",
-                "to_the_beginning_Animenz.pdf"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Fire Force",
-          "full_path": "/sheets/Anime/Fire Force/",
-          "contents": [
-            "Inferno - AnimePro.pdf"
-          ]
-        },
-        {
-          "name": "Ghibli",
-          "full_path": "/sheets/Anime/Ghibli/",
-          "contents": [
-            "Howl's Moving Castle Theme - G Minor - MN0170497.pdf",
-            "Spirited Away - Inochi no namae (version 2).pdf",
-            "Studio Ghibli Medley (Animenz)_v2.pdf"
-          ]
-        },
-        {
-          "name": "Golden Time",
-          "full_path": "/sheets/Anime/Golden Time/",
-          "contents": [
-            "Sweet & Sweet Cherry.pdf"
-          ]
-        },
-        {
-          "name": "Guilty Crown",
-          "full_path": "/sheets/Anime/Guilty Crown/",
-          "contents": [
-            "My Dearest (10 Year Anniversary Edition) (Animenz).pdf",
-            "The Everlasting Guilty Crown (Animenz).pdf"
+            "kigeki - animenz.pdf",
+            "Mix Nuts (Full ver.) piano.pdf",
+            "mixed nuts - animenz.pdf"
           ]
         },
         {
@@ -161,72 +244,48 @@
           "name": "Hunter x Hunter",
           "full_path": "/sheets/Anime/Hunter x Hunter/",
           "contents": [
-            "Departure - Animenz.pdf",
-            "Hyori Ittai - Animenz.pdf"
+            "Hyori Ittai - Animenz.pdf",
+            "Departure - Animenz.pdf"
           ]
         },
         {
-          "name": "Jaku Chara Tomozaki",
-          "full_path": "/sheets/Anime/Jaku Chara Tomozaki/",
+          "name": "Your Lie in April",
+          "full_path": "/sheets/Anime/Your Lie in April/",
           "contents": [
-            "Jinsei_Easy.pdf"
+            "Hikaru_Nara_guangrunara_ver._Theishter_.pdf",
+            "Your_Lie_in_April_Medley__Fonzi_M.pdf",
+            "My_Lie_Watashi_no_Uso_-_Shigatsu_wa_Kimi_no_Uso_OST.pdf",
+            "Hikaru Nara.pdf"
           ]
         },
         {
-          "name": "Jojo's Bizarre Adventure",
-          "full_path": "/sheets/Anime/Jojo's Bizarre Adventure/",
+          "name": "Naruto",
+          "full_path": "/sheets/Anime/Naruto/",
           "contents": [
-            "bloody-stream-animenz.pdf",
-            "giorno's-theme-animenz.pdf",
-            "Giornos Theme (Theishter).pdf",
-            "phantom blood - rus.pdf",
-            "Sono chi no sadame.pdf",
-            "traitors-requiem-animenz.pdf"
+            "Sadness and Sorrow.pdf",
+            "yell.pdf",
+            "Utakata Hanabi - Supercell.pdf",
+            "Theishter - Silhouette (2015).pdf",
+            "Blue Bird.pdf"
           ]
         },
         {
-          "name": "Jujutsu Kaisen",
-          "full_path": "/sheets/Anime/Jujutsu Kaisen/",
+          "name": "Ghibli",
+          "full_path": "/sheets/Anime/Ghibli/",
           "contents": [
-            "Kaikai_Kitan.pdf",
-            "Kaikai_Kitan_-_Jujutsu_Kaisen_OP.pdf"
+            "Howl's Moving Castle Theme - G Minor - MN0170497.pdf",
+            "Studio Ghibli Medley (Animenz)_v2.pdf",
+            "Spirited Away - Inochi no namae (version 2).pdf"
           ]
         },
         {
-          "name": "Kaguya Sama",
-          "full_path": "/sheets/Anime/Kaguya Sama/",
+          "name": "Bakemonogatari",
+          "full_path": "/sheets/Anime/Bakemonogatari/",
           "contents": [
-            "Chika Dance - Kaguya-sama ED 2 (Fonzi M).pdf",
-            "Kaguya-sama OP (Fonzi M).pdf",
-            "Sentimental_Crisis_HalcyonMusic.pdf"
-          ]
-        },
-        {
-          "name": "Kanojo mo Kanojo",
-          "full_path": "/sheets/Anime/Kanojo mo Kanojo/",
-          "contents": [
-            "Pinky_Hook.pdf"
-          ]
-        },
-        {
-          "name": "Love Live!",
-          "full_path": "/sheets/Anime/Love Live!/",
-          "contents": [
-            "Snow Halation.pdf"
-          ]
-        },
-        {
-          "name": "Lycoris Recoil",
-          "full_path": "/sheets/Anime/Lycoris Recoil/",
-          "contents": [
-            "ALIVE - Ru's Piano.pdf"
-          ]
-        },
-        {
-          "name": "Madoka Magica",
-          "full_path": "/sheets/Anime/Madoka Magica/",
-          "contents": [
-            "mata ashita.pdf"
+            "Renai_Circulation_tv.pdf",
+            "Kimi no Shiranai Monogatari.pdf",
+            "Renai_Circulation_fonzi.pdf",
+            "Theishter - Kimi no Shiranai Monogatari.pdf"
           ]
         },
         {
@@ -237,39 +296,6 @@
           ]
         },
         {
-          "name": "Naruto",
-          "full_path": "/sheets/Anime/Naruto/",
-          "contents": [
-            "Blue Bird.pdf",
-            "Sadness and Sorrow.pdf",
-            "Theishter - Silhouette (2015).pdf",
-            "Utakata Hanabi - Supercell.pdf",
-            "yell.pdf"
-          ]
-        },
-        {
-          "name": "Neon Genesis Evangelion",
-          "full_path": "/sheets/Anime/Neon Genesis Evangelion/",
-          "contents": [
-            "Animenz - A Cruel Angels Thesis 2020.pdf",
-            "Evangelion OP - Cruel Angel's Thesis -theishter.pdf"
-          ]
-        },
-        {
-          "name": "No Game No Life",
-          "full_path": "/sheets/Anime/No Game No Life/",
-          "contents": [
-            "This Game (1).pdf"
-          ]
-        },
-        {
-          "name": "Oregairu",
-          "full_path": "/sheets/Anime/Oregairu/",
-          "contents": [
-            "Everyday World.pdf"
-          ]
-        },
-        {
           "name": "Plastic Memories",
           "full_path": "/sheets/Anime/Plastic Memories/",
           "contents": [
@@ -277,20 +303,11 @@
           ]
         },
         {
-          "name": "Princess Connect",
-          "full_path": "/sheets/Anime/Princess Connect/",
+          "name": "Guilty Crown",
+          "full_path": "/sheets/Anime/Guilty Crown/",
           "contents": [
-            "Lost Princess (Full ver.) piano.pdf"
-          ]
-        },
-        {
-          "name": "Re Zero",
-          "full_path": "/sheets/Anime/Re Zero/",
-          "contents": [
-            "Animenz - STYX HELIX.pdf",
-            "Realize_HalcyonMusic.pdf",
-            "ReZero Elegy for Rem.pdf",
-            "Theishter - Requiem of Silence.pdf"
+            "The Everlasting Guilty Crown (Animenz).pdf",
+            "My Dearest (10 Year Anniversary Edition) (Animenz).pdf"
           ]
         },
         {
@@ -310,11 +327,152 @@
           ]
         },
         {
-          "name": "Seishun Buta Yarou",
-          "full_path": "/sheets/Anime/Seishun Buta Yarou/",
+          "name": "No Game No Life",
+          "full_path": "/sheets/Anime/No Game No Life/",
           "contents": [
-            "Fukashigi_no_Carte.pdf",
-            "Kimi_no_sei_HalcyonMusic.pdf"
+            "This Game (1).pdf"
+          ]
+        },
+        {
+          "name": "Dragon Ball",
+          "full_path": "/sheets/Anime/Dragon Ball/",
+          "contents": [
+            "Dragon_Ball_-_Maka_Fushigi_Adventure_Opening_Theme.mscz.pdf",
+            "Dan Dan.pdf"
+          ]
+        },
+        {
+          "name": "Fate",
+          "full_path": "/sheets/Anime/Fate/",
+          "contents": [
+            {
+              "name": "Heaven's Feel",
+              "full_path": "/sheets/Anime/Fate/Heaven's Feel/",
+              "contents": [
+                "Theishter - Haru wa Yuku.pdf",
+                "animenz-medley-heavens-feel.pdf"
+              ]
+            },
+            {
+              "name": "Zero",
+              "full_path": "/sheets/Anime/Fate/Zero/",
+              "contents": [
+                "Oath Sign.pdf",
+                "to_the_beginning_Animenz.pdf",
+                "Manten.pdf"
+              ]
+            },
+            {
+              "name": "Unlimited Blade Works",
+              "full_path": "/sheets/Anime/Fate/Unlimited Blade Works/",
+              "contents": [
+                "ideal white.pdf",
+                "Brave Shine.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Kaguya Sama",
+          "full_path": "/sheets/Anime/Kaguya Sama/",
+          "contents": [
+            "Sentimental_Crisis_HalcyonMusic.pdf",
+            "Chika Dance - Kaguya-sama ED 2 (Fonzi M).pdf",
+            "Kaguya-sama OP (Fonzi M).pdf"
+          ]
+        },
+        {
+          "name": "86",
+          "full_path": "/sheets/Anime/86/",
+          "contents": [
+            "avid - animenz.pdf"
+          ]
+        },
+        {
+          "name": "Re Zero",
+          "full_path": "/sheets/Anime/Re Zero/",
+          "contents": [
+            "Animenz - STYX HELIX.pdf",
+            "ReZero Elegy for Rem.pdf",
+            "Theishter - Requiem of Silence.pdf",
+            "Realize_HalcyonMusic.pdf"
+          ]
+        },
+        {
+          "name": "Demon Slayer",
+          "full_path": "/sheets/Anime/Demon Slayer/",
+          "contents": [
+            "Animenz - Gurenge.pdf",
+            "Kamado Tanjiro no Uta Pianominion.pdf",
+            "Kamado Tanjiro no Uta (Animenz).pdf"
+          ]
+        },
+        {
+          "name": "Love Live!",
+          "full_path": "/sheets/Anime/Love Live!/",
+          "contents": [
+            "Snow Halation.pdf"
+          ]
+        },
+        {
+          "name": "Tokyo Ghoul",
+          "full_path": "/sheets/Anime/Tokyo Ghoul/",
+          "contents": [
+            "Unravel.pdf"
+          ]
+        },
+        {
+          "name": "Wotakoi",
+          "full_path": "/sheets/Anime/Wotakoi/",
+          "contents": [
+            "Fiction.pdf"
+          ]
+        },
+        {
+          "name": "Golden Time",
+          "full_path": "/sheets/Anime/Golden Time/",
+          "contents": [
+            "Sweet & Sweet Cherry.pdf"
+          ]
+        },
+        {
+          "name": "Darling in the Franxx",
+          "full_path": "/sheets/Anime/Darling in the Franxx/",
+          "contents": [
+            "Torikago (Fonzi M.pdf"
+          ]
+        },
+        {
+          "name": "Jaku Chara Tomozaki",
+          "full_path": "/sheets/Anime/Jaku Chara Tomozaki/",
+          "contents": [
+            "Jinsei_Easy.pdf"
+          ]
+        },
+        {
+          "name": "Fire Force",
+          "full_path": "/sheets/Anime/Fire Force/",
+          "contents": [
+            "Inferno - AnimePro.pdf"
+          ]
+        },
+        {
+          "name": "Chihayafuru",
+          "full_path": "/sheets/Anime/Chihayafuru/",
+          "contents": [
+            "Akane Sora (Piano).pdf",
+            "Chihayafuru - Chihayafuru Main Theme (Piano vers.).pdf"
+          ]
+        },
+        {
+          "name": "Violet Evergarden",
+          "full_path": "/sheets/Anime/Violet Evergarden/",
+          "contents": [
+            "Animenz - Sincerely(2).pdf",
+            "Michishirube.pdf",
+            "Violet Evergarden OP - Sincerely (Fonzi M).pdf",
+            "Sincerely - Violet Evergarden.pdf",
+            "Violet Evergarden ED\u300eMichishirube\u300fPiano Cover - Ru's Piano -.pdf"
           ]
         },
         {
@@ -326,30 +484,34 @@
           ]
         },
         {
-          "name": "Spy x Family",
-          "full_path": "/sheets/Anime/Spy x Family/",
+          "name": "A Certain Scientific Railgun",
+          "full_path": "/sheets/Anime/A Certain Scientific Railgun/",
           "contents": [
-            "kigeki - animenz.pdf",
-            "Mix Nuts (Full ver.) piano.pdf",
-            "mixed nuts - animenz.pdf"
+            "Only my railgun (full ver).pdf",
+            "final phase.pdf"
           ]
         },
         {
-          "name": "Steins;Gate",
-          "full_path": "/sheets/Anime/Steins;Gate/",
+          "name": "Lycoris Recoil",
+          "full_path": "/sheets/Anime/Lycoris Recoil/",
           "contents": [
-            "Hacking to the Gate - Animenz.pdf",
-            "Hacking to the Gate - AnimePro.pdf"
+            "ALIVE - Ru's Piano.pdf"
           ]
         },
         {
-          "name": "Sword Art Online",
-          "full_path": "/sheets/Anime/Sword Art Online/",
+          "name": "Seishun Buta Yarou",
+          "full_path": "/sheets/Anime/Seishun Buta Yarou/",
           "contents": [
-            "Sword Art Online - Crossing Field [tv size].pdf",
-            "Swordland (Main Theme).pdf",
-            "Theishter - courage.pdf",
-            "\u5200\u528d\u795e\u57dfSword Art Online OP1 - Crossing Field - Ru's Piano.pdf"
+            "Kimi_no_sei_HalcyonMusic.pdf",
+            "Fukashigi_no_Carte.pdf"
+          ]
+        },
+        {
+          "name": "Bleach",
+          "full_path": "/sheets/Anime/Bleach/",
+          "contents": [
+            "Bleach - Never Meant To Belong.pdf",
+            "Bleach-Will_of_the_Heart.pdf"
           ]
         },
         {
@@ -360,45 +522,11 @@
           ]
         },
         {
-          "name": "Tokyo Ghoul",
-          "full_path": "/sheets/Anime/Tokyo Ghoul/",
+          "name": "Jujutsu Kaisen",
+          "full_path": "/sheets/Anime/Jujutsu Kaisen/",
           "contents": [
-            "Unravel.pdf"
-          ]
-        },
-        {
-          "name": "Violet Evergarden",
-          "full_path": "/sheets/Anime/Violet Evergarden/",
-          "contents": [
-            "Animenz - Sincerely(2).pdf",
-            "Michishirube.pdf",
-            "Sincerely - Violet Evergarden.pdf",
-            "Violet Evergarden ED\u300eMichishirube\u300fPiano Cover - Ru's Piano -.pdf",
-            "Violet Evergarden OP - Sincerely (Fonzi M).pdf"
-          ]
-        },
-        {
-          "name": "Wotakoi",
-          "full_path": "/sheets/Anime/Wotakoi/",
-          "contents": [
-            "Fiction.pdf"
-          ]
-        },
-        {
-          "name": "Yoasobi",
-          "full_path": "/sheets/Anime/Yoasobi/",
-          "contents": [
-            "YOASOBI - \u591c\u306b\u99c6\u3051\u308bRacing into the Night - Ru's Piano.pdf"
-          ]
-        },
-        {
-          "name": "Your Lie in April",
-          "full_path": "/sheets/Anime/Your Lie in April/",
-          "contents": [
-            "Hikaru Nara.pdf",
-            "Hikaru_Nara_guangrunara_ver._Theishter_.pdf",
-            "My_Lie_Watashi_no_Uso_-_Shigatsu_wa_Kimi_no_Uso_OST.pdf",
-            "Your_Lie_in_April_Medley__Fonzi_M.pdf"
+            "Kaikai_Kitan.pdf",
+            "Kaikai_Kitan_-_Jujutsu_Kaisen_OP.pdf"
           ]
         }
       ]
@@ -407,154 +535,13 @@
       "name": "Books",
       "full_path": "/sheets/Books/",
       "contents": [
-        "(Oxford Studies in Music Theory) Dmitri Tymoczko - Tonality_ An Owner's Manual-Oxford University Press (2023).pdf",
-        "Fabian Holt - Everyone Loves Live Music_ A Theory of Performance Institutions (2021, University of Chicago Press) [10.7208_9780226738680] - libgen.li.pdf",
-        "Miriam Iorwerth - Networked Music Performance_ Theory and Applications (2023, Focal Press) [10.4324_9781003268857] - libgen.li.pdf",
-        "Rolf Bader (auth.) - How Music Works_ A Physical Culture Theory (2021, Springer) [10.1007_978-3-030-67155-6] - libgen.li.pdf",
         "[Big Issues in Music] Fabian Holt - Everyone Loves Live Music_ A Theory of Performance Institutions (2021, University of Chicago Press) - libgen.li.pdf",
+        "[Routledge Research in Music] Bryan Parkhurst, Jeffrey Swinkin (eds.) - Perspectives on Contemporary Music Theory_ Essays in Honor of Kevin Korsyn (2023, Routledge) - libgen.li.pdf",
+        "Fabian Holt - Everyone Loves Live Music_ A Theory of Performance Institutions (2021, University of Chicago Press) [10.7208_9780226738680] - libgen.li.pdf",
         "[Critical Political Theory and Radical Practice] Sabby Sagall - MUSIC and CAPITALISM_ Melody, Harmony and Rhythm in the Modern World (2021, Palgrave Macmillan) - libgen.li.pdf",
-        "[Routledge Research in Music] Bryan Parkhurst, Jeffrey Swinkin (eds.) - Perspectives on Contemporary Music Theory_ Essays in Honor of Kevin Korsyn (2023, Routledge) - libgen.li.pdf"
-      ]
-    },
-    {
-      "name": "Classical",
-      "full_path": "/sheets/Classical/",
-      "contents": [
-        {
-          "name": "Beethoven",
-          "full_path": "/sheets/Classical/Beethoven/",
-          "contents": [
-            "IMSLP03862-Beethoven_-_Piano_Sonatas_Lamond_-_7.3.pdf",
-            "moonlight sonata.pdf"
-          ]
-        },
-        {
-          "name": "Chopin",
-          "full_path": "/sheets/Classical/Chopin/",
-          "contents": [
-            "Andante Spianato et Grand Polonaise Brillante.pdf",
-            "black keys etude (op 10 no. 5).pdf",
-            "Chopin, Waltz in E minor, B. 56 .pdf",
-            "fantasie impromptu.pdf",
-            "IMSLP127777-WIMA.c2b3-Chopin_Prelude_Eminor.pdf",
-            "nocturnes op 48.pdf",
-            "ocean etude (op 25 no. 12).PDF",
-            "scherzo op. 30 no. 2.pdf",
-            "tristesse (etude op. 10 no. 3).pdf",
-            "Waltz B. 150 posthumous.pdf",
-            "waterfall etude.pdf"
-          ]
-        },
-        "IMSLP00513-Debussy_-_Suite_Bergamasque_-_3_-_Clair_de_Lune.pdf",
-        "IMSLP00514-Debussy_-_Suite_Bergamasque_-_4_-_Passpied.pdf",
-        "IMSLP02377-Satie_-_Pi\u00e8ces_froides_(airs_\u00e0_faire_fuir).pdf",
-        "IMSLP136037-WIMA.8862-Satie_Gymnopedie_1.pdf",
-        {
-          "name": "Liszt",
-          "full_path": "/sheets/Classical/Liszt/",
-          "contents": [
-            "Dans-Macabre-Liszt.pdf",
-            "La Campanella.pdf"
-          ]
-        },
-        {
-          "name": "Mozart",
-          "full_path": "/sheets/Classical/Mozart/",
-          "contents": [
-            "IMSLP05898-Liszt_-_S550_Mozarts_Requiem_No2_Lacrimosa.pdf",
-            "IMSLP56321-PMLP01846-Mozart_Werke_Breitkopf_Serie_20_KV331.pdf",
-            "Mozaft Pf Conerto 21 K467 II Andante.pdf",
-            "Turksh March Volodos.pdf"
-          ]
-        },
-        {
-          "name": "Rachmaninoff",
-          "full_path": "/sheets/Classical/Rachmaninoff/",
-          "contents": [
-            "Rachmaninoff-Prelude-Op.3-No.2.pdf",
-            "Rachmaninoff_-_Moments_Musical_4.pdf",
-            "Rachmaninoff_-_Piano_Concerto_No.2_-_Mov.I.pdf"
-          ]
-        },
-        {
-          "name": "Schubert",
-          "full_path": "/sheets/Classical/Schubert/",
-          "contents": [
-            "Schubert_Werke_Breitkopf_Serie_9_No_84_Op_103.pdf"
-          ]
-        },
-        {
-          "name": "Schumann",
-          "full_path": "/sheets/Classical/Schumann/",
-          "contents": [
-            "kinderzenen.pdf"
-          ]
-        },
-        {
-          "name": "Scriabin",
-          "full_path": "/sheets/Classical/Scriabin/",
-          "contents": [
-            "Scriabin_-_Etude_in_D-sharp_Minor_-_Op_8_No_12.pdf"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Contemporary",
-      "full_path": "/sheets/Contemporary/",
-      "contents": [
-        "Art_is_dead.pdf",
-        "Cough_Syrup_by_Young_The_Giant.pdf",
-        "entertainer-a4.pdf",
-        "Faded-Alan_Walker.pdf",
-        "Flower_Dance.pdf",
-        "Guang Liang - Tong Hua (piano).pdf",
-        "piano_man.pdf",
-        "Sound of Music.cdr.pdf",
-        "Summertime - Maggie x Nyan.pdf"
-      ]
-    },
-    {
-      "name": "Exercises",
-      "full_path": "/sheets/Exercises/",
-      "contents": [
-        "Brahms 51 Exercises.pdf",
-        {
-          "name": "czerny",
-          "full_path": "/sheets/Exercises/czerny/",
-          "contents": [
-            "1-49.pdf",
-            "50-100.pdf"
-          ]
-        },
-        "Hanon.pdf",
-        {
-          "name": "Liszts exercises",
-          "full_path": "/sheets/Exercises/Liszts exercises/",
-          "contents": [
-            "10.pdf",
-            "11.pdf",
-            "12.pdf",
-            "2.pdf",
-            "3.pdf",
-            "4.pdf",
-            "5.pdf",
-            "6.pdf",
-            "7.pdf",
-            "8.pdf",
-            "9.pdf",
-            "book 1.pdf"
-          ]
-        },
-        {
-          "name": "Scale & Arpeggio Manual",
-          "full_path": "/sheets/Exercises/Scale & Arpeggio Manual/",
-          "contents": [
-            "arpeggios.pdf",
-            "double notes.pdf",
-            "scales.pdf"
-          ]
-        }
+        "Rolf Bader (auth.) - How Music Works_ A Physical Culture Theory (2021, Springer) [10.1007_978-3-030-67155-6] - libgen.li.pdf",
+        "Miriam Iorwerth - Networked Music Performance_ Theory and Applications (2023, Focal Press) [10.4324_9781003268857] - libgen.li.pdf",
+        "(Oxford Studies in Music Theory) Dmitri Tymoczko - Tonality_ An Owner's Manual-Oxford University Press (2023).pdf"
       ]
     },
     {
@@ -565,36 +552,11 @@
           "name": "Chrono Trigger",
           "full_path": "/sheets/Games/Chrono Trigger/",
           "contents": [
+            "Chrono_Trigger_-_09_Wind_Scene_600_A.D..pdf",
             "Chrono Trigger - Kingdom Trial.pdf",
-            "Chrono Trigger - Wind Scene.pdf",
-            "Chrono_Trigger_-_09_Wind_Scene_600_A.D..pdf"
+            "Chrono Trigger - Wind Scene.pdf"
           ]
         },
-        {
-          "name": "Final Fantasy X",
-          "full_path": "/sheets/Games/Final Fantasy X/",
-          "contents": [
-            "Final Fantasy X - Suteki Da Ne.pdf",
-            "Final Fantasy X - To Zanarkand.pdf",
-            "To_Zanarkand_Final_Fantasy_X.pdf"
-          ]
-        },
-        "Gwyn, Lord of Cinder.pdf",
-        "Midnas_Lament.pdf",
-        {
-          "name": "Nier",
-          "full_path": "/sheets/Games/Nier/",
-          "contents": [
-            "Ashes of Dreams Piano.pdf",
-            "City Ruins.pdf",
-            "Nier - Ashes of Dreams (Theishter).pdf",
-            "NieR_Automata_-_Copied_City_2018_Piano_Collections.pdf",
-            "NieR_Automata_-_Vague_Hope_2018_Piano_Collections.pdf",
-            "NieR_Automata_-_Voice_of_No_Return_2018_Piano_Collections.pdf",
-            "NieR_Automata_-_Weight_of_the_World_2018_Piano_Collections.pdf"
-          ]
-        },
-        "Octopath Traveler Main Theme.pdf",
         {
           "name": "Undertale",
           "full_path": "/sheets/Games/Undertale/",
@@ -602,7 +564,47 @@
             "Astronomia.pdf",
             "Megalovania.pdf"
           ]
-        }
+        },
+        "Octopath Traveler Main Theme.pdf",
+        {
+          "name": "Nier",
+          "full_path": "/sheets/Games/Nier/",
+          "contents": [
+            "NieR_Automata_-_Weight_of_the_World_2018_Piano_Collections.pdf",
+            "NieR_Automata_-_Voice_of_No_Return_2018_Piano_Collections.pdf",
+            "Ashes of Dreams Piano.pdf",
+            "NieR_Automata_-_Vague_Hope_2018_Piano_Collections.pdf",
+            "NieR_Automata_-_Copied_City_2018_Piano_Collections.pdf",
+            "Nier - Ashes of Dreams (Theishter).pdf",
+            "City Ruins.pdf"
+          ]
+        },
+        "Midnas_Lament.pdf",
+        {
+          "name": "Final Fantasy X",
+          "full_path": "/sheets/Games/Final Fantasy X/",
+          "contents": [
+            "To_Zanarkand_Final_Fantasy_X.pdf",
+            "Final Fantasy X - Suteki Da Ne.pdf",
+            "Final Fantasy X - To Zanarkand.pdf"
+          ]
+        },
+        "Gwyn, Lord of Cinder.pdf"
+      ]
+    },
+    {
+      "name": "Contemporary",
+      "full_path": "/sheets/Contemporary/",
+      "contents": [
+        "Summertime - Maggie x Nyan.pdf",
+        "Faded-Alan_Walker.pdf",
+        "entertainer-a4.pdf",
+        "Art_is_dead.pdf",
+        "Sound of Music.cdr.pdf",
+        "piano_man.pdf",
+        "Guang Liang - Tong Hua (piano).pdf",
+        "Cough_Syrup_by_Young_The_Giant.pdf",
+        "Flower_Dance.pdf"
       ]
     },
     {
