@@ -1,17 +1,7 @@
 {
   "name": "sheets",
   "full_path": "/sheets/",
-  "contents": [
-    {
-      "name": "Exercises",
-      "full_path": "/sheets/Exercises/",
-      "contents": [
-        {
-          "name": "czerny",
-          "full_path": "/sheets/Exercises/czerny/",
-          "contents": [
-            "50-100.pdf",
-            "1-49.pdf"
+
           ]
         },
         {
