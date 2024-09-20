@@ -6,7 +6,7 @@
     "target": "esnext",
     "jsx": "react-jsx",
     "allowJs": true,
-    "moduleResolution": "nodenext",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true
   },
