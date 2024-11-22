@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c98568dc.css",
-    "main.js": "/static/js/main.14802446.js",
+    "main.js": "/static/js/main.e224b017.js",
     "static/media/original_konosuba_ed_2.jpeg": "/static/media/original_konosuba_ed_2.75a1726cda7bb574177f.jpeg",
     "static/media/chizuru.gif": "/static/media/chizuru.8c9a9db02c01e8d0ed2a.gif",
     "static/media/okarishimasu_op.gif": "/static/media/okarishimasu_op.8c9a9db02c01e8d0ed2a.gif",
@@ -26,10 +26,10 @@
     "static/media/library_music-black-24dp.svg": "/static/media/library_music-black-24dp.60f191adaf0122c71404121e3a43c122.svg",
     "static/media/home-black-24dp.svg": "/static/media/home-black-24dp.93ce5ea32bbcaf907e6a77550920e575.svg",
     "main.c98568dc.css.map": "/static/css/main.c98568dc.css.map",
-    "main.14802446.js.map": "/static/js/main.14802446.js.map"
+    "main.e224b017.js.map": "/static/js/main.e224b017.js.map"
   },
   "entrypoints": [
     "static/css/main.c98568dc.css",
-    "static/js/main.14802446.js"
+    "static/js/main.e224b017.js"
   ]
 }
